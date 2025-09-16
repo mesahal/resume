@@ -1,7 +1,7 @@
 import { GraduationCap, Calendar, Building2, BookOpen } from "lucide-react";
-import ju from "../assets/ju.png";
-import ndc from "../assets/ndc.png";
-import frii from "../assets/frii.jpeg";
+import ju from "../assets/optimized/ju.png";
+import ndc from "../assets/optimized/ndc.png";
+import frii from "../assets/optimized/frii.jpeg";
 
 const Education = ({ darkMode }) => {
   const education = [

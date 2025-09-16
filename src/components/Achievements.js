@@ -1,16 +1,14 @@
 import { useEffect, useRef } from "react";
-import { Trophy, ExternalLink, Medal, MapPin } from "lucide-react";
+import { ExternalLink, Medal, MapPin } from "lucide-react";
 import codeforces from "../assets/codeforces.webp";
-import leetcode from "../assets/leetcode.png";
-import atcoder from "../assets/atcoder.png";
-import codechef from "../assets/codechef.jpeg";
-import lightoj from "../assets/lightoj.jpeg";
-import uva from "../assets/uva.png";
-import aust from "../assets/austiupc.jpeg";
-import ruet from "../assets/ruetiupc.jpeg";
-import mbstu from "../assets/mbstuiupc.jpeg";
-import cf from "../assets/cf.jpg";
-import cc from "../assets/cc.jpg";
+import leetcode from "../assets/optimized/leetcode.png";
+import atcoder from "../assets/optimized/atcoder.png";
+import codechef from "../assets/optimized/codechef.jpeg";
+import lightoj from "../assets/optimized/lightoj.jpeg";
+import uva from "../assets/optimized/uva.png";
+import aust from "../assets/optimized/austiupc.jpeg";
+import ruet from "../assets/optimized/ruetiupc.jpeg";
+import mbstu from "../assets/optimized/mbstuiupc.jpeg";
 
 const Achievements = ({ darkMode }) => {
   const countersRef = useRef(new Map());
@@ -106,18 +104,6 @@ const Achievements = ({ darkMode }) => {
     },
   ];
 
-  const onlineContests = [
-    {
-      contest: "Codechef Starter 67 Div.2",
-      position: "217",
-      image: cc,
-    },
-    {
-      contest: "Codeforces Round 760 Div. 3",
-      position: "254",
-      image: cf,
-    },
-  ];
 
   const onsiteContests = [
     {
@@ -234,45 +220,6 @@ const Achievements = ({ darkMode }) => {
 
         {/* Contest Achievements */}
         <div className="space-y-16">
-          {/* Online Contests */}
-          <div>
-            <div className="flex items-center gap-3 mb-8">
-              <Trophy className="w-8 h-8 text-purple-400" />
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                Online Contest Achievements
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {onlineContests.map((contest, index) => (
-                <div
-                  key={index}
-                  className={`group rounded-xl overflow-hidden transition-all duration-300 border hover:transform hover:scale-[1.02] ${
-                    darkMode
-                      ? "bg-gray-800/50 border-gray-700/50 hover:bg-gray-700/50"
-                      : "bg-white/80 border-gray-200/50 hover:bg-gray-50/80"
-                  }`}
-                >
-                  <div className="relative h-48">
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent z-10" />
-                    <img
-                      src={contest.image}
-                      alt={contest.contest}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute bottom-4 left-4 right-4 z-20">
-                      <h3 className="text-xl font-bold text-white mb-2">
-                        {contest.contest}
-                      </h3>
-                      <p className="text-orange-400 font-semibold flex items-center gap-2">
-                        <Medal size={16} />
-                        Ranked {contest.position}th
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
 
           {/* Onsite Contests */}
           <div>

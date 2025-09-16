@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import {
   Code2,
-  ExternalLink,
   ChevronLeft,
   ChevronRight,
   Database,
@@ -19,12 +18,11 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import cityremit from "../assets/cityremit.png";
+import cityremit from "../assets/optimized/cityremit.png";
 import convay from "../assets/convay.webp";
-import healthcare from "../assets/healthcare.png";
+import healthcare from "../assets/optimized/healthcare.png";
 
 const Work = ({ darkMode }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
 
   const professionalProjects = [
     {
@@ -92,32 +90,6 @@ const Work = ({ darkMode }) => {
     },
   ];
 
-  const otherProjects = [
-    {
-      title: "Programming Instructor",
-      description:
-        "Led the BdOSN Girls Programming Camp, teaching fundamental programming concepts and problem-solving techniques.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
-      link: "https://www.bdosn.org/blog/news-events/online-ghgpc-2021",
-      tags: ["Teaching", "C++", "Algorithms"],
-    },
-    {
-      title: "Frontend Development",
-      description:
-        "Built responsive web applications using modern JavaScript frameworks and libraries.",
-      image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8",
-      link: "https://github.com/mesahal",
-      tags: ["React", "TypeScript", "Tailwind CSS"],
-    },
-    {
-      title: "Competitive Programming",
-      description:
-        "Solved 3000+ algorithmic problems across various competitive programming platforms.",
-      image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
-      link: "https://www.stopstalk.com/user/profile/sahal",
-      tags: ["Algorithms", "Data Structures", "Problem Solving"],
-    },
-  ];
 
   return (
     <section className="py-20 px-4">
@@ -150,7 +122,6 @@ const Work = ({ darkMode }) => {
               disableOnInteraction: false,
             }}
             modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             className="w-full max-w-5xl mx-auto"
           >
             {professionalProjects.map((project, index) => (

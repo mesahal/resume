@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   Github,
   Linkedin,
-  Twitter,
   Instagram,
   Mail,
   MessageSquare,
@@ -11,7 +10,7 @@ import {
   Loader2,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import XLogoB from "../assets/twitterx--v2.png";
+import XLogoB from "../assets/optimized/twitterx--v2.png";
 import XLogo from "../assets/xlogo.svg";
 import { FaWhatsapp } from "react-icons/fa";
 

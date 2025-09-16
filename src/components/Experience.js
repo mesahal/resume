@@ -1,14 +1,13 @@
 import {
-  Building2,
   Calendar,
   Terminal,
   Code2,
   Binary,
   Cpu,
 } from "lucide-react";
-import bs23Logo from "../assets/brain_station_23_logo.jpeg";
-import synesisLogo from "../assets/synesis_it_limited_logo.jpeg";
-import bdosnLogo from "../assets/bdosn_logo.jpeg";
+import bs23Logo from "../assets/optimized/brain_station_23_logo.jpeg";
+import synesisLogo from "../assets/optimized/synesis_it_limited_logo.jpeg";
+import bdosnLogo from "../assets/optimized/bdosn_logo.jpeg";
 const Experience = ({ darkMode }) => {
   const experiences = [
     {

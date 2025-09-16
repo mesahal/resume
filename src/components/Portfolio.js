@@ -11,8 +11,8 @@ import Videos from "./Videos";
 import Contact from "./Contact";
 import FloatingIcons from "./FloatingIcons";
 import { Sun, Moon, Menu, X, ChevronUp } from "lucide-react";
-import bgImage from "../assets/bg.jpeg";
-import myLogo from "../assets/myLogo.jpeg";
+import bgImage from "../assets/optimized/bg.jpeg";
+import myLogo from "../assets/optimized/myLogo.jpeg";
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -138,21 +138,42 @@ const Portfolio = () => {
               </motion.button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => setIsOpen(!isOpen)}
-              className={`lg:hidden p-2 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50
-                ${
-                  darkMode
-                    ? "hover:bg-gray-800 text-gray-300"
-                    : "hover:bg-gray-100 text-gray-600"
-                }`}
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </motion.button>
+            {/* Mobile Controls */}
+            <div className="lg:hidden flex items-center space-x-2">
+              {/* Theme Toggle Button for Mobile */}
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setDarkMode(!darkMode)}
+                className={`p-2 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50
+                  ${
+                    darkMode
+                      ? "bg-gray-800 hover:bg-gray-700 text-yellow-400"
+                      : "bg-gray-100 hover:bg-gray-200 text-gray-600"
+                  }`}
+                aria-label={
+                  darkMode ? "Switch to light mode" : "Switch to dark mode"
+                }
+              >
+                {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+              </motion.button>
+
+              {/* Mobile Menu Button */}
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setIsOpen(!isOpen)}
+                className={`p-2 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-50
+                  ${
+                    darkMode
+                      ? "hover:bg-gray-800 text-gray-300"
+                      : "hover:bg-gray-100 text-gray-600"
+                  }`}
+                aria-label="Toggle menu"
+              >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </motion.button>
+            </div>
           </div>
 
           {/* Mobile Navigation Menu */}
@@ -183,21 +204,6 @@ const Portfolio = () => {
                     {label}
                   </Link>
                 ))}
-
-                {/* Theme Toggle Button for Mobile */}
-                <motion.button
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setDarkMode(!darkMode)}
-                  className={`w-full py-2 px-4 flex items-center space-x-2 rounded-lg transition-colors duration-200
-                    ${
-                      darkMode
-                        ? "hover:bg-gray-800 text-yellow-400"
-                        : "hover:bg-gray-100 text-gray-600"
-                    }`}
-                >
-                  {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-                  <span>{darkMode ? "Light Mode" : "Dark Mode"}</span>
-                </motion.button>
               </motion.div>
             )}
           </AnimatePresence>

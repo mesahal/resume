@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import {
   Mail,
   Github as GitHub,
   Linkedin,
-  Twitter,
   Youtube,
   Facebook,
   Instagram,
@@ -13,7 +12,7 @@ import {
   Cpu,
 } from "lucide-react";
 import { useTypingEffect } from "../components/hooks/useTypingEffect";
-import XLogoB from "../assets/twitterx--v2.png";
+import XLogoB from "../assets/optimized/twitterx--v2.png";
 import XLogo from "../assets/xlogo.svg";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -23,14 +22,14 @@ const Home = ({ darkMode }) => {
   const [showRoles, setShowRoles] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const roles = [
+  const roles = useMemo(() => [
     { text: "Software Engineer", color: "text-purple-400" },
     { text: "Content Creator", color: "text-blue-400" }, // New color
     { text: "Problem Solver", color: "text-pink-400" },
     { text: "Full-Stack Web Developer", color: "text-green-400" }, // New color
     { text: "Competitive Programmer", color: "text-red-400" },
     { text: "Programming Trainer", color: "text-yellow-400" }, // New color
-  ];
+  ], []);
 
   const [currentText, setCurrentText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
