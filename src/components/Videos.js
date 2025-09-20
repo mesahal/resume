@@ -1,4 +1,4 @@
-import { Youtube, ExternalLink } from "lucide-react";
+import { Youtube, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -87,35 +87,39 @@ const Videos = ({ darkMode }) => {
           Content Creation
         </h1>
 
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={24}
-          pagination={{
-            clickable: true,
-            dynamicBullets: true,
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation, Autoplay]}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 16,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 24,
-            },
-          }}
-          className="pb-12"
-        >
+        <div className="relative">
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={24}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
+            navigation={{
+              prevEl: ".videos-swiper-button-prev",
+              nextEl: ".videos-swiper-button-next",
+            }}
+            modules={[Pagination, Navigation, Autoplay]}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+              },
+            }}
+            className="pb-12"
+          >
           {videos.map((video, index) => (
             <SwiperSlide key={index}>
               <a
@@ -175,7 +179,28 @@ const Videos = ({ darkMode }) => {
               </a>
             </SwiperSlide>
           ))}
-        </Swiper>
+          </Swiper>
+
+          {/* Custom Navigation Buttons */}
+          <button
+            className={`absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full transition-all duration-300 ${
+              darkMode
+                ? "bg-gray-800/80 hover:bg-gray-700/80 text-white"
+                : "bg-white/80 hover:bg-white text-gray-800"
+            } shadow-lg hover:shadow-xl videos-swiper-button-prev`}
+          >
+            <ChevronLeft size={24} />
+          </button>
+          <button
+            className={`absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full transition-all duration-300 ${
+              darkMode
+                ? "bg-gray-800/80 hover:bg-gray-700/80 text-white"
+                : "bg-white/80 hover:bg-white text-gray-800"
+            } shadow-lg hover:shadow-xl videos-swiper-button-next`}
+          >
+            <ChevronRight size={24} />
+          </button>
+        </div>
       </div>
     </section>
   );

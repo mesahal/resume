@@ -21,33 +21,49 @@ import "swiper/css/navigation";
 import cityremit from "../assets/optimized/cityremit.png";
 import convay from "../assets/convay.webp";
 import healthcare from "../assets/optimized/healthcare.png";
+import omnizia from "../assets/optimized/Omnizia.webp";
+import myLogo from "../assets/optimized/myLogo.webp";
 
 const Work = ({ darkMode }) => {
 
   const professionalProjects = [
     {
-      title: "City Remit",
+      title: "Omnizia",
       description:
-        "A financial application for transferring remittances from Malaysia, serving 50K+ users with 99.9% uptime. Architected microservices that process $2M+ monthly transactions with enhanced security and compliance features.",
-      image: cityremit,
-      technologies: ["Java", "Spring Boot", "Oracle", "Vue.js", "RESTful APIs"],
+        "A business management platform where I developed backend microservices and integrated CI/CD pipelines for deployment.",
+      image: omnizia,
+      technologies: ["Java", "Spring Boot", "PostgreSQL", "React"],
       features: [
-        "Secure remittance transfers",
-        "Real-time transaction tracking",
-        "Multi-currency support",
-        "Automated compliance checks",
+        "Backend microservices development",
+        "CI/CD pipeline integration",
+        "Business management features",
+        "Scalable architecture",
       ],
       role: "Backend Developer",
-      metrics: {
-        users: "50K+",
-        transactions: "$2M+ monthly",
-        uptime: "99.9%",
-        responseTime: "<200ms"
-      },
       links: {
-        live: "https://cityremit.com",
-        github: "https://github.com/mesahal/cityremit-backend",
-        caseStudy: "#"
+        live: "#",
+      },
+      icons: [
+        { Icon: Server, color: "text-blue-400" },
+        { Icon: Database, color: "text-red-400" },
+        { Icon: Globe, color: "text-green-400" },
+      ],
+    },
+    {
+      title: "City Remit",
+      description:
+        "Financial application for transferring remittances from Malaysia. Built APIs, added features, and fixed backend bugs.",
+      image: cityremit,
+      technologies: ["Java", "Spring Boot", "Oracle", "Vue"],
+      features: [
+        "Remittance transfer system",
+        "API development",
+        "Backend bug fixes",
+        "Feature enhancements",
+      ],
+      role: "Backend Developer",
+      links: {
+        live: "https://cityremit.cblmoneytransfer.com/login",
       },
       icons: [
         { Icon: Server, color: "text-blue-400" },
@@ -58,26 +74,18 @@ const Work = ({ darkMode }) => {
     {
       title: "Convay",
       description:
-        "A video conferencing platform serving 10K+ daily active users with WebRTC technology. Implemented real-time features that reduced connection time by 60% and improved video quality by 40%.",
+        "Video conferencing platform for individuals and enterprises. Developed RESTful APIs and fixed frontend bugs.",
       image: convay,
-      technologies: ["Java", "Spring Boot", "React", "MySQL", "WebRTC"],
+      technologies: ["Java", "Spring Boot", "MySQL", "React"],
       features: [
-        "Real-time video conferencing",
-        "Screen sharing",
-        "Chat functionality",
-        "Meeting recording",
+        "Video conferencing platform",
+        "RESTful API development",
+        "Frontend bug fixes",
+        "Enterprise features",
       ],
       role: "Full Stack Developer",
-      metrics: {
-        users: "10K+ daily",
-        connections: "60% faster",
-        quality: "40% improvement",
-        uptime: "99.5%"
-      },
       links: {
-        live: "https://convay.app",
-        github: "https://github.com/mesahal/convay-platform",
-        caseStudy: "#"
+        live: "https://convay.com/home",
       },
       icons: [
         { Icon: Globe, color: "text-purple-400" },
@@ -88,37 +96,49 @@ const Work = ({ darkMode }) => {
     {
       title: "Health Care",
       description:
-        "A doctor appointment platform with 5K+ registered doctors and 25K+ patients. Implemented BMDC validation system that reduced fraudulent registrations by 90% and improved appointment booking efficiency by 50%.",
+        "Doctor appointment platform with BMDC validation. Implemented backend features and collaborated with frontend team.",
       image: healthcare,
       technologies: [
         "Java",
         "Spring Boot",
-        "React",
         "PostgreSQL",
-        "RESTful APIs",
+        "React",
       ],
       features: [
         "Doctor appointment booking",
-        "BMDC validation",
-        "Rating system",
-        "Patient records management",
+        "BMDC validation system",
+        "Backend feature implementation",
+        "Frontend collaboration",
       ],
       role: "Full Stack Developer",
-      metrics: {
-        doctors: "5K+",
-        patients: "25K+",
-        fraudReduction: "90%",
-        efficiency: "50% improvement"
-      },
       links: {
-        live: "https://healthcare-platform.com",
-        github: "https://github.com/mesahal/healthcare-app",
-        caseStudy: "#"
+        live: "https://github.com/LnD-Brainstaiton/Health-Care",
       },
       icons: [
         { Icon: Database, color: "text-emerald-400" },
         { Icon: Server, color: "text-pink-400" },
         { Icon: Globe, color: "text-orange-400" },
+      ],
+    },
+    {
+      title: "Portfolio",
+      description:
+        "Built a personal portfolio website to showcase projects and achievements.",
+      image: myLogo,
+      technologies: ["React", "Tailwind"],
+      features: [
+        "Personal portfolio website",
+        "Project showcase",
+        "Achievement display",
+        "Responsive design",
+      ],
+      role: "Frontend Developer",
+      links: {
+        live: "https://mdsahal.netlify.app/",
+      },
+      icons: [
+        { Icon: Globe, color: "text-purple-400" },
+        { Icon: Code2, color: "text-pink-400" },
       ],
     },
   ];
@@ -133,137 +153,132 @@ const Work = ({ darkMode }) => {
 
         {/* Professional Projects Carousel */}
         <div className="mb-20">
-          <Swiper
-            effect="coverflow"
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView="auto"
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: false,
-            }}
-            pagination={{ clickable: true }}
-            navigation={{
-              prevEl: ".swiper-button-prev",
-              nextEl: ".swiper-button-next",
-            }}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
-            modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-            className="w-full max-w-5xl mx-auto"
-          >
-            {professionalProjects.map((project, index) => (
-              <SwiperSlide key={index} className="w-full max-w-3xl">
-                <div
-                  className={`rounded-xl overflow-hidden transition-all duration-300 ${
-                    darkMode
-                      ? "bg-gray-800/50 border border-gray-700/50"
-                      : "bg-white/80 border border-gray-200/50"
-                  }`}
-                >
-                  <div className="relative h-64">
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent z-10" />
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-4 right-4 z-20 flex gap-2">
-                      {project.icons.map(({ Icon, color }, i) => (
-                        <Icon key={i} className={`w-6 h-6 ${color}`} />
-                      ))}
-                    </div>
-                  </div>
+          <div className="relative">
+            {/* Navigation Buttons */}
+            <button
+              className={`absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full transition-all duration-300 ${
+                darkMode
+                  ? "bg-gray-800/80 hover:bg-gray-700/80 text-white"
+                  : "bg-white/80 hover:bg-white text-gray-800"
+              } shadow-lg hover:shadow-xl swiper-button-prev`}
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button
+              className={`absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full transition-all duration-300 ${
+                darkMode
+                  ? "bg-gray-800/80 hover:bg-gray-700/80 text-white"
+                  : "bg-white/80 hover:bg-white text-gray-800"
+              } shadow-lg hover:shadow-xl swiper-button-next`}
+            >
+              <ChevronRight size={24} />
+            </button>
 
-                  <div className="p-8">
-                    <div className="flex items-center gap-3 mb-4">
-                      <Code2 className="text-purple-400" size={24} />
-                      <h3
-                        className={`text-2xl font-bold ${
-                          darkMode ? "text-gray-200" : "text-gray-800"
-                        }`}
-                      >
-                        {project.title}
-                      </h3>
-                    </div>
-
-                    <div className="mb-6">
-                      <p
-                        className={`text-lg mb-4 ${
-                          darkMode ? "text-gray-300" : "text-gray-600"
-                        }`}
-                      >
-                        {project.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.technologies.map((tech, i) => (
-                          <span
-                            key={i}
-                            className={`px-3 py-1 text-sm rounded-full border ${
-                              darkMode
-                                ? "bg-gray-700/50 border-gray-600 text-gray-300"
-                                : "bg-gray-100/80 border-gray-200 text-gray-700"
-                            }`}
-                          >
-                            {tech}
-                          </span>
+            <Swiper
+              effect="coverflow"
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView="auto"
+              coverflowEffect={{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
+              }}
+              pagination={{ clickable: true }}
+              navigation={{
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next",
+              }}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+              className="w-full max-w-5xl mx-auto"
+            >
+              {professionalProjects.map((project, index) => (
+                <SwiperSlide key={index} className="w-full max-w-3xl">
+                  <div
+                    className={`rounded-xl overflow-hidden transition-all duration-300 ${
+                      darkMode
+                        ? "bg-gray-800/50 border border-gray-700/50"
+                        : "bg-white/80 border border-gray-200/50"
+                    }`}
+                  >
+                    <div className="relative h-64 overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent z-10" />
+                      <div className="absolute top-4 right-4 z-20 flex gap-2">
+                        {project.icons.map(({ Icon, color }, i) => (
+                          <Icon key={i} className={`w-6 h-6 ${color}`} />
                         ))}
                       </div>
                     </div>
 
-                    <div
-                      className={`space-y-2 ${
-                        darkMode ? "text-gray-400" : "text-gray-600"
-                      }`}
-                    >
-                      <h4 className="font-semibold text-purple-400">
-                        Key Features:
-                      </h4>
-                      <ul className="list-disc list-inside space-y-1">
-                        {project.features.map((feature, i) => (
-                          <li key={i}>{feature}</li>
-                        ))}
-                      </ul>
-                    </div>
+                    <div className="p-8">
+                      <div className="flex items-center gap-3 mb-4">
+                        <Code2 className="text-purple-400" size={24} />
+                        <h3
+                          className={`text-2xl font-bold ${
+                            darkMode ? "text-gray-200" : "text-gray-800"
+                          }`}
+                        >
+                          {project.title}
+                        </h3>
+                      </div>
 
-                    {/* Metrics */}
-                    {project.metrics && (
-                      <div className="mt-6">
-                        <h4 className="font-semibold text-purple-400 mb-3">
-                          Key Metrics:
-                        </h4>
-                        <div className="grid grid-cols-2 gap-3">
-                          {Object.entries(project.metrics).map(([key, value]) => (
-                            <div key={key} className={`p-3 rounded-lg ${
-                              darkMode ? "bg-gray-700/30" : "bg-gray-100/50"
-                            }`}>
-                              <div className="text-xs text-gray-500 uppercase tracking-wide">
-                                {key.replace(/([A-Z])/g, ' $1').trim()}
-                              </div>
-                              <div className={`font-bold ${
-                                darkMode ? "text-gray-200" : "text-gray-800"
-                              }`}>
-                                {value}
-                              </div>
-                            </div>
+                      <div className="mb-6">
+                        <p
+                          className={`text-lg mb-4 ${
+                            darkMode ? "text-gray-300" : "text-gray-600"
+                          }`}
+                        >
+                          {project.description}
+                        </p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {project.technologies.map((tech, i) => (
+                            <span
+                              key={i}
+                              className={`px-3 py-1 text-sm rounded-full border ${
+                                darkMode
+                                  ? "bg-gray-700/50 border-gray-600 text-gray-300"
+                                  : "bg-gray-100/80 border-gray-200 text-gray-700"
+                              }`}
+                            >
+                              {tech}
+                            </span>
                           ))}
                         </div>
                       </div>
-                    )}
 
-                    {/* Links */}
-                    {project.links && (
-                      <div className="mt-6">
-                        <h4 className="font-semibold text-purple-400 mb-3">
-                          Project Links:
+                      <div
+                        className={`space-y-2 ${
+                          darkMode ? "text-gray-400" : "text-gray-600"
+                        }`}
+                      >
+                        <h4 className="font-semibold text-purple-400">
+                          Key Features:
                         </h4>
-                        <div className="flex flex-wrap gap-3">
-                          {project.links.live && (
+                        <ul className="list-disc list-inside space-y-1">
+                          {project.features.map((feature, i) => (
+                            <li key={i}>{feature}</li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Links */}
+                      {project.links && project.links.live && project.links.live !== "#" && (
+                        <div className="mt-6">
+                          <h4 className="font-semibold text-purple-400 mb-3">
+                            Project Link:
+                          </h4>
+                          <div className="flex flex-wrap gap-3">
                             <a
                               href={project.links.live}
                               target="_blank"
@@ -271,73 +286,29 @@ const Work = ({ darkMode }) => {
                               className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors duration-200"
                             >
                               <Globe size={16} />
-                              Live Demo
+                              View Project
                             </a>
-                          )}
-                          {project.links.github && (
-                            <a
-                              href={project.links.github}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors duration-200"
-                            >
-                              <Code2 size={16} />
-                              GitHub
-                            </a>
-                          )}
-                          {project.links.caseStudy && project.links.caseStudy !== "#" && (
-                            <a
-                              href={project.links.caseStudy}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-2 px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition-colors duration-200"
-                            >
-                              <Database size={16} />
-                              Case Study
-                            </a>
-                          )}
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
 
-                    <div className="mt-6 pt-6 border-t border-gray-700/50">
-                      <p
-                        className={`flex items-center gap-2 font-bold ${
-                          darkMode ? "text-orange-400" : "text-gray-700"
-                        }`}
-                      >
-                        <span className="font-semibold text-purple-400">
-                          Role:
-                        </span>
-                        {project.role}
-                      </p>
+                      <div className="mt-6 pt-6 border-t border-gray-700/50">
+                        <p
+                          className={`flex items-center gap-2 font-bold ${
+                            darkMode ? "text-orange-400" : "text-gray-700"
+                          }`}
+                        >
+                          <span className="font-semibold text-purple-400">
+                            Role:
+                          </span>
+                          {project.role}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          {/* Custom Navigation Buttons */}
-          <div className="flex justify-center gap-4 mt-8">
-            <button
-              className={`p-2 rounded-full transition-colors ${
-                darkMode
-                  ? "bg-gray-800 hover:bg-gray-700 text-gray-300"
-                  : "bg-white hover:bg-gray-100 text-gray-600"
-              } swiper-button-prev`}
-            >
-              <ChevronLeft size={24} />
-            </button>
-            <button
-              className={`p-2 rounded-full transition-colors ${
-                darkMode
-                  ? "bg-gray-800 hover:bg-gray-700 text-gray-300"
-                  : "bg-white hover:bg-gray-100 text-gray-600"
-              } swiper-button-next`}
-            >
-              <ChevronRight size={24} />
-            </button>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
 
