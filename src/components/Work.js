@@ -160,7 +160,7 @@ const Work = ({ darkMode }) => {
                 darkMode
                   ? "bg-gray-800/80 hover:bg-gray-700/80 text-white"
                   : "bg-white/80 hover:bg-white text-gray-800"
-              } shadow-lg hover:shadow-xl swiper-button-prev`}
+              } shadow-lg hover:shadow-xl work-swiper-button-prev`}
             >
               <ChevronLeft size={24} />
             </button>
@@ -169,7 +169,7 @@ const Work = ({ darkMode }) => {
                 darkMode
                   ? "bg-gray-800/80 hover:bg-gray-700/80 text-white"
                   : "bg-white/80 hover:bg-white text-gray-800"
-              } shadow-lg hover:shadow-xl swiper-button-next`}
+              } shadow-lg hover:shadow-xl work-swiper-button-next`}
             >
               <ChevronRight size={24} />
             </button>
@@ -188,8 +188,8 @@ const Work = ({ darkMode }) => {
               }}
               pagination={{ clickable: true }}
               navigation={{
-                prevEl: ".swiper-button-prev",
-                nextEl: ".swiper-button-next",
+                prevEl: ".work-swiper-button-prev",
+                nextEl: ".work-swiper-button-next",
               }}
               autoplay={{
                 delay: 5000,

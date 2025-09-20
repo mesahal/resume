@@ -145,3 +145,4 @@ body {
 .card:hover::before {
   @apply opacity-100;
 }
+
