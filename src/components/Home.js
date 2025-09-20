@@ -319,14 +319,14 @@ const Home = ({ darkMode }) => {
                     </div>
                     
                     {/* Browser Content */}
-                    <div className="h-full flex items-start justify-center pt-16">
+                    <div className="h-full flex items-start justify-start pt-16 px-6">
                       {/* Large Role Display - Two Lines */}
                       {showRoles && (
-                        <div className="text-center">
-                          <div className={`text-2xl md:text-3xl font-bold ${roles[currentIndex].color} mb-1 flex items-center justify-center`}>
+                        <div className="text-left">
+                          <div className={`text-2xl md:text-3xl font-bold ${roles[currentIndex].color} mb-1`}>
                             {currentText.split(' ')[0]}
                           </div>
-                          <div className={`text-2xl md:text-3xl font-bold ${roles[currentIndex].color} flex items-center justify-center`}>
+                          <div className={`text-2xl md:text-3xl font-bold ${roles[currentIndex].color}`}>
                             {currentText.split(' ').slice(1).join(' ')}
                           </div>
                         </div>
