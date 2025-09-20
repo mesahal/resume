@@ -152,9 +152,20 @@ const Blog = ({ darkMode }) => {
   return (
     <section className="py-12 md:py-20 px-4">
       <div className="container mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-          Blog
-        </h1>
+        <div className="text-center mb-8 md:mb-12">
+          <div className="relative inline-block">
+            <h1 className={`text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent ${
+              darkMode ? "" : "drop-shadow-sm"
+            }`}>
+              Blog
+            </h1>
+            {!darkMode && (
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+                Blog
+              </div>
+            )}
+          </div>
+        </div>
 
         <div 
           className="relative"
@@ -189,10 +200,10 @@ const Blog = ({ darkMode }) => {
             {getCurrentBlogs().map((blog, index) => (
               <article
                 key={`${currentIndex}-${index}-${blog.title}`}
-                className={`group rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 border flex flex-col h-[400px] md:h-[500px] ${
+                className={`group rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 border flex flex-col h-[400px] md:h-[500px] shadow-lg ${
                   darkMode
                     ? "bg-gray-800/50 border-gray-700/50"
-                    : "bg-white/80 border-gray-200/50"
+                    : "bg-white/95 border-gray-300/60 shadow-xl"
                 }`}
               >
                 <div className="relative h-40 md:h-48 flex-shrink-0">
@@ -231,7 +242,7 @@ const Blog = ({ darkMode }) => {
 
                   <p
                     className={`mb-3 md:mb-4 flex-grow text-xs md:text-sm leading-relaxed ${
-                      darkMode ? "text-gray-400" : "text-gray-600"
+                      darkMode ? "text-gray-400" : "text-gray-700"
                     }`}
                   >
                     {blog.excerpt}

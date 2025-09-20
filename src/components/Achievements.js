@@ -134,9 +134,20 @@ const Achievements = ({ darkMode }) => {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-          Competitive Programming Achievements
-        </h1>
+        <div className="text-center mb-12">
+          <div className="relative inline-block">
+            <h1 className={`text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent ${
+              darkMode ? "" : "drop-shadow-sm"
+            }`}>
+              Competitive Programming Achievements
+            </h1>
+            {!darkMode && (
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+                Competitive Programming Achievements
+              </div>
+            )}
+          </div>
+        </div>
 
         <div className="text-center mb-16">
           <div
@@ -162,10 +173,10 @@ const Achievements = ({ darkMode }) => {
             <div
               key={index}
               data-platform-id={`platform-${index}`}
-              className={`group rounded-xl p-6 transition-all duration-300 border hover:transform hover:scale-[1.02] ${
+              className={`group rounded-xl p-6 transition-all duration-300 border hover:transform hover:scale-[1.02] shadow-lg ${
                 darkMode
                   ? "bg-gray-800/50 border-gray-700/50 hover:bg-gray-700/50"
-                  : "bg-white/80 border-gray-200/50 hover:bg-gray-50/80"
+                  : "bg-white/95 border-gray-300/60 hover:bg-gray-50/95 shadow-xl"
               }`}
             >
               <div className="flex items-center gap-4 mb-4">
@@ -233,10 +244,10 @@ const Achievements = ({ darkMode }) => {
               {onsiteContests.map((contest, index) => (
                 <div
                   key={index}
-                  className={`group rounded-xl overflow-hidden transition-all duration-300 border hover:transform hover:scale-[1.02] ${
+                  className={`group rounded-xl overflow-hidden transition-all duration-300 border hover:transform hover:scale-[1.02] shadow-lg ${
                     darkMode
                       ? "bg-gray-800/50 border-gray-700/50 hover:bg-gray-700/50"
-                      : "bg-white/80 border-gray-200/50 hover:bg-gray-50/80"
+                      : "bg-white/95 border-gray-300/60 hover:bg-gray-50/95 shadow-xl"
                   }`}
                 >
                   <div className="relative h-48">

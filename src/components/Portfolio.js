@@ -68,7 +68,7 @@ const Portfolio = () => {
   return (
     <div
       className={`min-h-screen bg-cover bg-fixed bg-center before:content-[''] before:absolute before:inset-0 ${
-        darkMode ? "before:bg-gray-900/85" : "before:bg-gray-50/90"
+        darkMode ? "before:bg-gray-900/85" : "before:bg-light-bg-overlay"
       }`}
       style={{ backgroundImage: `url(${bgImage})` }}
     >
@@ -81,7 +81,7 @@ const Portfolio = () => {
           ${
             darkMode
               ? "bg-gray-900/95 border-gray-800 text-gray-100"
-              : "bg-white/95 border-gray-200 text-gray-800"
+              : "bg-light-surface-elevated/95 border-light-border-primary text-light-text-primary"
           }`}
       >
         <div className="container mx-auto px-4">
@@ -114,7 +114,7 @@ const Portfolio = () => {
                   smooth={true}
                   duration={500}
                   className={`cursor-pointer transition-all duration-200 hover:text-purple-400 relative group 
-                    ${darkMode ? "text-gray-300" : "text-gray-600"}`}
+                    ${darkMode ? "text-gray-300" : "text-light-text-secondary"}`}
                 >
                   {label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
@@ -130,7 +130,7 @@ const Portfolio = () => {
                   ${
                     darkMode
                       ? "bg-gray-800 hover:bg-gray-700 text-yellow-400"
-                      : "bg-gray-100 hover:bg-gray-200 text-gray-600"
+                      : "bg-light-interactive-secondary hover:bg-light-interactive-secondaryHover text-light-text-secondary"
                   }`}
                 aria-label={
                   darkMode ? "Switch to light mode" : "Switch to dark mode"
@@ -151,7 +151,7 @@ const Portfolio = () => {
                   ${
                     darkMode
                       ? "bg-gray-800 hover:bg-gray-700 text-yellow-400"
-                      : "bg-gray-100 hover:bg-gray-200 text-gray-600"
+                      : "bg-light-interactive-secondary hover:bg-light-interactive-secondaryHover text-light-text-secondary"
                   }`}
                 aria-label={
                   darkMode ? "Switch to light mode" : "Switch to dark mode"
@@ -169,7 +169,7 @@ const Portfolio = () => {
                   ${
                     darkMode
                       ? "hover:bg-gray-800 text-gray-300"
-                      : "hover:bg-gray-100 text-gray-600"
+                      : "hover:bg-light-interactive-secondary text-light-text-secondary"
                   }`}
                 aria-label="Toggle menu"
               >
@@ -200,7 +200,7 @@ const Portfolio = () => {
                       ${
                         darkMode
                           ? "text-gray-300 hover:text-purple-400 hover:bg-gray-800"
-                          : "text-gray-600 hover:text-purple-600 hover:bg-gray-100"
+                          : "text-light-text-secondary hover:text-purple-600 hover:bg-light-interactive-secondary"
                       }`}
                   >
                     {label}
@@ -222,7 +222,7 @@ const Portfolio = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             className={`min-h-screen pt-24 px-4 md:px-6 lg:px-8 relative overflow-hidden
-              ${darkMode ? "text-gray-100" : "text-gray-800"}`}
+              ${darkMode ? "text-gray-100" : "text-light-text-primary"}`}
           >
             {/* Floating Icons Background */}
             <FloatingIcons darkMode={darkMode} />

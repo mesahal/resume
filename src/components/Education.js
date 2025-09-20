@@ -36,9 +36,18 @@ const Education = ({ darkMode }) => {
       <div className="container mx-auto max-w-6xl">
         <div className="flex items-center justify-center gap-3 mb-24">
           <GraduationCap className="w-10 h-10 text-purple-400" />
-          <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-            Educational Journey
-          </h1>
+          <div className="relative">
+            <h1 className={`text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent ${
+              darkMode ? "" : "drop-shadow-sm"
+            }`}>
+              Educational Journey
+            </h1>
+            {!darkMode && (
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+                Educational Journey
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Desktop Timeline */}
@@ -76,7 +85,7 @@ const Education = ({ darkMode }) => {
                       className={`relative group rounded-xl p-6 transition-all duration-300 border shadow-lg hover:shadow-xl ${
                         darkMode
                           ? "bg-gray-800/90 border-gray-700/50 hover:bg-gray-700/90"
-                          : "bg-white/90 border-gray-200/50 hover:bg-white"
+                          : "bg-white/95 border-gray-300/60 hover:bg-gray-50/95"
                       }`}
                     >
                       {/* Gradient overlay on hover */}
@@ -109,7 +118,7 @@ const Education = ({ darkMode }) => {
 
                           <p
                             className={`text-lg font-medium ${
-                              darkMode ? "text-gray-300" : "text-gray-700"
+                              darkMode ? "text-gray-300" : "text-gray-800"
                             }`}
                           >
                             {edu.degree}
@@ -125,7 +134,7 @@ const Education = ({ darkMode }) => {
 
                           <div
                             className={`flex items-center justify-center gap-2 text-sm ${
-                              darkMode ? "text-gray-400" : "text-gray-500"
+                              darkMode ? "text-gray-400" : "text-gray-600"
                             }`}
                           >
                             <Calendar size={16} />
@@ -165,7 +174,7 @@ const Education = ({ darkMode }) => {
                       className={`relative group rounded-xl p-6 transition-all duration-300 border shadow-lg hover:shadow-xl ${
                         darkMode
                           ? "bg-gray-800/90 border-gray-700/50 hover:bg-gray-700/90"
-                          : "bg-white/90 border-gray-200/50 hover:bg-white"
+                          : "bg-white/95 border-gray-300/60 hover:bg-gray-50/95"
                       }`}
                     >
                       {/* Gradient overlay on hover */}
@@ -198,7 +207,7 @@ const Education = ({ darkMode }) => {
 
                           <p
                             className={`text-lg font-medium ${
-                              darkMode ? "text-gray-300" : "text-gray-700"
+                              darkMode ? "text-gray-300" : "text-gray-800"
                             }`}
                           >
                             {edu.degree}
@@ -214,7 +223,7 @@ const Education = ({ darkMode }) => {
 
                           <div
                             className={`flex items-center justify-center gap-2 text-sm ${
-                              darkMode ? "text-gray-400" : "text-gray-500"
+                              darkMode ? "text-gray-400" : "text-gray-600"
                             }`}
                           >
                             <Calendar size={16} />

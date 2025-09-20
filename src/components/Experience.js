@@ -56,7 +56,7 @@ const Experience = ({ darkMode }) => {
         <div
           key={index}
           className={`absolute ${
-            darkMode ? "text-white/10" : "text-gray-800/10"
+            darkMode ? "text-white/10" : "text-gray-800/5"
           }`}
           style={{
             animation: `float 15s infinite linear`,
@@ -69,9 +69,20 @@ const Experience = ({ darkMode }) => {
       ))}
 
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-          Professional Journey
-        </h1>
+        <div className="text-center mb-16">
+          <div className="relative inline-block">
+            <h1 className={`text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent ${
+              darkMode ? "" : "drop-shadow-sm"
+            }`}>
+              Professional Journey
+            </h1>
+            {!darkMode && (
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+                Professional Journey
+              </div>
+            )}
+          </div>
+        </div>
 
         {/* Desktop Timeline */}
         <div className="hidden md:block relative">
@@ -96,10 +107,10 @@ const Experience = ({ darkMode }) => {
                   }`}
                 >
                   <div
-                    className={`group relative rounded-xl p-6 transition-all duration-300 border hover:transform hover:scale-[1.02] ${
+                    className={`group relative rounded-xl p-6 transition-all duration-300 border hover:transform hover:scale-[1.02] shadow-lg ${
                       darkMode
                         ? "bg-gray-800/90 border-gray-700/50 hover:bg-gray-700/50"
-                        : "bg-white/80 border-gray-200/50 hover:bg-gray-50/80"
+                        : "bg-light-surface-primary border-light-border-secondary hover:bg-light-surface-secondary shadow-light-xl"
                     }`}
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -116,14 +127,14 @@ const Experience = ({ darkMode }) => {
                       <div>
                         <h3
                           className={`text-xl font-semibold ${
-                            darkMode ? "text-gray-200" : "text-gray-800"
+                            darkMode ? "text-gray-200" : "text-light-text-primary"
                           }`}
                         >
                           {exp.company}
                         </h3>
                         <p
                           className={`text-lg ${
-                            darkMode ? "text-purple-400" : "text-purple-600"
+                            darkMode ? "text-purple-400" : "text-light-accent-primary"
                           }`}
                         >
                           {exp.role}
@@ -133,7 +144,7 @@ const Experience = ({ darkMode }) => {
 
                     <p
                       className={`mb-4 ${
-                        darkMode ? "text-gray-400" : "text-gray-600"
+                        darkMode ? "text-gray-400" : "text-light-text-secondary"
                       }`}
                     >
                       {exp.description}
@@ -143,14 +154,14 @@ const Experience = ({ darkMode }) => {
                     {exp.achievements && (
                       <div className="mb-4">
                         <h4 className={`text-sm font-semibold mb-2 ${
-                          darkMode ? "text-gray-300" : "text-gray-700"
+                          darkMode ? "text-gray-300" : "text-light-text-primary"
                         }`}>
                           Key Achievements:
                         </h4>
                         <ul className="space-y-1">
                           {exp.achievements.map((achievement, i) => (
                             <li key={i} className={`flex items-start gap-2 text-sm ${
-                              darkMode ? "text-gray-400" : "text-gray-600"
+                              darkMode ? "text-gray-400" : "text-light-text-secondary"
                             }`}>
                               <span className="text-purple-400 mt-1">•</span>
                               <span>{achievement}</span>
@@ -168,7 +179,7 @@ const Experience = ({ darkMode }) => {
                           className={`px-3 py-1 text-sm rounded-full border ${
                             darkMode
                               ? "bg-gray-700/50 border-gray-600 text-gray-300"
-                              : "bg-gray-100/80 border-gray-200 text-gray-700"
+                              : "bg-light-bg-tertiary border-light-border-secondary text-light-text-primary"
                           }`}
                         >
                           {skill}
@@ -178,7 +189,7 @@ const Experience = ({ darkMode }) => {
 
                     <div
                       className={`flex items-center gap-2 text-sm ${
-                        darkMode ? "text-gray-500" : "text-gray-500"
+                        darkMode ? "text-gray-500" : "text-light-text-tertiary"
                       }`}
                     >
                       <Calendar size={16} />
@@ -213,7 +224,7 @@ const Experience = ({ darkMode }) => {
                     className={`group relative rounded-xl p-6 transition-all duration-300 border shadow-lg hover:shadow-xl ${
                       darkMode
                         ? "bg-gray-800/90 border-gray-700/50 hover:bg-gray-700/90"
-                        : "bg-white/90 border-gray-200/50 hover:bg-white"
+                        : "bg-light-surface-primary border-light-border-secondary hover:bg-light-surface-secondary shadow-light-xl"
                     }`}
                   >
                     {/* Gradient overlay on hover */}
@@ -235,7 +246,7 @@ const Experience = ({ darkMode }) => {
                       <div className="text-center space-y-3">
                         <h3
                           className={`text-xl font-semibold ${
-                            darkMode ? "text-gray-200" : "text-gray-800"
+                            darkMode ? "text-gray-200" : "text-light-text-primary"
                           }`}
                         >
                           {exp.company}
@@ -243,7 +254,7 @@ const Experience = ({ darkMode }) => {
 
                         <p
                           className={`text-lg font-medium ${
-                            darkMode ? "text-gray-300" : "text-gray-700"
+                            darkMode ? "text-gray-300" : "text-light-text-secondary"
                           }`}
                         >
                           {exp.role}
@@ -251,7 +262,7 @@ const Experience = ({ darkMode }) => {
 
                         <p
                           className={`text-sm ${
-                            darkMode ? "text-gray-400" : "text-gray-600"
+                            darkMode ? "text-gray-400" : "text-light-text-tertiary"
                           }`}
                         >
                           {exp.description}
@@ -259,7 +270,7 @@ const Experience = ({ darkMode }) => {
 
                         <div
                           className={`flex items-center justify-center gap-2 text-sm ${
-                            darkMode ? "text-gray-400" : "text-gray-500"
+                            darkMode ? "text-gray-400" : "text-light-text-tertiary"
                           }`}
                         >
                           <Calendar size={16} />

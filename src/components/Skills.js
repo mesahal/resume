@@ -112,10 +112,19 @@ const Skills = ({ darkMode }) => {
     <section className="py-16 px-4">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-gradient">
-            Technical Skills
-          </h1>
-          <p className={`text-lg ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+          <div className="relative inline-block">
+            <h1 className={`text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-gradient ${
+              darkMode ? "" : "drop-shadow-sm"
+            }`}>
+              Technical Skills
+            </h1>
+            {!darkMode && (
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+                Technical Skills
+              </div>
+            )}
+          </div>
+          <p className={`text-lg ${darkMode ? "text-gray-400" : "text-light-text-secondary"}`}>
             A comprehensive overview of my technical expertise and proficiency levels
           </p>
         </div>
@@ -129,9 +138,18 @@ const Skills = ({ darkMode }) => {
                 <div className={`p-3 rounded-lg ${category.bgColor} ${category.color} shadow-lg`}>
                   {category.icon}
                 </div>
-                <h2 className={`text-2xl font-bold bg-gradient-to-r ${getCategoryGradient(key)} bg-clip-text text-transparent`}>
-                  {category.title}
-                </h2>
+                <div className="relative">
+                  <h2 className={`text-2xl font-bold bg-gradient-to-r ${getCategoryGradient(key)} bg-clip-text text-transparent ${
+                    darkMode ? "" : "drop-shadow-sm"
+                  }`}>
+                    {category.title}
+                  </h2>
+                  {!darkMode && (
+                    <div className={`absolute inset-0 bg-gradient-to-r ${getCategoryGradient(key)} bg-clip-text text-transparent opacity-15 blur-sm -z-10`}>
+                      {category.title}
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* Skills Grid */}
@@ -142,7 +160,7 @@ const Skills = ({ darkMode }) => {
                     className={`group relative p-4 rounded-lg border transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg ${
                       darkMode
                         ? "bg-gray-800/30 border-gray-700/30 hover:bg-gray-700/40"
-                        : "bg-white/60 border-gray-200/60 hover:bg-gray-50/80"
+                        : "bg-light-surface-primary border-light-border-secondary hover:bg-light-surface-secondary shadow-light-md"
                     }`}
                   >
                     <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${getSkillColor(skill.name, key)} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
@@ -150,7 +168,7 @@ const Skills = ({ darkMode }) => {
                     <h3 className={`text-center font-medium transition-all duration-300 ${
                       darkMode 
                         ? "text-gray-200 group-hover:text-white" 
-                        : "text-gray-800 group-hover:text-gray-900"
+                        : "text-light-text-primary group-hover:text-light-text-primary"
                     } group-hover:scale-105`}>
                       <span className={`bg-gradient-to-r ${getSkillColor(skill.name, key)} bg-clip-text text-transparent`}>
                         {skill.name}
@@ -167,10 +185,10 @@ const Skills = ({ darkMode }) => {
         {/* Additional Info */}
         <div className="mt-16 text-center">
           <div className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg ${
-            darkMode ? "bg-gray-800/50" : "bg-gray-100/80"
+            darkMode ? "bg-gray-800/50" : "bg-light-bg-tertiary shadow-light-md"
           }`}>
             <Zap className="text-yellow-400" size={20} />
-            <span className={`font-medium ${darkMode ? "text-gray-200" : "text-gray-800"}`}>
+            <span className={`font-medium ${darkMode ? "text-gray-200" : "text-light-text-primary"}`}>
               Continuously learning and adapting to new technologies
             </span>
           </div>

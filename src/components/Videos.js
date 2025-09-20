@@ -83,9 +83,20 @@ const Videos = ({ darkMode }) => {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-          Content Creation
-        </h1>
+        <div className="text-center mb-12">
+          <div className="relative inline-block">
+            <h1 className={`text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent ${
+              darkMode ? "" : "drop-shadow-sm"
+            }`}>
+              Content Creation
+            </h1>
+            {!darkMode && (
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+                Content Creation
+              </div>
+            )}
+          </div>
+        </div>
 
         <div className="relative">
           <Swiper
@@ -129,10 +140,10 @@ const Videos = ({ darkMode }) => {
                 className="block"
               >
                 <div
-                  className={`group rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 h-[550px] border flex flex-col cursor-pointer ${
+                  className={`group rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 h-[550px] border flex flex-col cursor-pointer shadow-lg ${
                     darkMode
                       ? "bg-gray-800/50 border-gray-700/50"
-                      : "bg-white/80 border-gray-200/50"
+                      : "bg-white/95 border-gray-300/60 shadow-xl"
                   }`}
                 >
                   <div className="relative aspect-video flex-shrink-0 group">
@@ -164,7 +175,7 @@ const Videos = ({ darkMode }) => {
 
                     <p
                       className={`mb-6 line-clamp-4 flex-grow ${
-                        darkMode ? "text-gray-400" : "text-gray-600"
+                        darkMode ? "text-gray-400" : "text-gray-700"
                       }`}
                     >
                       {video.description}

@@ -42,7 +42,7 @@ img {
 
 /* Light mode styles */
 body {
-  @apply bg-gray-50 text-gray-800;
+  @apply bg-light-bg-primary text-light-text-primary;
 }
 
 /* Dark mode styles */
@@ -134,7 +134,7 @@ body {
 }
 
 .card:not(.dark) {
-  @apply bg-white/80;
+  @apply bg-light-surface-primary shadow-light-lg border border-light-border-primary;
 }
 
 .card::before {

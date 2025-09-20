@@ -150,7 +150,7 @@ const Home = ({ darkMode }) => {
         <div
           key={index}
           className={`absolute ${
-            darkMode ? "text-white/20" : "text-gray-800/20"
+            darkMode ? "text-white/20" : "text-gray-800/10"
           }`}
           style={{
             animation: `float 15s infinite linear`,
@@ -170,7 +170,7 @@ const Home = ({ darkMode }) => {
             <div className="space-y-4">
               <h1
                 className={`text-4xl md:text-6xl font-bold ${
-                  darkMode ? "text-white" : "text-gray-800"
+                  darkMode ? "text-white" : "text-light-text-primary"
                 }`}
               >
                 <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-gradient">
@@ -199,7 +199,7 @@ const Home = ({ darkMode }) => {
                 className={`group relative p-3 rounded-lg transition-all duration-300 hover:scale-110 hover:rotate-2 ${
                   darkMode
                     ? "bg-gray-800/50 border border-gray-700/50 hover:bg-gray-700/50"
-                    : "bg-white/80 border border-gray-200/50 hover:bg-gray-100/80"
+                    : "bg-light-surface-primary border border-light-border-primary hover:bg-light-surface-secondary shadow-light-md"
                 }`}
                 aria-label="Download Resume"
                 title="Download Resume"
@@ -220,7 +220,7 @@ const Home = ({ darkMode }) => {
                     transform hover:scale-110 hover:rotate-[8deg] ${
                       darkMode
                         ? "bg-gray-800/50 border border-gray-700/50 hover:bg-gray-700/50"
-                        : "bg-white/80 border border-gray-200/50 hover:bg-gray-100/80"
+                        : "bg-light-surface-primary border border-light-border-primary hover:bg-light-surface-secondary shadow-light-md"
                     }`}
                   aria-label={link.label}
                 >
@@ -241,19 +241,21 @@ const Home = ({ darkMode }) => {
             <div className="flex flex-col items-center space-y-8">
               {/* Development Environment - Side by Side */}
               <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                <div className={`absolute -inset-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-2xl blur transition duration-1000 group-hover:duration-200 ${
+                  darkMode ? "opacity-75 group-hover:opacity-100" : "opacity-30 group-hover:opacity-50"
+                }`}></div>
                 <div className="relative flex flex-col md:flex-row gap-4">
                   
                   {/* Terminal Panel */}
                   <div className={`w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 ${
-                    darkMode ? "border-gray-700 bg-gray-900" : "border-gray-200 bg-white"
-                  } shadow-2xl p-4 md:p-6`}>
+                    darkMode ? "border-gray-700 bg-gray-900 shadow-terminal-dark" : "border-light-border-secondary bg-light-surface-primary shadow-terminal-light"
+                  } p-4 md:p-6`}>
                     {/* Terminal Header */}
                     <div className="flex items-center space-x-2 mb-4">
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                       <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                       <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                      <span className={`text-sm ml-4 ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                      <span className={`text-sm ml-4 ${darkMode ? "text-gray-400" : "text-light-text-tertiary"}`}>
                         terminal
                       </span>
                     </div>
@@ -281,7 +283,7 @@ const Home = ({ darkMode }) => {
                       
                       {/* Dynamic Role Display - More space */}
                       <div className="pt-2 border-t border-gray-600/30 flex-1 flex flex-col justify-center">
-                        <div className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                        <div className={`${darkMode ? "text-gray-400" : "text-light-text-tertiary"}`}>
                           $ <span className="text-blue-400">whoami</span>
                         </div>
                         {showRoles && (
@@ -300,11 +302,11 @@ const Home = ({ darkMode }) => {
 
                   {/* Browser Panel */}
                   <div className={`w-72 h-60 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 ${
-                    darkMode ? "border-gray-700 bg-gray-900" : "border-gray-200 bg-white"
-                  } shadow-2xl`}>
+                    darkMode ? "border-gray-700 bg-gray-900 shadow-terminal-dark" : "border-light-border-secondary bg-light-surface-primary shadow-terminal-light"
+                  }`}>
                     {/* Browser Header */}
                     <div className={`flex items-center space-x-2 px-4 py-3 border-b ${
-                      darkMode ? "border-gray-700 bg-gray-800" : "border-gray-200 bg-gray-50"
+                      darkMode ? "border-gray-700 bg-gray-800" : "border-light-border-primary bg-light-bg-tertiary"
                     }`}>
                       <div className="flex space-x-2">
                         <div className="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -312,7 +314,7 @@ const Home = ({ darkMode }) => {
                         <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                       </div>
                       <div className={`flex-1 mx-4 px-3 py-1 rounded text-xs ${
-                        darkMode ? "bg-gray-700 text-gray-300" : "bg-white text-gray-600"
+                        darkMode ? "bg-gray-700 text-gray-300" : "bg-light-surface-primary text-light-text-tertiary"
                       }`}>
                         mdsahal.com
                       </div>
@@ -336,7 +338,9 @@ const Home = ({ darkMode }) => {
                 </div>
                 
                 {/* Floating Code Icon */}
-                <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center animate-pulse">
+                <div className={`absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center animate-pulse ${
+                  darkMode ? "shadow-2xl" : "shadow-terminal-light"
+                }`}>
                   <Code2 className="text-white" size={32} />
                 </div>
               </div>

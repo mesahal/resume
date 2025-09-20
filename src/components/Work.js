@@ -147,9 +147,20 @@ const Work = ({ darkMode }) => {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-          Professional Projects
-        </h1>
+        <div className="text-center mb-12">
+          <div className="relative inline-block">
+            <h1 className={`text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent ${
+              darkMode ? "" : "drop-shadow-sm"
+            }`}>
+              Professional Projects
+            </h1>
+            {!darkMode && (
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+                Professional Projects
+              </div>
+            )}
+          </div>
+        </div>
 
         {/* Professional Projects Carousel */}
         <div className="mb-20">
@@ -204,7 +215,7 @@ const Work = ({ darkMode }) => {
                     className={`rounded-xl overflow-hidden transition-all duration-300 ${
                       darkMode
                         ? "bg-gray-800/50 border border-gray-700/50"
-                        : "bg-white/80 border border-gray-200/50"
+                        : "bg-white/95 border border-gray-300/60 shadow-lg"
                     }`}
                   >
                     <div className="relative h-64 overflow-hidden">
@@ -236,7 +247,7 @@ const Work = ({ darkMode }) => {
                       <div className="mb-6">
                         <p
                           className={`text-lg mb-4 ${
-                            darkMode ? "text-gray-300" : "text-gray-600"
+                            darkMode ? "text-gray-300" : "text-gray-700"
                           }`}
                         >
                           {project.description}
@@ -248,7 +259,7 @@ const Work = ({ darkMode }) => {
                               className={`px-3 py-1 text-sm rounded-full border ${
                                 darkMode
                                   ? "bg-gray-700/50 border-gray-600 text-gray-300"
-                                  : "bg-gray-100/80 border-gray-200 text-gray-700"
+                                  : "bg-gray-100 border-gray-300 text-gray-800"
                               }`}
                             >
                               {tech}
@@ -259,7 +270,7 @@ const Work = ({ darkMode }) => {
 
                       <div
                         className={`space-y-2 ${
-                          darkMode ? "text-gray-400" : "text-gray-600"
+                          darkMode ? "text-gray-400" : "text-gray-700"
                         }`}
                       >
                         <h4 className="font-semibold text-purple-400">
@@ -295,7 +306,7 @@ const Work = ({ darkMode }) => {
                       <div className="mt-6 pt-6 border-t border-gray-700/50">
                         <p
                           className={`flex items-center gap-2 font-bold ${
-                            darkMode ? "text-orange-400" : "text-gray-700"
+                            darkMode ? "text-orange-400" : "text-gray-800"
                           }`}
                         >
                           <span className="font-semibold text-purple-400">
