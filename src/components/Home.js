@@ -144,7 +144,7 @@ const Home = ({ darkMode }) => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-20 px-4 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center  pb-20 px-4 overflow-hidden">
       {/* Animated Background Icons */}
       {floatingIcons.map((item, index) => (
         <div
@@ -230,7 +230,7 @@ const Home = ({ darkMode }) => {
             </div>
           </div>
 
-          {/* Right Side - Professional Headshot & Roles */}
+          {/* Right Side - Dual Panel Development Environment */}
           <div
             className={`lg:w-6/12 transform transition-all duration-1000 ${
               showRoles
@@ -239,38 +239,108 @@ const Home = ({ darkMode }) => {
             }`}
           >
             <div className="flex flex-col items-center space-y-8">
-              {/* Professional Headshot */}
+              {/* Development Environment - Side by Side */}
               <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                <div className="relative">
-                  <div className={`w-64 h-64 rounded-full overflow-hidden border-4 ${
-                    darkMode ? "border-gray-700" : "border-gray-200"
+                <div className="absolute -inset-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                <div className="relative flex flex-col md:flex-row gap-4">
+                  
+                  {/* Terminal Panel */}
+                  <div className={`w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 ${
+                    darkMode ? "border-gray-700 bg-gray-900" : "border-gray-200 bg-white"
+                  } shadow-2xl p-4 md:p-6`}>
+                    {/* Terminal Header */}
+                    <div className="flex items-center space-x-2 mb-4">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                      <span className={`text-sm ml-4 ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                        terminal
+                      </span>
+                    </div>
+                    
+                    {/* Terminal Content */}
+                    <div className="text-xs md:text-sm font-mono h-full flex flex-col">
+                      {/* Code Section - Smaller on mobile */}
+                      <div className="space-y-1 md:space-y-2 mb-2 md:mb-4">
+                        <div className={`${darkMode ? "text-green-400" : "text-green-600"}`}>
+                          <span className="text-blue-400">const</span> developer = <span className="text-yellow-400">"Sahal"</span>;
+                        </div>
+                        <div className={`${darkMode ? "text-green-400" : "text-green-600"}`}>
+                          <span className="text-blue-400">let</span> skills = [<span className="text-yellow-400">"Java"</span>, <span className="text-yellow-400">"Spring Boot"</span>];
+                        </div>
+                        <div className={`${darkMode ? "text-green-400" : "text-green-600"}`}>
+                          <span className="text-blue-400">function</span> <span className="text-purple-400">solveProblem</span>() {"{"}
+                        </div>
+                        <div className={`ml-2 md:ml-4 ${darkMode ? "text-green-400" : "text-green-600"}`}>
+                          <span className="text-blue-400">return</span> <span className="text-yellow-400">"Innovation"</span>;
+                        </div>
+                        <div className={`${darkMode ? "text-green-400" : "text-green-600"}`}>
+                          {"}"}
+                        </div>
+                      </div>
+                      
+                      {/* Dynamic Role Display - More space */}
+                      <div className="pt-2 border-t border-gray-600/30 flex-1 flex flex-col justify-center">
+                        <div className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                          $ <span className="text-blue-400">whoami</span>
+                        </div>
+                        {showRoles && (
+                          <div className="mt-2">
+                            <div className={`${darkMode ? "text-green-400" : "text-green-600"}`}>
+                              <span className="text-purple-400">role:</span> <span className={`${roles[currentIndex].color} font-semibold`}>
+                                {currentText}
+                                <span className="animate-blink">_</span>
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Browser Panel */}
+                  <div className={`w-72 h-60 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 ${
+                    darkMode ? "border-gray-700 bg-gray-900" : "border-gray-200 bg-white"
                   } shadow-2xl`}>
-                    <img
-                      src={myLogo}
-                      alt="Md Sahal - Professional Headshot"
-                      className="w-full h-full object-cover"
-                    />
+                    {/* Browser Header */}
+                    <div className={`flex items-center space-x-2 px-4 py-3 border-b ${
+                      darkMode ? "border-gray-700 bg-gray-800" : "border-gray-200 bg-gray-50"
+                    }`}>
+                      <div className="flex space-x-2">
+                        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                      </div>
+                      <div className={`flex-1 mx-4 px-3 py-1 rounded text-xs ${
+                        darkMode ? "bg-gray-700 text-gray-300" : "bg-white text-gray-600"
+                      }`}>
+                        mdsahal.com
+                      </div>
+                    </div>
+                    
+                    {/* Browser Content */}
+                    <div className="h-full flex items-start justify-center pt-16">
+                      {/* Large Role Display - Two Lines */}
+                      {showRoles && (
+                        <div className="text-center">
+                          <div className={`text-2xl md:text-3xl font-bold ${roles[currentIndex].color} mb-1 flex items-center justify-center`}>
+                            {currentText.split(' ')[0]}
+                          </div>
+                          <div className={`text-2xl md:text-3xl font-bold ${roles[currentIndex].color} flex items-center justify-center`}>
+                            {currentText.split(' ').slice(1).join(' ')}
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
-                    <Code2 className="text-white" size={32} />
-                  </div>
+                </div>
+                
+                {/* Floating Code Icon */}
+                <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center animate-pulse">
+                  <Code2 className="text-white" size={32} />
                 </div>
               </div>
 
-              {/* Animated Roles */}
-              <div className="p-6 backdrop-blur-sm">
-                <div className="flex flex-col gap-6 text-5xl">
-                  {showRoles && (
-                    <div className="relative h-16">
-                      <span className={`${roles[currentIndex].color}`}>
-                        {currentText}
-                        <span className="absolute ml-1 w-1 h-full bg-current animate-blink"></span>
-                      </span>
-                    </div>
-                  )}
-                </div>
-              </div>
             </div>
           </div>
         </div>
