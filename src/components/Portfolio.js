@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import Home from "./Home";
 import Experience from "./Experience";
+import Skills from "./Skills";
 import Achievements from "./Achievements";
 import Work from "./Work";
 import Education from "./Education";
@@ -41,6 +42,7 @@ const Portfolio = () => {
   const sections = [
     { id: "home", label: "Home" },
     { id: "experience", label: "Experience" },
+    { id: "skills", label: "Skills" },
     { id: "achievements", label: "Achievements" },
     { id: "work", label: "Projects" },
     { id: "education", label: "Education" },
@@ -65,7 +67,7 @@ const Portfolio = () => {
 
   return (
     <div
-      className={`min-h-screen  bg-cover bg-fixed bg-center before:content-[''] before:absolute before:inset-0 ${
+      className={`min-h-screen bg-cover bg-fixed bg-center before:content-[''] before:absolute before:inset-0 ${
         darkMode ? "before:bg-gray-900/85" : "before:bg-gray-50/90"
       }`}
       style={{ backgroundImage: `url(${bgImage})` }}
@@ -229,6 +231,7 @@ const Portfolio = () => {
             <div className="relative z-10">
               {id === "home" && <Home darkMode={darkMode} />}
               {id === "experience" && <Experience darkMode={darkMode} />}
+              {id === "skills" && <Skills darkMode={darkMode} />}
               {id === "achievements" && <Achievements darkMode={darkMode} />}
               {id === "work" && <Work darkMode={darkMode} />}
               {id === "education" && <Education darkMode={darkMode} />}

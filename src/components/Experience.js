@@ -12,30 +12,33 @@ const Experience = ({ darkMode }) => {
   const experiences = [
     {
       company: "Brain Station 23 PLC.",
-      role: "Software Engineer",
-      duration: "April 2024 - Present",
+      role: "Software Engineer I",
+      duration: "Apr 2024 – Present",
       logo: bs23Logo,
       description:
-        "Working on enterprise-level software solutions using cutting-edge technologies.",
-      skills: ["Spring Boot", "Java", "Microservice", "Fintech"],
+        "Developed and maintained RESTful APIs using Spring Boot, implementing new features and backend fixes.",
+      achievements: [],
+      skills: ["Spring Boot", "RESTful APIs", "Backend Development"],
     },
     {
       company: "Synesis IT Ltd.",
       role: "Trainee Programmer",
-      duration: "August 2023 - March 2024",
+      duration: "Aug 2023 – Mar 2024",
       logo: synesisLogo,
       description:
-        "Developed and maintained web applications, focusing on front-end development and API integration.",
-      skills: ["Spring Boot", "Java", "JavaScript", "React"],
+        "Built RESTful APIs using Spring Boot and fixed frontend issues with React to improve usability.",
+      achievements: [],
+      skills: ["Spring Boot", "React", "RESTful APIs", "Frontend Development"],
     },
     {
-      company: "BdOSN",
+      company: "BdOSN Girls Programming Camp",
       role: "Programming Instructor",
-      duration: "2020 - 2021",
+      duration: "2020 – 2021",
       logo: bdosnLogo,
       description:
-        "Developed and maintained web applications, focusing on front-end development and API integration.",
-      skills: ["Algorithm", "Data Structure", "C", "C++"],
+        "Conducted online programming classes and mentored students in problem-solving.",
+      achievements: [],
+      skills: ["Programming Education", "Mentoring", "Problem Solving"],
     },
   ];
 
@@ -73,15 +76,17 @@ const Experience = ({ darkMode }) => {
         {/* Desktop Timeline */}
         <div className="hidden md:block relative">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-purple-400 via-pink-500 to-red-500 rounded-full"></div>
+          <div className="absolute top-0 left-1/2 w-1 h-full bg-gradient-to-b from-purple-400 via-pink-500 to-red-500 transform -translate-x-1/2"></div>
 
           {/* Experience Cards */}
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <div key={index} className="relative">
                 {/* Timeline Dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-purple-400 to-pink-500">
-                  <div className="absolute inset-0 w-full h-full rounded-full animate-ping bg-gradient-to-r from-purple-400 to-pink-500 opacity-75"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6">
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 border-4 border-white dark:border-gray-300">
+                    <div className="absolute inset-0 w-full h-full rounded-full animate-ping bg-gradient-to-r from-purple-400 to-pink-500 opacity-75"></div>
+                  </div>
                 </div>
 
                 {/* Card */}
@@ -134,6 +139,27 @@ const Experience = ({ darkMode }) => {
                       {exp.description}
                     </p>
 
+                    {/* Key Achievements */}
+                    {exp.achievements && (
+                      <div className="mb-4">
+                        <h4 className={`text-sm font-semibold mb-2 ${
+                          darkMode ? "text-gray-300" : "text-gray-700"
+                        }`}>
+                          Key Achievements:
+                        </h4>
+                        <ul className="space-y-1">
+                          {exp.achievements.map((achievement, i) => (
+                            <li key={i} className={`flex items-start gap-2 text-sm ${
+                              darkMode ? "text-gray-400" : "text-gray-600"
+                            }`}>
+                              <span className="text-purple-400 mt-1">•</span>
+                              <span>{achievement}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
                     {/* Skills */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {exp.skills.map((skill, i) => (
@@ -166,89 +192,85 @@ const Experience = ({ darkMode }) => {
         </div>
 
         {/* Mobile Timeline */}
-        <div className="md:hidden">
-          <div className="relative pl-8">
-            {/* Timeline Line */}
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-400 via-pink-500 to-red-500"></div>
+        <div className="md:hidden relative">
+          {/* Timeline Line */}
+          <div className="absolute top-0 left-8 w-1 h-full bg-gradient-to-b from-purple-400 via-pink-500 to-red-500"></div>
 
-            {/* Experience Cards */}
-            <div className="space-y-8">
-              {experiences.map((exp, index) => (
-                <div key={index} className="relative">
-                  {/* Timeline Dot */}
-                  <div className="absolute left-0 top-8 transform -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-purple-400 to-pink-500">
+          {/* Timeline Items */}
+          <div className="relative">
+            {experiences.map((exp, index) => (
+              <div key={index} className="relative mb-16 last:mb-0">
+                {/* Timeline Dot */}
+                <div className="absolute left-8 transform -translate-x-1/2 w-6 h-6">
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 border-4 border-white dark:border-gray-300">
                     <div className="absolute inset-0 w-full h-full rounded-full animate-ping bg-gradient-to-r from-purple-400 to-pink-500 opacity-75"></div>
                   </div>
+                </div>
 
-                  {/* Card */}
+                {/* Card */}
+                <div className="ml-16">
                   <div
-                    className={`group rounded-xl p-4 transition-all duration-300 border shadow-lg hover:shadow-xl ml-4 ${
+                    className={`group relative rounded-xl p-6 transition-all duration-300 border shadow-lg hover:shadow-xl ${
                       darkMode
-                        ? "bg-gray-800/50 border-gray-700/50 hover:bg-gray-700/50"
-                        : "bg-white/80 border-gray-200/50 hover:bg-gray-50/80"
+                        ? "bg-gray-800/90 border-gray-700/50 hover:bg-gray-700/90"
+                        : "bg-white/90 border-gray-200/50 hover:bg-white"
                     }`}
                   >
-                    <div className="flex items-start gap-3">
-                      <div className="w-12 h-12 rounded-lg overflow-hidden bg-white p-1 flex-shrink-0">
-                        <img
-                          src={exp.logo}
-                          alt={exp.company}
-                          className="w-full h-full object-contain"
-                        />
+                    {/* Gradient overlay on hover */}
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                    {/* Content */}
+                    <div className="relative z-10">
+                      {/* Company Logo */}
+                      <div className="mb-4 flex justify-center">
+                        <div className="w-24 h-24 rounded-full overflow-hidden bg-white p-2 border-4 border-purple-400/20 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                          <img
+                            src={exp.logo}
+                            alt={exp.company}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
                       </div>
-                      <div className="flex-1 min-w-0">
+
+                      <div className="text-center space-y-3">
                         <h3
-                          className={`text-lg font-semibold truncate ${
+                          className={`text-xl font-semibold ${
                             darkMode ? "text-gray-200" : "text-gray-800"
                           }`}
                         >
                           {exp.company}
                         </h3>
+
                         <p
-                          className={`text-base ${
-                            darkMode ? "text-purple-400" : "text-purple-600"
+                          className={`text-lg font-medium ${
+                            darkMode ? "text-gray-300" : "text-gray-700"
                           }`}
                         >
                           {exp.role}
                         </p>
-                      </div>
-                    </div>
 
-                    <p
-                      className={`mt-3 text-sm ${
-                        darkMode ? "text-gray-400" : "text-gray-600"
-                      }`}
-                    >
-                      {exp.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-1.5 mt-3">
-                      {exp.skills.map((skill, i) => (
-                        <span
-                          key={i}
-                          className={`px-2 py-0.5 text-xs rounded-full border ${
-                            darkMode
-                              ? "bg-gray-700/50 border-gray-600 text-gray-300"
-                              : "bg-gray-100/80 border-gray-200 text-gray-700"
+                        <p
+                          className={`text-sm ${
+                            darkMode ? "text-gray-400" : "text-gray-600"
                           }`}
                         >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
+                          {exp.description}
+                        </p>
 
-                    <div
-                      className={`flex items-center gap-1.5 mt-3 text-xs ${
-                        darkMode ? "text-gray-500" : "text-gray-500"
-                      }`}
-                    >
-                      <Calendar size={14} />
-                      {exp.duration}
+                        <div
+                          className={`flex items-center justify-center gap-2 text-sm ${
+                            darkMode ? "text-gray-400" : "text-gray-500"
+                          }`}
+                        >
+                          <Calendar size={16} />
+                          <span>{exp.duration}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

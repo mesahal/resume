@@ -10,10 +10,12 @@ import {
   Code2,
   Binary,
   Cpu,
+  Download,
 } from "lucide-react";
 import { useTypingEffect } from "../components/hooks/useTypingEffect";
 import XLogoB from "../assets/optimized/twitterx--v2.png";
 import XLogo from "../assets/xlogo.svg";
+import myLogo from "../assets/optimized/myLogo.jpeg";
 import { FaWhatsapp } from "react-icons/fa";
 
 const Home = ({ darkMode }) => {
@@ -180,6 +182,7 @@ const Home = ({ darkMode }) => {
                   <span className="text-purple-500 ml-2 relative">{name}</span>
                 </span>
               </h1>
+              
             </div>
 
             <div
@@ -189,6 +192,22 @@ const Home = ({ darkMode }) => {
                   : "opacity-0 translate-y-4"
               }`}
             >
+              {/* Resume Download Button */}
+              <a
+                href="/resume.pdf"
+                download="Md_Sahal_Resume.pdf"
+                className={`group relative p-3 rounded-lg transition-all duration-300 hover:scale-110 hover:rotate-2 ${
+                  darkMode
+                    ? "bg-gray-800/50 border border-gray-700/50 hover:bg-gray-700/50"
+                    : "bg-white/80 border border-gray-200/50 hover:bg-gray-100/80"
+                }`}
+                aria-label="Download Resume"
+                title="Download Resume"
+              >
+                <Download className="w-6 h-6 text-purple-500 group-hover:text-purple-400" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+              </a>
+              
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
@@ -211,7 +230,7 @@ const Home = ({ darkMode }) => {
             </div>
           </div>
 
-          {/* Right Side - Roles */}
+          {/* Right Side - Professional Headshot & Roles */}
           <div
             className={`lg:w-6/12 transform transition-all duration-1000 ${
               showRoles
@@ -219,16 +238,38 @@ const Home = ({ darkMode }) => {
                 : "opacity-0 translate-x-4"
             }`}
           >
-            <div className="p-6 backdrop-blur-sm">
-              <div className="flex flex-col gap-6 text-5xl">
-                {showRoles && (
-                  <div className="relative h-16">
-                    <span className={`${roles[currentIndex].color}`}>
-                      {currentText}
-                      <span className="absolute ml-1 w-1 h-full bg-current animate-blink"></span>
-                    </span>
+            <div className="flex flex-col items-center space-y-8">
+              {/* Professional Headshot */}
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                <div className="relative">
+                  <div className={`w-64 h-64 rounded-full overflow-hidden border-4 ${
+                    darkMode ? "border-gray-700" : "border-gray-200"
+                  } shadow-2xl`}>
+                    <img
+                      src={myLogo}
+                      alt="Md Sahal - Professional Headshot"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                )}
+                  <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
+                    <Code2 className="text-white" size={32} />
+                  </div>
+                </div>
+              </div>
+
+              {/* Animated Roles */}
+              <div className="p-6 backdrop-blur-sm">
+                <div className="flex flex-col gap-6 text-5xl">
+                  {showRoles && (
+                    <div className="relative h-16">
+                      <span className={`${roles[currentIndex].color}`}>
+                        {currentText}
+                        <span className="absolute ml-1 w-1 h-full bg-current animate-blink"></span>
+                      </span>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
