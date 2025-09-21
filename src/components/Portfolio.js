@@ -81,7 +81,7 @@ const Portfolio = () => {
           ${
             darkMode
               ? "bg-gray-900/95 border-gray-800 text-gray-100"
-              : "bg-light-surface-elevated/95 border-light-border-primary text-light-text-primary"
+              : "bg-white/95 border-light-border-primary text-light-text-primary shadow-light-sm"
           }`}
       >
         <div className="container mx-auto px-4">
@@ -98,10 +98,18 @@ const Portfolio = () => {
                 alt="Logo"
                 className="ml-2 w-8 h-8 rounded-full"
               />
-              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+              <span className={`bg-gradient-to-r ${
+                darkMode 
+                  ? "from-purple-400 via-pink-500 to-red-500" 
+                  : "from-purple-600 via-purple-500 to-purple-700"
+              } bg-clip-text text-transparent`}>
                 Md Sahal
               </span>
-              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className={`absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r ${
+                darkMode 
+                  ? "from-purple-400 via-pink-500 to-red-500" 
+                  : "from-purple-600 via-purple-500 to-purple-700"
+              } transition-all duration-300 group-hover:w-full`}></span>
             </Link>
 
             {/* Desktop Navigation */}
@@ -256,7 +264,13 @@ const Portfolio = () => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="p-3 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 text-white hover:from-purple-500 hover:to-pink-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
+                className={`p-3 rounded-full bg-gradient-to-r ${
+                  darkMode 
+                    ? "from-purple-400 to-pink-500 hover:from-purple-500 hover:to-pink-600" 
+                    : "from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800"
+                } text-white transition-colors duration-200 focus:outline-none focus:ring-2 ${
+                  darkMode ? "focus:ring-purple-500" : "focus:ring-purple-600"
+                } focus:ring-opacity-50`}
                 aria-label="Scroll to top"
               >
                 <ChevronUp size={24} />

@@ -154,13 +154,15 @@ const Blog = ({ darkMode }) => {
       <div className="container mx-auto">
         <div className="text-center mb-8 md:mb-12">
           <div className="relative inline-block">
-            <h1 className={`text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent ${
-              darkMode ? "" : "drop-shadow-sm"
+            <h1 className={`text-3xl md:text-4xl font-bold ${
+              darkMode 
+                ? "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
+                : "bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent drop-shadow-sm"
             }`}>
               Blog
             </h1>
             {!darkMode && (
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
                 Blog
               </div>
             )}
@@ -178,8 +180,8 @@ const Blog = ({ darkMode }) => {
             className={`absolute left-2 md:left-0 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full transition-all duration-300 ${
               darkMode
                 ? "bg-gray-800/80 hover:bg-gray-700/80 text-white"
-                : "bg-white/80 hover:bg-white text-gray-800"
-            } shadow-lg hover:shadow-xl`}
+                : "bg-white/80 hover:bg-white text-light-text-primary"
+            } shadow-card-light hover:shadow-card-hover`}
           >
             <ChevronLeft size={20} className="md:w-6 md:h-6" />
           </button>
@@ -189,8 +191,8 @@ const Blog = ({ darkMode }) => {
             className={`absolute right-2 md:right-0 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full transition-all duration-300 ${
               darkMode
                 ? "bg-gray-800/80 hover:bg-gray-700/80 text-white"
-                : "bg-white/80 hover:bg-white text-gray-800"
-            } shadow-lg hover:shadow-xl`}
+                : "bg-white/80 hover:bg-white text-light-text-primary"
+            } shadow-card-light hover:shadow-card-hover`}
           >
             <ChevronRight size={20} className="md:w-6 md:h-6" />
           </button>
@@ -200,10 +202,10 @@ const Blog = ({ darkMode }) => {
             {getCurrentBlogs().map((blog, index) => (
               <article
                 key={`${currentIndex}-${index}-${blog.title}`}
-                className={`group rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 border flex flex-col h-[400px] md:h-[500px] shadow-lg ${
+                className={`group rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 border flex flex-col h-[400px] md:h-[500px] ${
                   darkMode
-                    ? "bg-gray-800/50 border-gray-700/50"
-                    : "bg-white/95 border-gray-300/60 shadow-xl"
+                    ? "bg-gray-800/50 border-gray-700/50 shadow-lg"
+                    : "bg-white/95 border-light-border-secondary shadow-card-light hover:shadow-card-hover"
                 }`}
               >
                 <div className="relative h-40 md:h-48 flex-shrink-0">
@@ -213,17 +215,23 @@ const Blog = ({ darkMode }) => {
                     alt={blog.title}
                     className="w-full h-full object-cover"
                   />
-                  <span className="absolute top-2 right-2 md:top-4 md:right-4 z-20 px-2 py-1 md:px-3 md:py-1 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full text-xs md:text-sm text-white">
+                  <span className={`absolute top-2 right-2 md:top-4 md:right-4 z-20 px-2 py-1 md:px-3 md:py-1 bg-gradient-to-r ${
+                    darkMode 
+                      ? "from-purple-400 to-pink-500" 
+                      : "from-purple-600 to-purple-700"
+                  } rounded-full text-xs md:text-sm text-white`}>
                     {blog.category}
                   </span>
                 </div>
 
                 <div className="p-4 md:p-6 flex flex-col flex-grow">
                   <div className="flex items-start gap-2 mb-2 md:mb-3">
-                    <BookOpen className="text-purple-400 flex-shrink-0 mt-1" size={16} />
+                    <BookOpen className={`flex-shrink-0 mt-1 ${
+                      darkMode ? "text-purple-400" : "text-purple-600"
+                    }`} size={16} />
                     <h3
                       className={`text-base md:text-lg font-semibold leading-tight ${
-                        darkMode ? "text-gray-200" : "text-gray-800"
+                        darkMode ? "text-gray-200" : "text-light-text-primary"
                       }`}
                     >
                       {blog.title}
@@ -233,7 +241,7 @@ const Blog = ({ darkMode }) => {
                   {blog.date && (
                     <p
                       className={`text-xs md:text-sm mb-2 md:mb-3 ${
-                        darkMode ? "text-gray-500" : "text-gray-500"
+                        darkMode ? "text-gray-500" : "text-light-text-tertiary"
                       }`}
                     >
                       {blog.date}
@@ -242,7 +250,7 @@ const Blog = ({ darkMode }) => {
 
                   <p
                     className={`mb-3 md:mb-4 flex-grow text-xs md:text-sm leading-relaxed ${
-                      darkMode ? "text-gray-400" : "text-gray-700"
+                      darkMode ? "text-gray-400" : "text-light-text-secondary"
                     }`}
                   >
                     {blog.excerpt}
@@ -252,7 +260,11 @@ const Blog = ({ darkMode }) => {
                     href={blog.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 md:gap-2 text-purple-400 hover:text-pink-400 transition-colors mt-auto text-sm md:text-base"
+                    className={`inline-flex items-center gap-1 md:gap-2 transition-colors mt-auto text-sm md:text-base ${
+                      darkMode 
+                        ? "text-purple-400 hover:text-pink-400" 
+                        : "text-purple-600 hover:text-purple-700"
+                    }`}
                   >
                     Read More
                     <ExternalLink size={14} className="md:w-4 md:h-4" />
@@ -273,10 +285,10 @@ const Blog = ({ darkMode }) => {
                 }}
                 className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? "bg-purple-500"
+                    ? darkMode ? "bg-purple-500" : "bg-purple-600"
                     : darkMode
                     ? "bg-gray-600 hover:bg-gray-500"
-                    : "bg-gray-300 hover:bg-gray-400"
+                    : "bg-light-border-secondary hover:bg-light-border-primary"
                 }`}
               />
             ))}

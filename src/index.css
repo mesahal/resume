@@ -134,7 +134,7 @@ body {
 }
 
 .card:not(.dark) {
-  @apply bg-light-surface-primary shadow-light-lg border border-light-border-primary;
+  @apply bg-light-surface-primary shadow-card-light border border-light-border-primary;
 }
 
 .card::before {

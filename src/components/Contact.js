@@ -130,13 +130,15 @@ const Contact = ({ darkMode }) => {
       <div className="container mx-auto max-w-4xl">
         <div className="text-center space-y-4 mb-12">
           <div className="relative inline-block">
-            <h1 className={`text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent ${
-              darkMode ? "" : "drop-shadow-sm"
+            <h1 className={`text-4xl font-bold ${
+              darkMode 
+                ? "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
+                : "bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent drop-shadow-sm"
             }`}>
               Get in Touch
             </h1>
             {!darkMode && (
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
                 Get in Touch
               </div>
             )}
@@ -147,17 +149,19 @@ const Contact = ({ darkMode }) => {
         </div>
 
         <div
-          className={`rounded-xl p-8 mb-12 border shadow-lg ${
+          className={`rounded-xl p-8 mb-12 border ${
             darkMode
-              ? "bg-gray-800/50 border-gray-700/50"
-              : "bg-white/95 border-gray-300/60 shadow-xl"
+              ? "bg-gray-800/50 border-gray-700/50 shadow-lg"
+              : "bg-white/95 border-light-border-secondary shadow-card-light"
           }`}
         >
           <div className="flex items-center gap-3 mb-6">
-            <MessageSquare className="text-purple-400" size={24} />
+            <MessageSquare className={`${
+              darkMode ? "text-purple-400" : "text-purple-600"
+            }`} size={24} />
             <h2
               className={`text-2xl font-semibold ${
-                darkMode ? "text-gray-200" : "text-gray-800"
+                darkMode ? "text-gray-200" : "text-light-text-primary"
               }`}
             >
               Send a Message
@@ -176,7 +180,7 @@ const Contact = ({ darkMode }) => {
                 className={`w-full px-4 py-3 rounded-lg border focus:ring-1 focus:ring-purple-400 outline-none transition-colors ${
                   darkMode
                     ? "bg-gray-700/50 border-gray-600 text-gray-200"
-                    : "bg-white border-gray-400 text-gray-800"
+                    : "bg-white border-light-border-primary text-light-text-primary"
                 }`}
               />
               <input
@@ -189,7 +193,7 @@ const Contact = ({ darkMode }) => {
                 className={`w-full px-4 py-3 rounded-lg border focus:ring-1 focus:ring-purple-400 outline-none transition-colors ${
                   darkMode
                     ? "bg-gray-700/50 border-gray-600 text-gray-200"
-                    : "bg-white border-gray-400 text-gray-800"
+                    : "bg-white border-light-border-primary text-light-text-primary"
                 }`}
               />
             </div>
@@ -203,7 +207,7 @@ const Contact = ({ darkMode }) => {
               className={`w-full px-4 py-3 rounded-lg border focus:ring-1 focus:ring-purple-400 outline-none transition-colors ${
                 darkMode
                   ? "bg-gray-700/50 border-gray-600 text-gray-200"
-                  : "bg-white border-gray-300 text-gray-800"
+                  : "bg-white border-light-border-primary text-light-text-primary"
               }`}
             ></textarea>
 
@@ -220,7 +224,11 @@ const Contact = ({ darkMode }) => {
             <button
               type="submit"
               disabled={status.loading}
-              className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-purple-400 to-pink-500 hover:from-purple-500 hover:to-pink-600 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className={`w-full md:w-auto px-8 py-3 bg-gradient-to-r ${
+                darkMode 
+                  ? "from-purple-400 to-pink-500 hover:from-purple-500 hover:to-pink-600" 
+                  : "from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800"
+              } rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2`}
             >
               {status.loading ? (
                 <>
@@ -246,7 +254,7 @@ const Contact = ({ darkMode }) => {
               } ${
                 darkMode
                   ? "bg-gray-800/50 border-gray-700/50"
-                  : "bg-white/90 border-gray-300/60 shadow-md"
+                  : "bg-white/90 border-light-border-primary shadow-card-light"
               }`}
               aria-label={social.name}
             >

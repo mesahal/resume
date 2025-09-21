@@ -136,13 +136,15 @@ const Achievements = ({ darkMode }) => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <div className="relative inline-block">
-            <h1 className={`text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent ${
-              darkMode ? "" : "drop-shadow-sm"
+            <h1 className={`text-4xl font-bold ${
+              darkMode 
+                ? "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
+                : "bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent drop-shadow-sm"
             }`}>
               Competitive Programming Achievements
             </h1>
             {!darkMode && (
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
                 Competitive Programming Achievements
               </div>
             )}
@@ -152,7 +154,7 @@ const Achievements = ({ darkMode }) => {
         <div className="text-center mb-16">
           <div
             className={`text-5xl font-bold ${
-              darkMode ? "text-white" : "text-gray-800"
+              darkMode ? "text-white" : "text-light-text-primary"
             }`}
           >
             Problems Solved:{" "}
@@ -160,7 +162,11 @@ const Achievements = ({ darkMode }) => {
               ref={(el) => countersRef.current.set("total", el)}
               data-platform-id="total"
               data-count={totalProblems}
-              className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"
+              className={`bg-gradient-to-r ${
+                darkMode 
+                  ? "from-purple-400 to-pink-500" 
+                  : "from-purple-600 to-purple-700"
+              } bg-clip-text text-transparent`}
             >
               0
             </span>
@@ -173,10 +179,10 @@ const Achievements = ({ darkMode }) => {
             <div
               key={index}
               data-platform-id={`platform-${index}`}
-              className={`group rounded-xl p-6 transition-all duration-300 border hover:transform hover:scale-[1.02] shadow-lg ${
+              className={`group rounded-xl p-6 transition-all duration-300 border hover:transform hover:scale-[1.02] ${
                 darkMode
-                  ? "bg-gray-800/50 border-gray-700/50 hover:bg-gray-700/50"
-                  : "bg-white/95 border-gray-300/60 hover:bg-gray-50/95 shadow-xl"
+                  ? "bg-gray-800/50 border-gray-700/50 hover:bg-gray-700/50 shadow-lg"
+                  : "bg-white/95 border-light-border-secondary hover:bg-light-surface-secondary shadow-card-light hover:shadow-card-hover"
               }`}
             >
               <div className="flex items-center gap-4 mb-4">
@@ -189,7 +195,7 @@ const Achievements = ({ darkMode }) => {
                 </div>
                 <h3
                   className={`text-xl font-semibold ${
-                    darkMode ? "text-gray-200" : "text-gray-800"
+                    darkMode ? "text-gray-200" : "text-light-text-primary"
                   }`}
                 >
                   {platform.name}
@@ -197,7 +203,11 @@ const Achievements = ({ darkMode }) => {
               </div>
 
               <div className="space-y-2">
-                <p className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                <p className={`text-2xl font-bold bg-gradient-to-r ${
+                  darkMode 
+                    ? "from-purple-400 to-pink-500" 
+                    : "from-purple-600 to-purple-700"
+                } bg-clip-text text-transparent`}>
                   <span
                     ref={(el) =>
                       countersRef.current.set(`platform-${index}`, el)
@@ -220,7 +230,11 @@ const Achievements = ({ darkMode }) => {
                 href={platform.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-4 text-purple-400 hover:text-pink-400 transition-colors"
+                className={`inline-flex items-center gap-2 mt-4 transition-colors ${
+                  darkMode 
+                    ? "text-purple-400 hover:text-pink-400" 
+                    : "text-purple-600 hover:text-purple-700"
+                }`}
               >
                 View Profile
                 <ExternalLink size={16} />
@@ -236,7 +250,11 @@ const Achievements = ({ darkMode }) => {
           <div>
             <div className="flex items-center gap-3 mb-8">
               <MapPin className="w-8 h-8 text-pink-400" />
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+              <h2 className={`text-3xl font-bold bg-gradient-to-r ${
+                darkMode 
+                  ? "from-purple-400 to-pink-500" 
+                  : "from-purple-600 to-purple-700"
+              } bg-clip-text text-transparent`}>
                 Onsite Contest Achievements
               </h2>
             </div>
@@ -244,10 +262,10 @@ const Achievements = ({ darkMode }) => {
               {onsiteContests.map((contest, index) => (
                 <div
                   key={index}
-                  className={`group rounded-xl overflow-hidden transition-all duration-300 border hover:transform hover:scale-[1.02] shadow-lg ${
+                  className={`group rounded-xl overflow-hidden transition-all duration-300 border hover:transform hover:scale-[1.02] ${
                     darkMode
-                      ? "bg-gray-800/50 border-gray-700/50 hover:bg-gray-700/50"
-                      : "bg-white/95 border-gray-300/60 hover:bg-gray-50/95 shadow-xl"
+                      ? "bg-gray-800/50 border-gray-700/50 hover:bg-gray-700/50 shadow-lg"
+                      : "bg-white/95 border-light-border-secondary hover:bg-light-surface-secondary shadow-card-light hover:shadow-card-hover"
                   }`}
                 >
                   <div className="relative h-48">

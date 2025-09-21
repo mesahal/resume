@@ -149,13 +149,15 @@ const Work = ({ darkMode }) => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <div className="relative inline-block">
-            <h1 className={`text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent ${
-              darkMode ? "" : "drop-shadow-sm"
+            <h1 className={`text-4xl font-bold ${
+              darkMode 
+                ? "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
+                : "bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent drop-shadow-sm"
             }`}>
               Professional Projects
             </h1>
             {!darkMode && (
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
                 Professional Projects
               </div>
             )}
@@ -170,8 +172,8 @@ const Work = ({ darkMode }) => {
               className={`absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full transition-all duration-300 ${
                 darkMode
                   ? "bg-gray-800/80 hover:bg-gray-700/80 text-white"
-                  : "bg-white/80 hover:bg-white text-gray-800"
-              } shadow-lg hover:shadow-xl work-swiper-button-prev`}
+                  : "bg-white/80 hover:bg-white text-light-text-primary"
+              } shadow-card-light hover:shadow-card-hover work-swiper-button-prev`}
             >
               <ChevronLeft size={24} />
             </button>
@@ -179,8 +181,8 @@ const Work = ({ darkMode }) => {
               className={`absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full transition-all duration-300 ${
                 darkMode
                   ? "bg-gray-800/80 hover:bg-gray-700/80 text-white"
-                  : "bg-white/80 hover:bg-white text-gray-800"
-              } shadow-lg hover:shadow-xl work-swiper-button-next`}
+                  : "bg-white/80 hover:bg-white text-light-text-primary"
+              } shadow-card-light hover:shadow-card-hover work-swiper-button-next`}
             >
               <ChevronRight size={24} />
             </button>
@@ -215,7 +217,7 @@ const Work = ({ darkMode }) => {
                     className={`rounded-xl overflow-hidden transition-all duration-300 ${
                       darkMode
                         ? "bg-gray-800/50 border border-gray-700/50"
-                        : "bg-white/95 border border-gray-300/60 shadow-lg"
+                        : "bg-white/95 border border-light-border-secondary shadow-card-light"
                     }`}
                   >
                     <div className="relative h-64 overflow-hidden">
@@ -237,7 +239,7 @@ const Work = ({ darkMode }) => {
                         <Code2 className="text-purple-400" size={24} />
                         <h3
                           className={`text-2xl font-bold ${
-                            darkMode ? "text-gray-200" : "text-gray-800"
+                            darkMode ? "text-gray-200" : "text-light-text-primary"
                           }`}
                         >
                           {project.title}
@@ -247,7 +249,7 @@ const Work = ({ darkMode }) => {
                       <div className="mb-6">
                         <p
                           className={`text-lg mb-4 ${
-                            darkMode ? "text-gray-300" : "text-gray-700"
+                            darkMode ? "text-gray-300" : "text-light-text-secondary"
                           }`}
                         >
                           {project.description}
@@ -259,7 +261,7 @@ const Work = ({ darkMode }) => {
                               className={`px-3 py-1 text-sm rounded-full border ${
                                 darkMode
                                   ? "bg-gray-700/50 border-gray-600 text-gray-300"
-                                  : "bg-gray-100 border-gray-300 text-gray-800"
+                                  : "bg-light-bg-tertiary border-light-border-secondary text-light-text-primary"
                               }`}
                             >
                               {tech}
@@ -270,10 +272,12 @@ const Work = ({ darkMode }) => {
 
                       <div
                         className={`space-y-2 ${
-                          darkMode ? "text-gray-400" : "text-gray-700"
+                          darkMode ? "text-gray-400" : "text-light-text-secondary"
                         }`}
                       >
-                        <h4 className="font-semibold text-purple-400">
+                        <h4 className={`font-semibold ${
+                          darkMode ? "text-purple-400" : "text-purple-600"
+                        }`}>
                           Key Features:
                         </h4>
                         <ul className="list-disc list-inside space-y-1">
@@ -286,7 +290,9 @@ const Work = ({ darkMode }) => {
                       {/* Links */}
                       {project.links && project.links.live && project.links.live !== "#" && (
                         <div className="mt-6">
-                          <h4 className="font-semibold text-purple-400 mb-3">
+                          <h4 className={`font-semibold mb-3 ${
+                            darkMode ? "text-purple-400" : "text-purple-600"
+                          }`}>
                             Project Link:
                           </h4>
                           <div className="flex flex-wrap gap-3">
@@ -306,10 +312,12 @@ const Work = ({ darkMode }) => {
                       <div className="mt-6 pt-6 border-t border-gray-700/50">
                         <p
                           className={`flex items-center gap-2 font-bold ${
-                            darkMode ? "text-orange-400" : "text-gray-800"
+                            darkMode ? "text-orange-400" : "text-light-text-primary"
                           }`}
                         >
-                          <span className="font-semibold text-purple-400">
+                          <span className={`font-semibold ${
+                            darkMode ? "text-purple-400" : "text-purple-600"
+                          }`}>
                             Role:
                           </span>
                           {project.role}

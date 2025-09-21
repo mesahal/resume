@@ -35,15 +35,19 @@ const Education = ({ darkMode }) => {
     <section className="py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="flex items-center justify-center gap-3 mb-24">
-          <GraduationCap className="w-10 h-10 text-purple-400" />
+          <GraduationCap className={`w-10 h-10 ${
+            darkMode ? "text-purple-400" : "text-purple-600"
+          }`} />
           <div className="relative">
-            <h1 className={`text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent ${
-              darkMode ? "" : "drop-shadow-sm"
+            <h1 className={`text-4xl font-bold ${
+              darkMode 
+                ? "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
+                : "bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent drop-shadow-sm"
             }`}>
               Educational Journey
             </h1>
             {!darkMode && (
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
                 Educational Journey
               </div>
             )}
@@ -53,7 +57,11 @@ const Education = ({ darkMode }) => {
         {/* Desktop Timeline */}
         <div className="hidden lg:block relative">
           {/* Timeline Line */}
-          <div className="absolute top-0 left-1/2 w-1 h-full bg-gradient-to-b from-purple-400 via-pink-500 to-red-500 transform -translate-x-1/2"></div>
+          <div className={`absolute top-0 left-1/2 w-1 h-full bg-gradient-to-b ${
+            darkMode 
+              ? "from-purple-400 via-pink-500 to-red-500" 
+              : "from-purple-600 via-purple-500 to-purple-700"
+          } transform -translate-x-1/2`}></div>
 
           {/* Timeline Items */}
           <div className="relative">
@@ -70,8 +78,16 @@ const Education = ({ darkMode }) => {
                 >
                   {/* Timeline Dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6">
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 border-4 border-white dark:border-gray-300">
-                      <div className="absolute inset-0 w-full h-full rounded-full animate-ping bg-gradient-to-r from-purple-400 to-pink-500 opacity-75"></div>
+                    <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-gradient-to-r ${
+                      darkMode 
+                        ? "from-purple-400 to-pink-500" 
+                        : "from-purple-600 to-purple-700"
+                    } border-4 border-white dark:border-gray-300`}>
+                      <div className={`absolute inset-0 w-full h-full rounded-full animate-ping bg-gradient-to-r ${
+                        darkMode 
+                          ? "from-purple-400 to-pink-500" 
+                          : "from-purple-600 to-purple-700"
+                      } opacity-75`}></div>
                     </div>
                   </div>
 
@@ -82,20 +98,28 @@ const Education = ({ darkMode }) => {
                     }`}
                   >
                     <div
-                      className={`relative group rounded-xl p-6 transition-all duration-300 border shadow-lg hover:shadow-xl ${
+                      className={`relative group rounded-xl p-6 transition-all duration-300 border ${
                         darkMode
-                          ? "bg-gray-800/90 border-gray-700/50 hover:bg-gray-700/90"
-                          : "bg-white/95 border-gray-300/60 hover:bg-gray-50/95"
+                          ? "bg-gray-800/90 border-gray-700/50 hover:bg-gray-700/90 shadow-lg hover:shadow-xl"
+                          : "bg-white/95 border-light-border-secondary hover:bg-light-surface-secondary shadow-card-light hover:shadow-card-hover"
                       }`}
                     >
                       {/* Gradient overlay on hover */}
-                      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className={`absolute inset-0 rounded-xl bg-gradient-to-r ${
+                        darkMode 
+                          ? "from-purple-500/10 to-pink-500/10" 
+                          : "from-purple-600/10 to-purple-700/10"
+                      } opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
                       {/* Content */}
                       <div className="relative z-10">
                         {/* Institution Logo */}
                         <div className="mb-4 flex justify-center">
-                          <div className="w-24 h-24 rounded-full overflow-hidden bg-white p-2 border-4 border-purple-400/20 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                          <div className={`w-24 h-24 rounded-full overflow-hidden bg-white p-2 border-4 ${
+                            darkMode 
+                              ? "border-purple-400/20" 
+                              : "border-purple-600/20"
+                          } shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
                             <img
                               src={edu.logo}
                               alt={edu.institution}
@@ -106,10 +130,12 @@ const Education = ({ darkMode }) => {
 
                         <div className="text-center space-y-3">
                           <div className="flex items-center justify-center gap-2">
-                            <Icon className="text-purple-400" size={20} />
+                            <Icon className={`${
+                              darkMode ? "text-purple-400" : "text-purple-600"
+                            }`} size={20} />
                             <h3
                               className={`text-xl font-semibold ${
-                                darkMode ? "text-gray-200" : "text-gray-800"
+                                darkMode ? "text-gray-200" : "text-light-text-primary"
                               }`}
                             >
                               {edu.institution}
@@ -118,7 +144,7 @@ const Education = ({ darkMode }) => {
 
                           <p
                             className={`text-lg font-medium ${
-                              darkMode ? "text-gray-300" : "text-gray-800"
+                              darkMode ? "text-gray-300" : "text-light-text-secondary"
                             }`}
                           >
                             {edu.degree}
@@ -134,7 +160,7 @@ const Education = ({ darkMode }) => {
 
                           <div
                             className={`flex items-center justify-center gap-2 text-sm ${
-                              darkMode ? "text-gray-400" : "text-gray-600"
+                              darkMode ? "text-gray-400" : "text-light-text-tertiary"
                             }`}
                           >
                             <Calendar size={16} />
@@ -153,7 +179,11 @@ const Education = ({ darkMode }) => {
         {/* Mobile Timeline */}
         <div className="lg:hidden relative">
           {/* Timeline Line */}
-          <div className="absolute top-0 left-8 w-1 h-full bg-gradient-to-b from-purple-400 via-pink-500 to-red-500"></div>
+          <div className={`absolute top-0 left-8 w-1 h-full bg-gradient-to-b ${
+            darkMode 
+              ? "from-purple-400 via-pink-500 to-red-500" 
+              : "from-purple-600 via-purple-500 to-purple-700"
+          }`}></div>
 
           {/* Timeline Items */}
           <div className="relative">
@@ -163,28 +193,44 @@ const Education = ({ darkMode }) => {
                 <div key={index} className="relative mb-16 last:mb-0">
                   {/* Timeline Dot */}
                   <div className="absolute left-8 transform -translate-x-1/2 w-6 h-6">
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 border-4 border-white dark:border-gray-300">
-                      <div className="absolute inset-0 w-full h-full rounded-full animate-ping bg-gradient-to-r from-purple-400 to-pink-500 opacity-75"></div>
+                    <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-gradient-to-r ${
+                      darkMode 
+                        ? "from-purple-400 to-pink-500" 
+                        : "from-purple-600 to-purple-700"
+                    } border-4 border-white dark:border-gray-300`}>
+                      <div className={`absolute inset-0 w-full h-full rounded-full animate-ping bg-gradient-to-r ${
+                        darkMode 
+                          ? "from-purple-400 to-pink-500" 
+                          : "from-purple-600 to-purple-700"
+                      } opacity-75`}></div>
                     </div>
                   </div>
 
                   {/* Card */}
                   <div className="ml-16">
                     <div
-                      className={`relative group rounded-xl p-6 transition-all duration-300 border shadow-lg hover:shadow-xl ${
+                      className={`relative group rounded-xl p-6 transition-all duration-300 border ${
                         darkMode
-                          ? "bg-gray-800/90 border-gray-700/50 hover:bg-gray-700/90"
-                          : "bg-white/95 border-gray-300/60 hover:bg-gray-50/95"
+                          ? "bg-gray-800/90 border-gray-700/50 hover:bg-gray-700/90 shadow-lg hover:shadow-xl"
+                          : "bg-white/95 border-light-border-secondary hover:bg-light-surface-secondary shadow-card-light hover:shadow-card-hover"
                       }`}
                     >
                       {/* Gradient overlay on hover */}
-                      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className={`absolute inset-0 rounded-xl bg-gradient-to-r ${
+                        darkMode 
+                          ? "from-purple-500/10 to-pink-500/10" 
+                          : "from-purple-600/10 to-purple-700/10"
+                      } opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
                       {/* Content */}
                       <div className="relative z-10">
                         {/* Institution Logo */}
                         <div className="mb-4 flex justify-center">
-                          <div className="w-24 h-24 rounded-full overflow-hidden bg-white p-2 border-4 border-purple-400/20 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                          <div className={`w-24 h-24 rounded-full overflow-hidden bg-white p-2 border-4 ${
+                            darkMode 
+                              ? "border-purple-400/20" 
+                              : "border-purple-600/20"
+                          } shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
                             <img
                               src={edu.logo}
                               alt={edu.institution}
@@ -195,10 +241,12 @@ const Education = ({ darkMode }) => {
 
                         <div className="text-center space-y-3">
                           <div className="flex items-center justify-center gap-2">
-                            <Icon className="text-purple-400" size={20} />
+                            <Icon className={`${
+                              darkMode ? "text-purple-400" : "text-purple-600"
+                            }`} size={20} />
                             <h3
                               className={`text-xl font-semibold ${
-                                darkMode ? "text-gray-200" : "text-gray-800"
+                                darkMode ? "text-gray-200" : "text-light-text-primary"
                               }`}
                             >
                               {edu.institution}
@@ -207,7 +255,7 @@ const Education = ({ darkMode }) => {
 
                           <p
                             className={`text-lg font-medium ${
-                              darkMode ? "text-gray-300" : "text-gray-800"
+                              darkMode ? "text-gray-300" : "text-light-text-secondary"
                             }`}
                           >
                             {edu.degree}
@@ -223,7 +271,7 @@ const Education = ({ darkMode }) => {
 
                           <div
                             className={`flex items-center justify-center gap-2 text-sm ${
-                              darkMode ? "text-gray-400" : "text-gray-600"
+                              darkMode ? "text-gray-400" : "text-light-text-tertiary"
                             }`}
                           >
                             <Calendar size={16} />

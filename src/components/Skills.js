@@ -113,13 +113,15 @@ const Skills = ({ darkMode }) => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <div className="relative inline-block">
-            <h1 className={`text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-gradient ${
-              darkMode ? "" : "drop-shadow-sm"
+            <h1 className={`text-4xl font-bold mb-4 ${
+              darkMode 
+                ? "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-gradient"
+                : "bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent animate-gradient drop-shadow-sm"
             }`}>
               Technical Skills
             </h1>
             {!darkMode && (
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
                 Technical Skills
               </div>
             )}
@@ -157,10 +159,10 @@ const Skills = ({ darkMode }) => {
                 {category.skills.map((skill, index) => (
                   <div
                     key={skill.name}
-                    className={`group relative p-4 rounded-lg border transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg ${
+                    className={`group relative p-4 rounded-lg border transition-all duration-300 hover:transform hover:scale-105 ${
                       darkMode
-                        ? "bg-gray-800/30 border-gray-700/30 hover:bg-gray-700/40"
-                        : "bg-light-surface-primary border-light-border-secondary hover:bg-light-surface-secondary shadow-light-md"
+                        ? "bg-gray-800/30 border-gray-700/30 hover:bg-gray-700/40 hover:shadow-lg"
+                        : "bg-light-surface-primary border-light-border-secondary hover:bg-light-surface-secondary shadow-card-light hover:shadow-card-hover"
                     }`}
                   >
                     <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${getSkillColor(skill.name, key)} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
@@ -185,7 +187,7 @@ const Skills = ({ darkMode }) => {
         {/* Additional Info */}
         <div className="mt-16 text-center">
           <div className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg ${
-            darkMode ? "bg-gray-800/50" : "bg-light-bg-tertiary shadow-light-md"
+            darkMode ? "bg-gray-800/50" : "bg-light-bg-tertiary shadow-card-light"
           }`}>
             <Zap className="text-yellow-400" size={20} />
             <span className={`font-medium ${darkMode ? "text-gray-200" : "text-light-text-primary"}`}>

@@ -25,13 +25,13 @@ const Home = ({ darkMode }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const roles = useMemo(() => [
-    { text: "Software Engineer", color: "text-purple-400" },
-    { text: "Content Creator", color: "text-blue-400" }, // New color
-    { text: "Problem Solver", color: "text-pink-400" },
-    { text: "Full-Stack Web Developer", color: "text-green-400" }, // New color
-    { text: "Competitive Programmer", color: "text-red-400" },
-    { text: "Programming Trainer", color: "text-yellow-400" }, // New color
-  ], []);
+    { text: "Software Engineer", color: darkMode ? "text-purple-400" : "text-purple-600" },
+    { text: "Content Creator", color: darkMode ? "text-blue-400" : "text-blue-600" },
+    { text: "Problem Solver", color: darkMode ? "text-pink-400" : "text-pink-600" },
+    { text: "Full-Stack Web Developer", color: darkMode ? "text-green-400" : "text-green-600" },
+    { text: "Competitive Programmer", color: darkMode ? "text-red-400" : "text-red-600" },
+    { text: "Programming Trainer", color: darkMode ? "text-yellow-400" : "text-yellow-600" },
+  ], [darkMode]);
 
   const [currentText, setCurrentText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
@@ -173,13 +173,19 @@ const Home = ({ darkMode }) => {
                   darkMode ? "text-white" : "text-light-text-primary"
                 }`}
               >
-                <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-gradient">
+                <span className={`bg-gradient-to-r ${
+                  darkMode 
+                    ? "from-purple-400 via-pink-500 to-red-500" 
+                    : "from-purple-600 via-purple-500 to-purple-700"
+                } bg-clip-text text-transparent animate-gradient`}>
                   {greeting}
                 </span>
                 <br />
                 <span className="inline-flex">
                   I am{" "}
-                  <span className="text-purple-500 ml-2 relative">{name}</span>
+                  <span className={`ml-2 relative ${
+                    darkMode ? "text-purple-500" : "text-purple-600"
+                  }`}>{name}</span>
                 </span>
               </h1>
               
@@ -199,12 +205,16 @@ const Home = ({ darkMode }) => {
                 className={`group relative p-3 rounded-lg transition-all duration-300 hover:scale-110 hover:rotate-2 ${
                   darkMode
                     ? "bg-gray-800/50 border border-gray-700/50 hover:bg-gray-700/50"
-                    : "bg-light-surface-primary border border-light-border-primary hover:bg-light-surface-secondary shadow-light-md"
+                    : "bg-light-surface-primary border border-light-border-primary hover:bg-light-surface-secondary shadow-card-light"
                 }`}
                 aria-label="Download Resume"
                 title="Download Resume"
               >
-                <Download className="w-6 h-6 text-purple-500 group-hover:text-purple-400" />
+                <Download className={`w-6 h-6 ${
+                  darkMode 
+                    ? "text-purple-500 group-hover:text-purple-400" 
+                    : "text-purple-600 group-hover:text-purple-700"
+                }`} />
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
               </a>
               
@@ -220,7 +230,7 @@ const Home = ({ darkMode }) => {
                     transform hover:scale-110 hover:rotate-[8deg] ${
                       darkMode
                         ? "bg-gray-800/50 border border-gray-700/50 hover:bg-gray-700/50"
-                        : "bg-light-surface-primary border border-light-border-primary hover:bg-light-surface-secondary shadow-light-md"
+                        : "bg-light-surface-primary border border-light-border-primary hover:bg-light-surface-secondary shadow-card-light"
                     }`}
                   aria-label={link.label}
                 >
@@ -241,7 +251,11 @@ const Home = ({ darkMode }) => {
             <div className="flex flex-col items-center space-y-8">
               {/* Development Environment - Side by Side */}
               <div className="relative group">
-                <div className={`absolute -inset-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-2xl blur transition duration-1000 group-hover:duration-200 ${
+                <div className={`absolute -inset-4 bg-gradient-to-r ${
+                  darkMode 
+                    ? "from-purple-400 via-pink-500 to-red-500" 
+                    : "from-purple-600 via-purple-500 to-purple-700"
+                } rounded-2xl blur transition duration-1000 group-hover:duration-200 ${
                   darkMode ? "opacity-75 group-hover:opacity-100" : "opacity-30 group-hover:opacity-50"
                 }`}></div>
                 <div className="relative flex flex-col md:flex-row gap-4">
@@ -301,7 +315,7 @@ const Home = ({ darkMode }) => {
                   </div>
 
                   {/* Browser Panel */}
-                  <div className={`w-72 h-60 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 ${
+                  <div className={`w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 ${
                     darkMode ? "border-gray-700 bg-gray-900 shadow-terminal-dark" : "border-light-border-secondary bg-light-surface-primary shadow-terminal-light"
                   }`}>
                     {/* Browser Header */}
@@ -338,8 +352,12 @@ const Home = ({ darkMode }) => {
                 </div>
                 
                 {/* Floating Code Icon */}
-                <div className={`absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center animate-pulse ${
-                  darkMode ? "shadow-2xl" : "shadow-terminal-light"
+                <div className={`absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-r ${
+                  darkMode 
+                    ? "from-purple-400 to-pink-500" 
+                    : "from-purple-600 to-purple-700"
+                } rounded-full flex items-center justify-center animate-pulse ${
+                  darkMode ? "shadow-2xl" : "shadow-purple-lg"
                 }`}>
                   <Code2 className="text-white" size={32} />
                 </div>

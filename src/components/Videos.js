@@ -85,13 +85,15 @@ const Videos = ({ darkMode }) => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <div className="relative inline-block">
-            <h1 className={`text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent ${
-              darkMode ? "" : "drop-shadow-sm"
+            <h1 className={`text-4xl font-bold ${
+              darkMode 
+                ? "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
+                : "bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent drop-shadow-sm"
             }`}>
               Content Creation
             </h1>
             {!darkMode && (
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
                 Content Creation
               </div>
             )}
@@ -140,10 +142,10 @@ const Videos = ({ darkMode }) => {
                 className="block"
               >
                 <div
-                  className={`group rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 h-[550px] border flex flex-col cursor-pointer shadow-lg ${
+                  className={`group rounded-xl overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 h-[550px] border flex flex-col cursor-pointer ${
                     darkMode
-                      ? "bg-gray-800/50 border-gray-700/50"
-                      : "bg-white/95 border-gray-300/60 shadow-xl"
+                      ? "bg-gray-800/50 border-gray-700/50 shadow-lg"
+                      : "bg-white/95 border-light-border-secondary shadow-card-light hover:shadow-card-hover"
                   }`}
                 >
                   <div className="relative aspect-video flex-shrink-0 group">
@@ -163,10 +165,12 @@ const Videos = ({ darkMode }) => {
 
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="flex items-start gap-2 mb-4">
-                      <Youtube className="text-purple-400 flex-shrink-0 mt-1" size={20} />
+                      <Youtube className={`flex-shrink-0 mt-1 ${
+                        darkMode ? "text-purple-400" : "text-purple-600"
+                      }`} size={20} />
                       <h3
                         className={`text-xl font-semibold line-clamp-2 ${
-                          darkMode ? "text-gray-200" : "text-gray-800"
+                          darkMode ? "text-gray-200" : "text-light-text-primary"
                         }`}
                       >
                         {video.title}
@@ -175,13 +179,17 @@ const Videos = ({ darkMode }) => {
 
                     <p
                       className={`mb-6 line-clamp-4 flex-grow ${
-                        darkMode ? "text-gray-400" : "text-gray-700"
+                        darkMode ? "text-gray-400" : "text-light-text-secondary"
                       }`}
                     >
                       {video.description}
                     </p>
 
-                    <div className="inline-flex items-center gap-2 text-purple-400 hover:text-pink-400 transition-colors mt-auto">
+                    <div className={`inline-flex items-center gap-2 transition-colors mt-auto ${
+                      darkMode 
+                        ? "text-purple-400 hover:text-pink-400" 
+                        : "text-purple-600 hover:text-purple-700"
+                    }`}>
                       Watch Video
                       <ExternalLink size={16} />
                     </div>
@@ -197,8 +205,8 @@ const Videos = ({ darkMode }) => {
             className={`absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full transition-all duration-300 ${
               darkMode
                 ? "bg-gray-800/80 hover:bg-gray-700/80 text-white"
-                : "bg-white/80 hover:bg-white text-gray-800"
-            } shadow-lg hover:shadow-xl videos-swiper-button-prev`}
+                : "bg-white/80 hover:bg-white text-light-text-primary"
+            } shadow-card-light hover:shadow-card-hover videos-swiper-button-prev`}
           >
             <ChevronLeft size={24} />
           </button>
@@ -206,8 +214,8 @@ const Videos = ({ darkMode }) => {
             className={`absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full transition-all duration-300 ${
               darkMode
                 ? "bg-gray-800/80 hover:bg-gray-700/80 text-white"
-                : "bg-white/80 hover:bg-white text-gray-800"
-            } shadow-lg hover:shadow-xl videos-swiper-button-next`}
+                : "bg-white/80 hover:bg-white text-light-text-primary"
+            } shadow-card-light hover:shadow-card-hover videos-swiper-button-next`}
           >
             <ChevronRight size={24} />
           </button>
