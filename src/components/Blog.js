@@ -209,7 +209,7 @@ const Blog = ({ darkMode }) => {
                 }`}
               >
                 <div className="relative h-40 md:h-48 flex-shrink-0">
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent z-10" />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${darkMode ? "from-gray-900" : "from-gray-800/40"} to-transparent z-10`} />
                   <img
                     src={blog.image}
                     alt={blog.title}

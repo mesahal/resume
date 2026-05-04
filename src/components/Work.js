@@ -309,7 +309,7 @@ const Work = ({ darkMode }) => {
                         </div>
                       )}
 
-                      <div className="mt-6 pt-6 border-t border-gray-700/50">
+                      <div className={`mt-6 pt-6 border-t ${darkMode ? "border-gray-700/50" : "border-light-border-primary"}`}>
                         <p
                           className={`flex items-center gap-2 font-bold ${
                             darkMode ? "text-orange-400" : "text-light-text-primary"
