@@ -56,7 +56,7 @@ const Experience = ({ darkMode }) => {
         <div
           key={index}
           className={`absolute ${
-            darkMode ? "text-white/10" : "text-gray-800/5"
+            darkMode ? "text-white/10" : "text-gray-500/15"
           }`}
           style={{
             animation: `float 15s infinite linear`,

@@ -180,7 +180,7 @@ const Contact = ({ darkMode }) => {
                 className={`w-full px-4 py-3 rounded-lg border focus:ring-1 focus:ring-purple-400 outline-none transition-colors ${
                   darkMode
                     ? "bg-gray-700/50 border-gray-600 text-gray-200"
-                    : "bg-white border-light-border-primary text-light-text-primary"
+                    : "bg-white border-light-border-secondary text-light-text-primary placeholder-light-text-muted"
                 }`}
               />
               <input
@@ -193,7 +193,7 @@ const Contact = ({ darkMode }) => {
                 className={`w-full px-4 py-3 rounded-lg border focus:ring-1 focus:ring-purple-400 outline-none transition-colors ${
                   darkMode
                     ? "bg-gray-700/50 border-gray-600 text-gray-200"
-                    : "bg-white border-light-border-primary text-light-text-primary"
+                    : "bg-white border-light-border-secondary text-light-text-primary placeholder-light-text-muted"
                 }`}
               />
             </div>
@@ -207,7 +207,7 @@ const Contact = ({ darkMode }) => {
               className={`w-full px-4 py-3 rounded-lg border focus:ring-1 focus:ring-purple-400 outline-none transition-colors ${
                 darkMode
                   ? "bg-gray-700/50 border-gray-600 text-gray-200"
-                  : "bg-white border-light-border-primary text-light-text-primary"
+                  : "bg-white border-light-border-secondary text-light-text-primary placeholder-light-text-muted"
               }`}
             ></textarea>
 

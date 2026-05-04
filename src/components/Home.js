@@ -262,7 +262,7 @@ const Home = ({ darkMode }) => {
                   
                   {/* Terminal Panel */}
                   <div className={`w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 ${
-                    darkMode ? "border-gray-700 bg-gray-900 shadow-terminal-dark" : "border-light-border-secondary bg-light-surface-primary shadow-terminal-light"
+                    darkMode ? "border-gray-700 bg-gray-900 shadow-terminal-dark" : "border-light-border-secondary bg-light-bg-tertiary shadow-terminal-light"
                   } p-4 md:p-6`}>
                     {/* Terminal Header */}
                     <div className="flex items-center space-x-2 mb-4">
@@ -279,16 +279,16 @@ const Home = ({ darkMode }) => {
                       {/* Code Section - Smaller on mobile */}
                       <div className="space-y-1 md:space-y-2 mb-2 md:mb-4">
                         <div className={`${darkMode ? "text-green-400" : "text-green-600"}`}>
-                          <span className="text-blue-400">const</span> developer = <span className="text-yellow-400">"Sahal"</span>;
+                          <span className={darkMode ? "text-blue-400" : "text-blue-600"}>const</span> developer = <span className={darkMode ? "text-yellow-400" : "text-amber-600"}>"Sahal"</span>;
                         </div>
                         <div className={`${darkMode ? "text-green-400" : "text-green-600"}`}>
-                          <span className="text-blue-400">let</span> skills = [<span className="text-yellow-400">"Java"</span>, <span className="text-yellow-400">"Spring Boot"</span>];
+                          <span className={darkMode ? "text-blue-400" : "text-blue-600"}>let</span> skills = [<span className={darkMode ? "text-yellow-400" : "text-amber-600"}>"Java"</span>, <span className={darkMode ? "text-yellow-400" : "text-amber-600"}>"Spring Boot"</span>];
                         </div>
                         <div className={`${darkMode ? "text-green-400" : "text-green-600"}`}>
-                          <span className="text-blue-400">function</span> <span className="text-purple-400">solveProblem</span>() {"{"}
+                          <span className={darkMode ? "text-blue-400" : "text-blue-600"}>function</span> <span className={darkMode ? "text-purple-400" : "text-purple-600"}>solveProblem</span>() {"{"}
                         </div>
                         <div className={`ml-2 md:ml-4 ${darkMode ? "text-green-400" : "text-green-600"}`}>
-                          <span className="text-blue-400">return</span> <span className="text-yellow-400">"Innovation"</span>;
+                          <span className={darkMode ? "text-blue-400" : "text-blue-600"}>return</span> <span className={darkMode ? "text-yellow-400" : "text-amber-600"}>"Innovation"</span>;
                         </div>
                         <div className={`${darkMode ? "text-green-400" : "text-green-600"}`}>
                           {"}"}
@@ -296,14 +296,14 @@ const Home = ({ darkMode }) => {
                       </div>
                       
                       {/* Dynamic Role Display - More space */}
-                      <div className="pt-2 border-t border-gray-600/30 flex-1 flex flex-col justify-center">
+                      <div className={`pt-2 border-t ${darkMode ? "border-gray-600/30" : "border-light-border-secondary"} flex-1 flex flex-col justify-center`}>
                         <div className={`${darkMode ? "text-gray-400" : "text-light-text-tertiary"}`}>
-                          $ <span className="text-blue-400">whoami</span>
+                          $ <span className={darkMode ? "text-blue-400" : "text-blue-600"}>whoami</span>
                         </div>
                         {showRoles && (
                           <div className="mt-2">
                             <div className={`${darkMode ? "text-green-400" : "text-green-600"}`}>
-                              <span className="text-purple-400">role:</span> <span className={`${roles[currentIndex].color} font-semibold`}>
+                              <span className={darkMode ? "text-purple-400" : "text-purple-600"}>role:</span> <span className={`${roles[currentIndex].color} font-semibold`}>
                                 {currentText}
                                 <span className="animate-blink">_</span>
                               </span>
@@ -316,7 +316,7 @@ const Home = ({ darkMode }) => {
 
                   {/* Browser Panel */}
                   <div className={`w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 ${
-                    darkMode ? "border-gray-700 bg-gray-900 shadow-terminal-dark" : "border-light-border-secondary bg-light-surface-primary shadow-terminal-light"
+                    darkMode ? "border-gray-700 bg-gray-900 shadow-terminal-dark" : "border-light-border-secondary bg-light-bg-secondary shadow-terminal-light"
                   }`}>
                     {/* Browser Header */}
                     <div className={`flex items-center space-x-2 px-4 py-3 border-b ${
