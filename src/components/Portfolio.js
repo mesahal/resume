@@ -68,7 +68,9 @@ const Portfolio = () => {
   return (
     <div
       className={`min-h-screen bg-cover bg-fixed bg-center before:content-[''] before:absolute before:inset-0 ${
-        darkMode ? "before:bg-gray-900/85" : "before:bg-light-bg-overlay"
+        darkMode
+          ? "before:bg-gray-900/85"
+          : "before:bg-gradient-to-br before:from-slate-50/98 before:via-white/97 before:to-purple-50/95"
       }`}
       style={{ backgroundImage: `url(${bgImage})` }}
     >
@@ -222,7 +224,7 @@ const Portfolio = () => {
 
       {/* Sections */}
       <div className={darkMode ? "dark" : ""}>
-        {sections.map(({ id }) => (
+        {sections.map(({ id }, index) => (
           <motion.section
             key={id}
             id={id}
@@ -230,7 +232,10 @@ const Portfolio = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             className={`min-h-screen pt-24 px-4 md:px-6 lg:px-8 relative overflow-hidden
-              ${darkMode ? "text-gray-100" : "text-light-text-primary"}`}
+              ${darkMode
+                ? "text-gray-100"
+                : `text-light-text-primary ${index % 2 === 0 ? "bg-white/85" : "bg-slate-50/90"}`
+              }`}
           >
             {/* Floating Icons Background */}
             <FloatingIcons darkMode={darkMode} />

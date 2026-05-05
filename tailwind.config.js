@@ -27,8 +27,8 @@ module.exports = {
           },
           // Border Colors
           border: {
-            primary: "#E2E8F0",      // Primary borders - light blue-gray
-            secondary: "#CBD5E1",    // Secondary borders - medium blue-gray
+            primary: "#CBD5E1",      // Primary borders - medium blue-gray
+            secondary: "#B0BCCC",    // Secondary borders - darker blue-gray
             accent: "#C4B5FD",       // Accent borders - light purple
             focus: "#7C3AED",        // Focus borders - purple
           },
@@ -90,8 +90,8 @@ module.exports = {
         "custom-light": "0 4px 6px rgba(0, 0, 0, 0.1)",
         "custom-dark": "0 10px 15px rgba(0, 0, 0, 0.3)",
         // New sophisticated shadow system
-        "light-sm": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-        "light-md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        "light-sm": "0 2px 6px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+        "light-md": "0 6px 12px -2px rgba(0, 0, 0, 0.12), 0 3px 6px -1px rgba(0, 0, 0, 0.07)",
         "light-lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
         "light-xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
         // Purple-tinted shadows for brand elements
@@ -103,8 +103,8 @@ module.exports = {
         "terminal-light": "0 8px 25px -5px rgba(124, 58, 237, 0.25), 0 4px 10px -3px rgba(124, 58, 237, 0.1)",
         "terminal-dark": "0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)",
         // Card shadows
-        "card-light": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-        "card-hover": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        "card-light": "0 4px 12px 0 rgba(0, 0, 0, 0.10), 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
+        "card-hover": "0 8px 24px -4px rgba(0, 0, 0, 0.14), 0 4px 8px -2px rgba(124, 58, 237, 0.10)",
       },
     },
   },
