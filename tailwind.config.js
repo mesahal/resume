@@ -9,26 +9,26 @@ module.exports = {
         light: {
           // Background Colors
           bg: {
-            primary: "#FEFEFE",      // Main background - pure white with warmth
-            secondary: "#F8FAFC",    // Secondary background - very light blue-gray
-            tertiary: "#F1F5F9",     // Tertiary background - light blue-gray
-            card: "#FFFFFF",         // Card background - pure white
-            cardHover: "#F8FAFC",    // Card hover state
-            overlay: "rgba(255, 255, 255, 0.60)", // Background overlay - more transparent
+            primary: "#FFFDF9",      // Main background - warm ivory white
+            secondary: "#FDF7F0",    // Secondary background - warm cream
+            tertiary: "#F5EDE3",     // Tertiary background - warm light peach
+            card: "#FFFEFB",         // Card background - warm white
+            cardHover: "#FDF7F0",    // Card hover state - warm cream
+            overlay: "rgba(255, 252, 245, 0.85)", // Background overlay - warm, more opaque
           },
           // Text Colors
           text: {
             primary: "#0F172A",      // Primary text - deep navy
-            secondary: "#1E293B",    // Secondary text - dark slate blue
-            tertiary: "#475569",     // Tertiary text - medium slate blue
-            muted: "#64748B",        // Muted text - light slate blue
+            secondary: "#1E293B",    // Secondary text - dark slate
+            tertiary: "#5C5149",     // Tertiary text - warm medium brown
+            muted: "#7A6B60",        // Muted text - warm muted brown
             accent: "#7C3AED",       // Accent text - rich purple
             inverse: "#FFFFFF",      // Inverse text for dark backgrounds
           },
           // Border Colors
           border: {
-            primary: "#CBD5E1",      // Primary borders - medium blue-gray
-            secondary: "#B0BCCC",    // Secondary borders - darker blue-gray
+            primary: "#D4C0AB",      // Primary borders - warm taupe-gray
+            secondary: "#BFAA97",    // Secondary borders - warmer medium tan
             accent: "#C4B5FD",       // Accent borders - light purple
             focus: "#7C3AED",        // Focus borders - purple
           },
@@ -43,17 +43,17 @@ module.exports = {
           },
           // Surface Colors
           surface: {
-            primary: "#FFFFFF",      // Primary surface
-            secondary: "#F8FAFC",    // Secondary surface
-            tertiary: "#F1F5F9",     // Tertiary surface
-            elevated: "#FFFFFF",     // Elevated surface (modals, dropdowns)
+            primary: "#FFFEFB",      // Primary surface - warm white
+            secondary: "#FDF7F0",    // Secondary surface - warm cream
+            tertiary: "#F5EDE3",     // Tertiary surface - warm light peach
+            elevated: "#FFFEFB",     // Elevated surface (modals, dropdowns)
           },
           // Interactive Colors
           interactive: {
             primary: "#7C3AED",      // Primary interactive
             primaryHover: "#6D28D9", // Primary hover
-            secondary: "#F1F5F9",    // Secondary interactive
-            secondaryHover: "#E2E8F0", // Secondary hover
+            secondary: "#F5EDE3",    // Secondary interactive - warm peach
+            secondaryHover: "#ECDBC9", // Secondary hover - warm amber-beige
             disabled: "#94A3B8",     // Disabled state
           },
           // Gradient Colors

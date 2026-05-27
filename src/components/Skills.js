@@ -6,6 +6,7 @@ import {
   Smartphone,
   Cpu,
   Zap,
+  Bot,
 } from "lucide-react";
 
 const Skills = ({ darkMode }) => {
@@ -62,7 +63,20 @@ const Skills = ({ darkMode }) => {
         { name: "CI/CD", level: 80, years: "2+ years" },
       ],
     },
-  
+    aitools: {
+      title: "AI Development Tools",
+      icon: <Bot size={24} />,
+      color: "text-violet-400",
+      bgColor: "bg-violet-500/10",
+      skills: [
+        { name: "Claude Code", level: 92, years: "1+ years" },
+        { name: "Cursor", level: 88, years: "1+ years" },
+        { name: "Windsurf", level: 83, years: "< 1 year" },
+        { name: "ChatGPT", level: 86, years: "2+ years" },
+        { name: "Antigravity", level: 78, years: "< 1 year" },
+      ],
+    },
+
   };
 
   const getCategoryGradient = (categoryKey) => {
@@ -71,6 +85,7 @@ const Skills = ({ darkMode }) => {
       backend: "from-green-400 via-emerald-500 to-teal-500",
       database: "from-orange-400 via-red-500 to-pink-500",
       tools: "from-purple-400 via-indigo-500 to-blue-500",
+      aitools: "from-violet-400 via-purple-500 to-fuchsia-500",
     };
     return gradients[categoryKey] || "from-gray-400 to-gray-600";
   };
@@ -102,6 +117,13 @@ const Skills = ({ darkMode }) => {
         "AWS": "from-orange-400 to-yellow-500",
         "Linux": "from-yellow-500 to-orange-500",
         "CI/CD": "from-purple-500 to-pink-500",
+      },
+      aitools: {
+        "Claude Code": "from-violet-500 to-purple-600",
+        "Cursor": "from-blue-500 to-violet-500",
+        "Windsurf": "from-cyan-400 to-blue-500",
+        "ChatGPT": "from-emerald-400 to-teal-500",
+        "Antigravity": "from-fuchsia-500 to-pink-500",
       },
     };
     
