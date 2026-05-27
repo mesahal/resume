@@ -6,6 +6,7 @@ import {
   Database,
   Globe,
   Server,
+  Smartphone,
 } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -139,6 +140,27 @@ const Work = ({ darkMode }) => {
       icons: [
         { Icon: Globe, color: "text-purple-400" },
         { Icon: Code2, color: "text-pink-400" },
+      ],
+    },
+    {
+      title: "Butterfly",
+      description:
+        "An iOS e-commerce application built with Swift and SwiftUI. Features a modern, fluid shopping experience with native iOS design patterns and smooth animations.",
+      image: myLogo,
+      technologies: ["Swift", "SwiftUI", "iOS", "Xcode"],
+      features: [
+        "E-commerce product catalog",
+        "Native SwiftUI interface",
+        "iOS design patterns",
+        "Smooth animations",
+      ],
+      role: "iOS Developer (Solo)",
+      links: {
+        live: "#",
+      },
+      icons: [
+        { Icon: Smartphone, color: "text-gray-400" },
+        { Icon: Code2, color: "text-orange-400" },
       ],
     },
   ];

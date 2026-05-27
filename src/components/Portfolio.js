@@ -70,7 +70,7 @@ const Portfolio = () => {
       className={`min-h-screen bg-cover bg-fixed bg-center before:content-[''] before:absolute before:inset-0 ${
         darkMode
           ? "before:bg-gray-900/85"
-          : "before:bg-gradient-to-br before:from-slate-50/98 before:via-white/97 before:to-purple-50/95"
+          : "before:bg-gradient-to-br before:from-amber-50/97 before:via-orange-50/93 before:to-rose-50/92"
       }`}
       style={{ backgroundImage: `url(${bgImage})` }}
     >
@@ -234,7 +234,7 @@ const Portfolio = () => {
             className={`min-h-screen pt-24 px-4 md:px-6 lg:px-8 relative overflow-hidden
               ${darkMode
                 ? "text-gray-100"
-                : `text-light-text-primary ${index % 2 === 0 ? "bg-white/85" : "bg-slate-50/90"}`
+                : `text-light-text-primary ${index % 2 === 0 ? "bg-amber-50/70" : "bg-orange-50/60"}`
               }`}
           >
             {/* Floating Icons Background */}
