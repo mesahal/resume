@@ -21,7 +21,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import cityremit from "../assets/optimized/cityremit.png";
 import convay from "../assets/convay.webp";
-import healthcare from "../assets/optimized/healthcare.png";
 import omnizia from "../assets/optimized/Omnizia.webp";
 import myLogo from "../assets/optimized/myLogo.webp";
 
@@ -31,14 +30,14 @@ const Work = ({ darkMode }) => {
     {
       title: "Omnizia",
       description:
-        "A business management platform where I developed backend microservices and integrated CI/CD pipelines for deployment.",
+        "Medical data intelligence platform. Developed automated data-processing jobs and integrated OpenAI APIs to generate AI-driven summaries and intelligent workflows.",
       image: omnizia,
-      technologies: ["Java", "Spring Boot", "PostgreSQL", "React"],
+      technologies: ["Java", "Spring Boot", "OpenAI API", "Spring Batch"],
       features: [
-        "Backend microservices development",
-        "CI/CD pipeline integration",
-        "Business management features",
-        "Scalable architecture",
+        "Automated data-processing jobs",
+        "OpenAI API integration",
+        "AI-driven summaries",
+        "Intelligent workflows",
       ],
       role: "Backend Developer",
       links: {
@@ -53,14 +52,14 @@ const Work = ({ darkMode }) => {
     {
       title: "City Remit",
       description:
-        "Financial application for transferring remittances from Malaysia. Built APIs, added features, and fixed backend bugs.",
+        "Built REST APIs and backend services for secure financial remittance operations and transaction management from Malaysia.",
       image: cityremit,
       technologies: ["Java", "Spring Boot", "Oracle", "Vue"],
       features: [
         "Remittance transfer system",
-        "API development",
-        "Backend bug fixes",
-        "Feature enhancements",
+        "REST API development",
+        "Secure transaction management",
+        "Backend services",
       ],
       role: "Backend Developer",
       links: {
@@ -75,14 +74,14 @@ const Work = ({ darkMode }) => {
     {
       title: "Convay",
       description:
-        "Video conferencing platform for individuals and enterprises. Developed RESTful APIs and fixed frontend bugs.",
+        "Engineered APIs for meeting scheduling, recording alerts, and enterprise communication workflows for a video conferencing platform.",
       image: convay,
       technologies: ["Java", "Spring Boot", "MySQL", "React"],
       features: [
-        "Video conferencing platform",
-        "RESTful API development",
-        "Frontend bug fixes",
-        "Enterprise features",
+        "Meeting scheduling APIs",
+        "Recording alert system",
+        "Enterprise communication workflows",
+        "Session stability improvements",
       ],
       role: "Full Stack Developer",
       links: {
@@ -92,33 +91,6 @@ const Work = ({ darkMode }) => {
         { Icon: Globe, color: "text-purple-400" },
         { Icon: Server, color: "text-yellow-400" },
         { Icon: Database, color: "text-cyan-400" },
-      ],
-    },
-    {
-      title: "Health Care",
-      description:
-        "Doctor appointment platform with BMDC validation. Implemented backend features and collaborated with frontend team.",
-      image: healthcare,
-      technologies: [
-        "Java",
-        "Spring Boot",
-        "PostgreSQL",
-        "React",
-      ],
-      features: [
-        "Doctor appointment booking",
-        "BMDC validation system",
-        "Backend feature implementation",
-        "Frontend collaboration",
-      ],
-      role: "Full Stack Developer",
-      links: {
-        live: "https://github.com/LnD-Brainstaiton/Health-Care",
-      },
-      icons: [
-        { Icon: Database, color: "text-emerald-400" },
-        { Icon: Server, color: "text-pink-400" },
-        { Icon: Globe, color: "text-orange-400" },
       ],
     },
     {
@@ -143,24 +115,108 @@ const Work = ({ darkMode }) => {
       ],
     },
     {
-      title: "Butterfly",
+      title: "Butterfly Group Bangladesh",
       description:
-        "An iOS e-commerce application built with Swift and SwiftUI. Features a modern, fluid shopping experience with native iOS design patterns and smooth animations.",
+        "Contributing to iOS application development, API integration, UI implementation, and deployment workflows for an e-commerce platform.",
       image: myLogo,
       technologies: ["Swift", "SwiftUI", "iOS", "Xcode"],
       features: [
-        "E-commerce product catalog",
-        "Native SwiftUI interface",
-        "iOS design patterns",
-        "Smooth animations",
+        "iOS application development",
+        "API integration",
+        "UI implementation",
+        "Deployment workflows",
       ],
-      role: "iOS Developer (Solo)",
+      role: "iOS Developer",
       links: {
-        live: "#",
+        live: "https://www.butterflygroupbd.com/",
       },
       icons: [
         { Icon: Smartphone, color: "text-gray-400" },
         { Icon: Code2, color: "text-orange-400" },
+      ],
+    },
+    {
+      title: "JU Alumni Association",
+      description:
+        "Developed and maintained responsive organizational platform features, user workflows, and modern web interfaces for Jahangirnagar University alumni.",
+      image: myLogo,
+      technologies: ["React", "Spring Boot", "Java", "MySQL"],
+      features: [
+        "Responsive platform features",
+        "User workflow development",
+        "Modern web interfaces",
+        "Organizational management",
+      ],
+      role: "Full Stack Developer",
+      links: {
+        live: "https://alumni.iitju.edu.bd/",
+      },
+      icons: [
+        { Icon: Globe, color: "text-blue-400" },
+        { Icon: Code2, color: "text-green-400" },
+      ],
+    },
+    {
+      title: "Cardinal Tour & Travel",
+      description:
+        "Developed and optimized a responsive travel and tourism platform with modern UI and performance-focused implementation.",
+      image: myLogo,
+      technologies: ["React", "JavaScript", "Tailwind CSS"],
+      features: [
+        "Responsive travel platform",
+        "Modern UI/UX design",
+        "Performance optimization",
+        "Tourism features",
+      ],
+      role: "Frontend Developer",
+      links: {
+        live: "https://cardinaltourtravel.com/",
+      },
+      icons: [
+        { Icon: Globe, color: "text-cyan-400" },
+        { Icon: Code2, color: "text-blue-400" },
+      ],
+    },
+    {
+      title: "RWWS",
+      description:
+        "Built and customized web solutions for organizational management and public information delivery for an NGO platform.",
+      image: myLogo,
+      technologies: ["React", "JavaScript", "Tailwind CSS"],
+      features: [
+        "Organizational management",
+        "Public information delivery",
+        "Custom web solutions",
+        "NGO platform features",
+      ],
+      role: "Frontend Developer",
+      links: {
+        live: "https://www.rwws.org.bd/",
+      },
+      icons: [
+        { Icon: Globe, color: "text-emerald-400" },
+        { Icon: Code2, color: "text-teal-400" },
+      ],
+    },
+    {
+      title: "Amla Kamla",
+      description:
+        "Developed a responsive modern web application using rapid prototyping and AI-assisted development workflows.",
+      image: myLogo,
+      technologies: ["React", "Tailwind CSS", "JavaScript"],
+      features: [
+        "Responsive web application",
+        "Modern UI design",
+        "AI-assisted development",
+        "Rapid prototyping",
+      ],
+      role: "Frontend Developer",
+      links: {
+        live: "https://amla-kamla.netlify.app/",
+      },
+      icons: [
+        { Icon: Globe, color: "text-violet-400" },
+        { Icon: Code2, color: "text-pink-400" },
       ],
     },
   ];

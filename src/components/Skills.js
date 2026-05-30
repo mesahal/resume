@@ -23,7 +23,8 @@ const Skills = ({ darkMode }) => {
         { name: "HTML5", level: 95, years: "5+ years" },
         { name: "CSS3", level: 90, years: "5+ years" },
         { name: "Tailwind CSS", level: 88, years: "2+ years" },
-       
+        { name: "Vue", level: 78, years: "1+ years" },
+        { name: "Thymeleaf", level: 75, years: "1+ years" },
       ],
     },
     backend: {
@@ -37,6 +38,8 @@ const Skills = ({ darkMode }) => {
         { name: "RESTful APIs", level: 88, years: "3+ years" },
         { name: "Microservices", level: 85, years: "2+ years" },
         { name: "Spring Security", level: 80, years: "2+ years" },
+        { name: "Spring Data JPA", level: 85, years: "2+ years" },
+        { name: "Spring Batch", level: 78, years: "1+ years" },
       ],
     },
     database: {
@@ -61,6 +64,9 @@ const Skills = ({ darkMode }) => {
         { name: "AWS", level: 75, years: "1+ years" },
         { name: "Linux", level: 80, years: "3+ years" },
         { name: "CI/CD", level: 80, years: "2+ years" },
+        { name: "GitHub Actions", level: 78, years: "1+ years" },
+        { name: "Jenkins", level: 78, years: "1+ years" },
+        { name: "Maven", level: 82, years: "2+ years" },
       ],
     },
     aitools: {
@@ -74,6 +80,10 @@ const Skills = ({ darkMode }) => {
         { name: "Windsurf", level: 83, years: "< 1 year" },
         { name: "ChatGPT", level: 86, years: "2+ years" },
         { name: "Antigravity", level: 78, years: "< 1 year" },
+        { name: "Gemini", level: 82, years: "1+ years" },
+        { name: "OpenAI API", level: 85, years: "1+ years" },
+        { name: "Veo3", level: 72, years: "< 1 year" },
+        { name: "NanoBanana", level: 70, years: "< 1 year" },
       ],
     },
 
@@ -98,6 +108,8 @@ const Skills = ({ darkMode }) => {
         "HTML5": "from-orange-400 to-red-500",
         "CSS3": "from-blue-500 to-indigo-500",
         "Tailwind CSS": "from-cyan-400 to-blue-500",
+        "Vue": "from-green-500 to-emerald-400",
+        "Thymeleaf": "from-green-600 to-teal-500",
       },
       backend: {
         "Java": "from-orange-500 to-red-500",
@@ -105,6 +117,8 @@ const Skills = ({ darkMode }) => {
         "RESTful APIs": "from-blue-500 to-purple-500",
         "Microservices": "from-purple-500 to-pink-500",
         "Spring Security": "from-green-600 to-teal-500",
+        "Spring Data JPA": "from-indigo-500 to-blue-500",
+        "Spring Batch": "from-teal-500 to-cyan-500",
       },
       database: {
         "MySQL": "from-orange-400 to-yellow-500",
@@ -117,6 +131,9 @@ const Skills = ({ darkMode }) => {
         "AWS": "from-orange-400 to-yellow-500",
         "Linux": "from-yellow-500 to-orange-500",
         "CI/CD": "from-purple-500 to-pink-500",
+        "GitHub Actions": "from-gray-500 to-slate-600",
+        "Jenkins": "from-red-600 to-orange-500",
+        "Maven": "from-amber-500 to-orange-500",
       },
       aitools: {
         "Claude Code": "from-violet-500 to-purple-600",
@@ -124,6 +141,10 @@ const Skills = ({ darkMode }) => {
         "Windsurf": "from-cyan-400 to-blue-500",
         "ChatGPT": "from-emerald-400 to-teal-500",
         "Antigravity": "from-fuchsia-500 to-pink-500",
+        "Gemini": "from-blue-400 to-sky-500",
+        "OpenAI API": "from-teal-400 to-emerald-500",
+        "Veo3": "from-indigo-500 to-violet-500",
+        "NanoBanana": "from-yellow-400 to-orange-400",
       },
     };
     

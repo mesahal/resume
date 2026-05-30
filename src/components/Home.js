@@ -94,7 +94,7 @@ const Home = ({ darkMode }) => {
     },
     {
       icon: <Mail size={20} />,
-      href: "mailto:me.sahal2000@gmail.com",
+      href: "mailto:mdsahal.info@gmail.com",
       label: "Email",
       color: "text-red-400",
     },

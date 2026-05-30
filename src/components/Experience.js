@@ -16,9 +16,16 @@ const Experience = ({ darkMode }) => {
       duration: "Apr 2024 – Present",
       logo: bs23Logo,
       description:
-        "Developed and maintained RESTful APIs using Spring Boot, implementing new features and backend fixes.",
-      achievements: [],
-      skills: ["Spring Boot", "RESTful APIs", "Backend Development"],
+        "Engineered and maintained 50+ RESTful APIs, architected reward systems, built CI/CD pipelines, and currently developing a medical data intelligence platform with OpenAI API integration.",
+      achievements: [
+        "Engineered and maintained 50+ RESTful APIs using Spring Boot, Oracle, and Vue.",
+        "Architected a reward point system based on user transactions and referrals, improving user engagement.",
+        "Designed and implemented admin panel APIs and Thymeleaf-based UI for operational monitoring.",
+        "Built CI/CD pipelines using Jenkins and Docker Compose, reducing deployment time from hours to minutes.",
+        "Currently developing Omnizia, a medical data intelligence platform using Spring Batch and OpenAI API.",
+        "Leveraged AI-assisted tools (Claude, Cursor, Windsurf, ChatGPT) for rapid debugging, prototyping, and delivery acceleration.",
+      ],
+      skills: ["Java", "Spring Boot", "Oracle", "Vue", "Jenkins", "Docker", "OpenAI API", "CI/CD"],
     },
     {
       company: "Synesis IT Ltd.",
@@ -26,9 +33,13 @@ const Experience = ({ darkMode }) => {
       duration: "Aug 2023 – Mar 2024",
       logo: synesisLogo,
       description:
-        "Built RESTful APIs using Spring Boot and fixed frontend issues with React to improve usability.",
-      achievements: [],
-      skills: ["Spring Boot", "React", "RESTful APIs", "Frontend Development"],
+        "Contributed to Convay, an enterprise video conferencing platform. Diagnosed real-time issues, developed meeting scheduling APIs, and implemented a recording alert system.",
+      achievements: [
+        "Contributed to Convay, an enterprise-grade video conferencing platform.",
+        "Diagnosed and resolved real-time issues, improving session stability and user experience.",
+        "Developed meeting scheduling APIs and implemented a recording alert system.",
+      ],
+      skills: ["Java", "Spring Boot", "React", "RESTful APIs", "Frontend Development"],
     },
     {
       company: "BdOSN Girls Programming Camp",
@@ -36,9 +47,12 @@ const Experience = ({ darkMode }) => {
       duration: "2020 – 2021",
       logo: bdosnLogo,
       description:
-        "Conducted online programming classes and mentored students in problem-solving.",
-      achievements: [],
-      skills: ["Programming Education", "Mentoring", "Problem Solving"],
+        "Mentored 100+ students in algorithmic problem-solving and competitive programming through online programming classes.",
+      achievements: [
+        "Mentored 100+ students in algorithmic problem-solving and competitive programming.",
+        "Conducted online programming classes covering algorithms and data structures.",
+      ],
+      skills: ["Algorithms", "Competitive Programming", "Mentoring", "Problem Solving"],
     },
   ];
 
