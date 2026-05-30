@@ -84,7 +84,7 @@ const Contact = ({ darkMode }) => {
     {
       name: "Email",
       icon: <Mail size={24} />,
-      link: "mailto:me.sahal2000@gmail.com",
+      link: "mailto:mdsahal.info@gmail.com",
       color: "hover:text-red-400",
     },
     {
