@@ -24,6 +24,11 @@ import cityremit from "../assets/optimized/cityremit.png";
 import convay from "../assets/convay.webp";
 import omnizia from "../assets/optimized/Omnizia.webp";
 import myLogo from "../assets/optimized/myLogo.webp";
+import butterflyImg from "../assets/projects/butterfly.png";
+import juAlumniImg from "../assets/projects/ju-alumni.png";
+import cardinalImg from "../assets/projects/cardinal.png";
+import rwwsImg from "../assets/projects/rwws.png";
+import amlaKamlaImg from "../assets/projects/amla-kamla.png";
 
 const Work = ({ darkMode }) => {
 
@@ -119,7 +124,7 @@ const Work = ({ darkMode }) => {
       title: "Butterfly Group Bangladesh",
       description:
         "Contributing to iOS application development, API integration, UI implementation, and deployment workflows for an e-commerce platform.",
-      image: myLogo,
+      image: butterflyImg,
       technologies: ["Swift", "SwiftUI", "iOS", "Xcode"],
       features: [
         "iOS application development",
@@ -140,7 +145,7 @@ const Work = ({ darkMode }) => {
       title: "JU Alumni Association",
       description:
         "Developed and maintained responsive organizational platform features, user workflows, and modern web interfaces for Jahangirnagar University alumni.",
-      image: myLogo,
+      image: juAlumniImg,
       technologies: ["React", "Spring Boot", "Java", "MySQL"],
       features: [
         "Responsive platform features",
@@ -161,7 +166,7 @@ const Work = ({ darkMode }) => {
       title: "Cardinal Tour & Travel",
       description:
         "Developed and optimized a responsive travel and tourism platform with modern UI and performance-focused implementation.",
-      image: myLogo,
+      image: cardinalImg,
       technologies: ["React", "JavaScript", "Tailwind CSS"],
       features: [
         "Responsive travel platform",
@@ -182,7 +187,7 @@ const Work = ({ darkMode }) => {
       title: "RWWS",
       description:
         "Built and customized web solutions for organizational management and public information delivery for an NGO platform.",
-      image: myLogo,
+      image: rwwsImg,
       technologies: ["React", "JavaScript", "Tailwind CSS"],
       features: [
         "Organizational management",
@@ -203,7 +208,7 @@ const Work = ({ darkMode }) => {
       title: "Amla Kamla",
       description:
         "Developed a responsive modern web application using rapid prototyping and AI-assisted development workflows.",
-      image: myLogo,
+      image: amlaKamlaImg,
       technologies: ["React", "Tailwind CSS", "JavaScript"],
       features: [
         "Responsive web application",
