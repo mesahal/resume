@@ -1,4 +1,5 @@
 import React from "react";
+import SectionHeading from "./ui/SectionHeading";
 import {
   Code2,
   ChevronLeft,
@@ -225,22 +226,7 @@ const Work = ({ darkMode }) => {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <div className="relative inline-block">
-            <h1 className={`text-4xl font-bold ${
-              darkMode 
-                ? "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
-                : "bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent drop-shadow-sm"
-            }`}>
-              Professional Projects
-            </h1>
-            {!darkMode && (
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
-                Professional Projects
-              </div>
-            )}
-          </div>
-        </div>
+        <SectionHeading title="Professional Projects" darkMode={darkMode} />
 
         {/* Professional Projects Carousel */}
         <div className="mb-20">
@@ -312,7 +298,7 @@ const Work = ({ darkMode }) => {
                       </div>
                     </div>
 
-                    <div className="p-8">
+                    <div className="p-6">
                       <div className="flex items-center gap-3 mb-4">
                         <Code2 className="text-purple-400" size={24} />
                         <h3
@@ -358,9 +344,12 @@ const Work = ({ darkMode }) => {
                         }`}>
                           Key Features:
                         </h4>
-                        <ul className="list-disc list-inside space-y-1">
+                        <ul className="space-y-1">
                           {project.features.map((feature, i) => (
-                            <li key={i}>{feature}</li>
+                            <li key={i} className="flex items-start gap-2">
+                              <span className="text-purple-400 mt-0.5">•</span>
+                              <span>{feature}</span>
+                            </li>
                           ))}
                         </ul>
                       </div>
@@ -378,7 +367,7 @@ const Work = ({ darkMode }) => {
                               href={project.links.live}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors duration-200"
+                              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors duration-200 text-white bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800`}
                             >
                               <Globe size={16} />
                               View Project

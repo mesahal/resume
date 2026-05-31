@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SectionHeading from "./ui/SectionHeading";
 import {
   Github,
   Linkedin,
@@ -128,25 +129,11 @@ const Contact = ({ darkMode }) => {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center space-y-4 mb-12">
-          <div className="relative inline-block">
-            <h1 className={`text-4xl font-bold ${
-              darkMode 
-                ? "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
-                : "bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent drop-shadow-sm"
-            }`}>
-              Get in Touch
-            </h1>
-            {!darkMode && (
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
-                Get in Touch
-              </div>
-            )}
-          </div>
-          <p className={darkMode ? "text-gray-400" : "text-light-text-secondary"}>
-            Let's connect and create something amazing together
-          </p>
-        </div>
+        <SectionHeading
+          title="Get In Touch"
+          subtitle="Let's connect and create something amazing together"
+          darkMode={darkMode}
+        />
 
         <div
           className={`rounded-xl p-8 mb-12 border ${
@@ -177,7 +164,7 @@ const Contact = ({ darkMode }) => {
                 onChange={handleChange}
                 placeholder="Your Name"
                 required
-                className={`w-full px-4 py-3 rounded-lg border focus:ring-1 focus:ring-purple-400 outline-none transition-colors ${
+                className={`w-full px-4 py-3 rounded-xl border focus:ring-1 focus:ring-purple-400 outline-none transition-colors ${
                   darkMode
                     ? "bg-gray-700/50 border-gray-600 text-gray-200"
                     : "bg-white border-light-border-secondary text-light-text-primary placeholder-light-text-muted"
@@ -190,7 +177,7 @@ const Contact = ({ darkMode }) => {
                 onChange={handleChange}
                 placeholder="Your Email"
                 required
-                className={`w-full px-4 py-3 rounded-lg border focus:ring-1 focus:ring-purple-400 outline-none transition-colors ${
+                className={`w-full px-4 py-3 rounded-xl border focus:ring-1 focus:ring-purple-400 outline-none transition-colors ${
                   darkMode
                     ? "bg-gray-700/50 border-gray-600 text-gray-200"
                     : "bg-white border-light-border-secondary text-light-text-primary placeholder-light-text-muted"
@@ -204,7 +191,7 @@ const Contact = ({ darkMode }) => {
               placeholder="Your Message"
               required
               rows="4"
-              className={`w-full px-4 py-3 rounded-lg border focus:ring-1 focus:ring-purple-400 outline-none transition-colors ${
+              className={`w-full px-4 py-3 rounded-xl border focus:ring-1 focus:ring-purple-400 outline-none transition-colors ${
                 darkMode
                   ? "bg-gray-700/50 border-gray-600 text-gray-200"
                   : "bg-white border-light-border-secondary text-light-text-primary placeholder-light-text-muted"

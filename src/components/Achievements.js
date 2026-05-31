@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import SectionHeading from "./ui/SectionHeading";
 import { ExternalLink, Medal, MapPin } from "lucide-react";
 import codeforces from "../assets/codeforces.webp";
 import leetcode from "../assets/optimized/leetcode.png";
@@ -134,22 +135,7 @@ const Achievements = ({ darkMode }) => {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <div className="relative inline-block">
-            <h1 className={`text-4xl font-bold ${
-              darkMode 
-                ? "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
-                : "bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent drop-shadow-sm"
-            }`}>
-              Competitive Programming Achievements
-            </h1>
-            {!darkMode && (
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
-                Competitive Programming Achievements
-              </div>
-            )}
-          </div>
-        </div>
+        <SectionHeading title="Competitive Programming" darkMode={darkMode} />
 
         <div className="text-center mb-16">
           <div
@@ -249,12 +235,10 @@ const Achievements = ({ darkMode }) => {
           {/* Onsite Contests */}
           <div>
             <div className="flex items-center gap-3 mb-8">
-              <MapPin className="w-8 h-8 text-pink-400" />
-              <h2 className={`text-3xl font-bold bg-gradient-to-r ${
-                darkMode 
-                  ? "from-purple-400 to-pink-500" 
-                  : "from-purple-600 to-purple-700"
-              } bg-clip-text text-transparent`}>
+              <MapPin className="w-7 h-7 text-purple-400" />
+              <h2 className={`text-2xl font-bold tracking-tight ${
+                darkMode ? "text-white" : "text-gray-900"
+              }`}>
                 Onsite Contest Achievements
               </h2>
             </div>
@@ -276,11 +260,11 @@ const Achievements = ({ darkMode }) => {
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute bottom-4 left-4 right-4 z-20">
-                      <h3 className="text-xl font-bold text-orange-400 mb-1">
+                      <h3 className="text-lg font-bold text-white mb-1">
                         {contest.contest}
                       </h3>
-                      <p className="text-gray-300 mb-2">{contest.university}</p>
-                      <p className="text-yellow-400 font-semibold flex items-center gap-2">
+                      <p className="text-gray-300 text-sm mb-2">{contest.university}</p>
+                      <p className="text-purple-300 font-semibold flex items-center gap-2">
                         <Medal size={16} />
                         Ranked {contest.position}th
                       </p>

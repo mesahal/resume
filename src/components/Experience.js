@@ -5,6 +5,7 @@ import {
   Binary,
   Cpu,
 } from "lucide-react";
+import SectionHeading from "./ui/SectionHeading";
 import bs23Logo from "../assets/optimized/brain_station_23_logo.jpeg";
 import synesisLogo from "../assets/optimized/synesis_it_limited_logo.jpeg";
 import bdosnLogo from "../assets/optimized/bdosn_logo.jpeg";
@@ -83,22 +84,7 @@ const Experience = ({ darkMode }) => {
       ))}
 
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <div className="relative inline-block">
-            <h1 className={`text-4xl font-bold ${
-              darkMode 
-                ? "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
-                : "bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent drop-shadow-sm"
-            }`}>
-              Professional Journey
-            </h1>
-            {!darkMode && (
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
-                Professional Journey
-              </div>
-            )}
-          </div>
-        </div>
+        <SectionHeading title="Professional Journey" darkMode={darkMode} />
 
         {/* Desktop Timeline */}
         <div className="hidden md:block relative">

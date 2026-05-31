@@ -1,4 +1,5 @@
 import { GraduationCap, Calendar, Building2, BookOpen } from "lucide-react";
+import SectionHeading from "./ui/SectionHeading";
 import ju from "../assets/optimized/ju.png";
 import ndc from "../assets/optimized/ndc.png";
 import frii from "../assets/optimized/frii.jpeg";
@@ -34,25 +35,7 @@ const Education = ({ darkMode }) => {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div className="flex items-center justify-center gap-3 mb-24">
-          <GraduationCap className={`w-10 h-10 ${
-            darkMode ? "text-purple-400" : "text-purple-600"
-          }`} />
-          <div className="relative">
-            <h1 className={`text-4xl font-bold ${
-              darkMode 
-                ? "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
-                : "bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent drop-shadow-sm"
-            }`}>
-              Educational Journey
-            </h1>
-            {!darkMode && (
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
-                Educational Journey
-              </div>
-            )}
-          </div>
-        </div>
+        <SectionHeading title="Education" darkMode={darkMode} />
 
         {/* Desktop Timeline */}
         <div className="hidden lg:block relative">

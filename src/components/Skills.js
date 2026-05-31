@@ -1,4 +1,5 @@
 import React from "react";
+import SectionHeading from "./ui/SectionHeading";
 import {
   Database,
   Globe,
@@ -154,25 +155,11 @@ const Skills = ({ darkMode }) => {
   return (
     <section className="py-16 px-4">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <div className="relative inline-block">
-            <h1 className={`text-4xl font-bold mb-4 ${
-              darkMode 
-                ? "bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent animate-gradient"
-                : "bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent animate-gradient drop-shadow-sm"
-            }`}>
-              Technical Skills
-            </h1>
-            {!darkMode && (
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 bg-clip-text text-transparent opacity-20 blur-sm -z-10">
-                Technical Skills
-              </div>
-            )}
-          </div>
-          <p className={`text-lg ${darkMode ? "text-gray-400" : "text-light-text-secondary"}`}>
-            A comprehensive overview of my technical expertise and proficiency levels
-          </p>
-        </div>
+        <SectionHeading
+          title="Technical Skills"
+          subtitle="A comprehensive overview of my technical expertise and proficiency levels"
+          darkMode={darkMode}
+        />
 
         {/* All Skills Categories */}
         <div className="space-y-12">
@@ -180,44 +167,35 @@ const Skills = ({ darkMode }) => {
             <div key={key} className="space-y-6">
               {/* Category Header */}
               <div className="flex items-center gap-4 mb-6">
-                <div className={`p-3 rounded-lg ${category.bgColor} ${category.color} shadow-lg`}>
+                <div className={`p-3 rounded-xl ${category.bgColor} ${category.color} shadow-md`}>
                   {category.icon}
                 </div>
-                <div className="relative">
-                  <h2 className={`text-2xl font-bold bg-gradient-to-r ${getCategoryGradient(key)} bg-clip-text text-transparent ${
-                    darkMode ? "" : "drop-shadow-sm"
-                  }`}>
-                    {category.title}
-                  </h2>
-                  {!darkMode && (
-                    <div className={`absolute inset-0 bg-gradient-to-r ${getCategoryGradient(key)} bg-clip-text text-transparent opacity-15 blur-sm -z-10`}>
-                      {category.title}
-                    </div>
-                  )}
-                </div>
+                <h2 className={`text-2xl font-bold tracking-tight ${
+                  darkMode ? "text-white" : "text-gray-900"
+                }`}>
+                  {category.title}
+                </h2>
               </div>
 
               {/* Skills Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 {category.skills.map((skill, index) => (
                   <div
                     key={skill.name}
-                    className={`group relative p-4 rounded-lg border transition-all duration-300 hover:transform hover:scale-105 ${
+                    className={`group relative p-4 rounded-xl border transition-all duration-300 hover:transform hover:scale-105 ${
                       darkMode
                         ? "bg-gray-800/30 border-gray-700/30 hover:bg-gray-700/40 hover:shadow-lg"
                         : "bg-light-surface-primary border-light-border-secondary hover:bg-light-surface-secondary shadow-card-light hover:shadow-card-hover"
                     }`}
                   >
-                    <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${getSkillColor(skill.name, key)} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
+                    <div className={`absolute inset-0 rounded-xl bg-gradient-to-r ${getSkillColor(skill.name, key)} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
                     <div className="relative z-10">
-                    <h3 className={`text-center font-medium transition-all duration-300 ${
-                      darkMode 
-                        ? "text-gray-200 group-hover:text-white" 
-                        : "text-light-text-primary group-hover:text-light-text-primary"
-                    } group-hover:scale-105`}>
-                      <span className={`bg-gradient-to-r ${getSkillColor(skill.name, key)} bg-clip-text text-transparent`}>
-                        {skill.name}
-                      </span>
+                    <h3 className={`text-center font-medium transition-all duration-300 group-hover:scale-105 ${
+                      darkMode
+                        ? "text-gray-100 group-hover:text-white"
+                        : "text-gray-800 group-hover:text-gray-900"
+                    }`}>
+                      {skill.name}
                     </h3>
                     </div>
                   </div>

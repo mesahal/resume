@@ -169,7 +169,7 @@ const Home = ({ darkMode }) => {
           <div className="lg:w-6/12 space-y-4">
             <div className="space-y-4">
               <h1
-                className={`text-4xl md:text-6xl font-bold ${
+                className={`text-4xl md:text-6xl font-bold tracking-tight ${
                   darkMode ? "text-white" : "text-light-text-primary"
                 }`}
               >
@@ -215,7 +215,7 @@ const Home = ({ darkMode }) => {
                     ? "text-purple-500 group-hover:text-purple-400" 
                     : "text-purple-600 group-hover:text-purple-700"
                 }`} />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
               </a>
               
               {socialLinks.map((link) => (
@@ -227,7 +227,7 @@ const Home = ({ darkMode }) => {
                   className={`p-3 rounded-lg transition-all duration-300 ${
                     link.color
                   } 
-                    transform hover:scale-110 hover:rotate-[8deg] ${
+                    transform hover:scale-110 ${
                       darkMode
                         ? "bg-gray-800/50 border border-gray-700/50 hover:bg-gray-700/50"
                         : "bg-light-surface-primary border border-light-border-primary hover:bg-light-surface-secondary shadow-card-light"
