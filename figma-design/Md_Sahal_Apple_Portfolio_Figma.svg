@@ -1,0 +1,359 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="3100" viewBox="0 0 1440 3100" fill="none">
+  <defs>
+    <!-- Background & Ambient Gradients -->
+    <linearGradient id="bg_obsidian" x1="0" y1="0" x2="1440" y2="3100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050507"/>
+      <stop offset="50%" stop-color="#09090F"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+    <radialGradient id="aurora_indigo" cx="25%" cy="10%" r="40%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aurora_purple" cx="80%" cy="18%" r="35%">
+      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent_grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="50%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="cta_grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+    <linearGradient id="card_glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#181822" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#101017" stop-opacity="0.78"/>
+    </linearGradient>
+    <linearGradient id="specular_border" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ===================================================================== -->
+  <!-- MASTER ARTBOARD: MD SAHAL — APPLE DESIGN AWARD PORTFOLIO (1440x3100)  -->
+  <!-- ===================================================================== -->
+  <g id="Artboard_Desktop_1440px_Md_Sahal_Apple_UI">
+    <rect id="Canvas_Obsidian_Titanium" width="1440" height="3100" fill="url(#bg_obsidian)"/>
+    <rect id="Ambient_Aurora_1" width="1440" height="1200" fill="url(#aurora_indigo)"/>
+    <rect id="Ambient_Aurora_2" width="1440" height="1200" fill="url(#aurora_purple)"/>
+
+    <!-- =================================================================== -->
+    <!-- 01. FLOATING VISION-OS LIQUID GLASS DOCK                            -->
+    <!-- =================================================================== -->
+    <g id="01_Floating_Glass_Navigation_Dock" transform="translate(410, 28)">
+      <rect width="620" height="48" rx="24" fill="url(#card_glass)" stroke="url(#specular_border)" stroke-width="1.2"/>
+      <circle cx="28" cy="24" r="13" fill="url(#cta_grad)"/>
+      <text x="24" y="29" fill="#FFFFFF" font-family="SF Pro Display, Inter, sans-serif" font-size="13" font-weight="700">S</text>
+      <text x="50" y="29" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600">Md Sahal</text>
+      <line x1="124" y1="14" x2="124" y2="34" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="146" y="29" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13" font-weight="500">Experience</text>
+      <text x="234" y="29" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13" font-weight="500">Projects</text>
+      <text x="306" y="29" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13" font-weight="500">3,500+ CP</text>
+      <text x="392" y="29" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13" font-weight="500">Skills</text>
+      <text x="446" y="29" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13" font-weight="500">Media</text>
+      <text x="502" y="29" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13" font-weight="500">Contact</text>
+      <rect x="564" y="11" width="44" height="26" rx="13" fill="#6366F1" fill-opacity="0.2" stroke="#6366F1" stroke-opacity="0.4"/>
+      <text x="575" y="28" fill="#A5B4FC" font-family="SF Mono, monospace" font-size="11" font-weight="600">⌘K</text>
+    </g>
+
+    <!-- =================================================================== -->
+    <!-- 02. SPATIAL HERO SECTION                                            -->
+    <!-- =================================================================== -->
+    <g id="02_Spatial_Hero_Section" transform="translate(120, 130)">
+      <!-- Status Pill -->
+      <g id="Hero_Status_Pill">
+        <rect width="410" height="34" rx="17" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <circle cx="18" cy="17" r="5" fill="#10B981"/>
+        <text x="32" y="22" fill="#E4E4E7" font-family="SF Pro Text, Inter, sans-serif" font-size="12" font-weight="500">As-salamu alaykum · Md Sahal · SWE I @ Brain Station 23</text>
+      </g>
+
+      <!-- Display Headline -->
+      <text x="0" y="102" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="56" font-weight="700" letter-spacing="-1.8">Engineering intelligent</text>
+      <text x="0" y="166" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="56" font-weight="700" letter-spacing="-1.8">systems with</text>
+      <text x="345" y="166" fill="url(#accent_grad)" font-family="SF Pro Display, Inter, sans-serif" font-size="56" font-weight="700" letter-spacing="-1.8">surgical precision.</text>
+
+      <!-- Role Lens Pills -->
+      <g id="Interactive_Role_Lenses" transform="translate(0, 196)">
+        <rect width="175" height="30" rx="15" fill="#6366F1" fill-opacity="0.2" stroke="#6366F1" stroke-opacity="0.5"/>
+        <text x="16" y="20" fill="#C7D2FE" font-family="SF Pro Text, Inter, sans-serif" font-size="12" font-weight="600">⚡ Backend &amp; AI Architect</text>
+
+        <rect x="185" width="215" height="30" rx="15" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="201" y="20" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="12" font-weight="500">🏆 Competitive Programmer (3,500+)</text>
+
+        <rect x="410" width="170" height="30" rx="15" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="426" y="20" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="12" font-weight="500">🌐 Full-Stack &amp; SwiftUI</text>
+      </g>
+
+      <!-- Subheadline -->
+      <text x="0" y="264" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="17">Architecting 50+ enterprise REST APIs, high-throughput Spring Batch pipelines, and</text>
+      <text x="0" y="290" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="17">OpenAI-powered medical intelligence (Omnizia) at Brain Station 23 PLC.</text>
+
+      <!-- CTA Buttons -->
+      <g id="Hero_CTA_Buttons" transform="translate(0, 322)">
+        <rect width="200" height="46" rx="23" fill="url(#cta_grad)"/>
+        <text x="26" y="28" fill="#FFFFFF" font-family="SF Pro Text, Inter, sans-serif" font-size="14" font-weight="600">Explore Featured Work →</text>
+
+        <rect x="214" width="140" height="46" rx="23" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="242" y="28" fill="#F5F5F7" font-family="SF Pro Text, Inter, sans-serif" font-size="14" font-weight="500">⬇ Resume.pdf</text>
+      </g>
+
+      <!-- Right Side: Spatial macOS / visionOS IDE Workbench -->
+      <g id="Spatial_IDE_Workbench" transform="translate(690, 0)">
+        <rect width="510" height="370" rx="28" fill="url(#card_glass)" stroke="url(#specular_border)" stroke-width="1.5"/>
+        <rect width="510" height="44" rx="28" fill="#09090E"/>
+        <circle cx="24" cy="22" r="6" fill="#FF5F56"/>
+        <circle cx="44" cy="22" r="6" fill="#FFBD2E"/>
+        <circle cx="64" cy="22" r="6" fill="#27C93F"/>
+        <rect x="220" y="9" width="110" height="26" rx="8" fill="#6366F1" fill-opacity="0.25"/>
+        <text x="234" y="26" fill="#C7D2FE" font-family="SF Mono, monospace" font-size="11">OmniziaAI.java</text>
+        <text x="345" y="26" fill="#71717A" font-family="SF Mono, monospace" font-size="11">Architecture</text>
+        <text x="442" y="26" fill="#71717A" font-family="SF Mono, monospace" font-size="11">zsh</text>
+
+        <text x="28" y="80" fill="#71717A" font-family="SF Mono, monospace" font-size="13">// Brain Station 23 · Medical AI Intelligence</text>
+        <text x="28" y="106" fill="#C084FC" font-family="SF Mono, monospace" font-size="13">@Service @RequiredArgsConstructor</text>
+        <text x="28" y="132" fill="#F472B6" font-family="SF Mono, monospace" font-size="13">public class <tspan fill="#FCD34D">OmniziaIntelligenceEngine</tspan> {</text>
+        <text x="48" y="158" fill="#38BDF8" font-family="SF Mono, monospace" font-size="13">private final OpenAiClient openAi;</text>
+        <text x="48" y="184" fill="#38BDF8" font-family="SF Mono, monospace" font-size="13">private final JobLauncher springBatch;</text>
+        <text x="48" y="214" fill="#34D399" font-family="SF Mono, monospace" font-size="13">public ClinicalSummary synthesize(Record r) {</text>
+        <text x="68" y="240" fill="#E4E4E7" font-family="SF Mono, monospace" font-size="13">return openAi.streamAnalysis(r);</text>
+        <text x="48" y="264" fill="#E4E4E7" font-family="SF Mono, monospace" font-size="13">}</text>
+        <text x="28" y="288" fill="#E4E4E7" font-family="SF Mono, monospace" font-size="13">}</text>
+
+        <!-- Sub-card Telemetry -->
+        <rect x="24" y="302" width="462" height="48" rx="14" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.1"/>
+        <circle cx="44" cy="326" r="5" fill="#10B981"/>
+        <text x="60" y="323" fill="#F5F5F7" font-family="SF Pro Text, Inter, sans-serif" font-size="12" font-weight="600">Spring Batch + OpenAI Pipeline Active</text>
+        <text x="60" y="339" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="11">50+ Enterprise APIs · Jenkins + Docker CI/CD</text>
+        <text x="395" y="330" fill="#34D399" font-family="SF Mono, monospace" font-size="11" font-weight="600">99.9% SLA</text>
+      </g>
+    </g>
+
+    <!-- =================================================================== -->
+    <!-- 03. AT-A-GLANCE 4-COLUMN IMPACT BENTO STRIP                         -->
+    <!-- =================================================================== -->
+    <g id="03_Impact_Bento_Metrics_Strip" transform="translate(120, 550)">
+      <g id="Metric_1_CP">
+        <rect width="282" height="145" rx="24" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="24" y="34" fill="#71717A" font-family="SF Mono, monospace" font-size="11" font-weight="600">ALGORITHMIC MASTERY</text>
+        <text x="24" y="82" fill="#22D3EE" font-family="SF Pro Display, Inter, sans-serif" font-size="40" font-weight="700">3,500+</text>
+        <text x="24" y="106" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="12">Problems solved across 6 judges</text>
+        <text x="24" y="128" fill="#38BDF8" font-family="SF Mono, monospace" font-size="11">CF 1694 · LC 1747 · CC 1759</text>
+      </g>
+
+      <g id="Metric_2_APIs" transform="translate(306, 0)">
+        <rect width="282" height="145" rx="24" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="24" y="34" fill="#71717A" font-family="SF Mono, monospace" font-size="11" font-weight="600">ENTERPRISE BACKEND</text>
+        <text x="24" y="82" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="40" font-weight="700">50+ APIs</text>
+        <text x="24" y="106" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="12">High-availability REST &amp; Batch</text>
+        <text x="24" y="128" fill="#34D399" font-family="SF Mono, monospace" font-size="11">Spring Boot · Oracle · Docker</text>
+      </g>
+
+      <g id="Metric_3_Products" transform="translate(612, 0)">
+        <rect width="282" height="145" rx="24" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="24" y="34" fill="#71717A" font-family="SF Mono, monospace" font-size="11" font-weight="600">PRODUCTION SYSTEMS</text>
+        <text x="24" y="82" fill="#C084FC" font-family="SF Pro Display, Inter, sans-serif" font-size="40" font-weight="700">9+ Live</text>
+        <text x="24" y="106" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="12">Medical AI, FinTech, Video &amp; iOS</text>
+        <text x="24" y="128" fill="#C084FC" font-family="SF Mono, monospace" font-size="11">Omnizia · City Remit · Convay</text>
+      </g>
+
+      <g id="Metric_4_Community" transform="translate(918, 0)">
+        <rect width="282" height="145" rx="24" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="24" y="34" fill="#71717A" font-family="SF Mono, monospace" font-size="11" font-weight="600">MENTORSHIP &amp; MEDIA</text>
+        <text x="24" y="82" fill="#F472B6" font-family="SF Pro Display, Inter, sans-serif" font-size="40" font-weight="700">100+</text>
+        <text x="24" y="106" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="12">Students mentored + 20+ Videos/Blogs</text>
+        <text x="24" y="128" fill="#FB7185" font-family="SF Mono, monospace" font-size="11">BdOSN Instructor &amp; Creator</text>
+      </g>
+    </g>
+
+    <!-- =================================================================== -->
+    <!-- 04. INTERACTIVE SPLIT EXPERIENCE ARCHITECTURE                       -->
+    <!-- =================================================================== -->
+    <g id="04_Experience_Master_Detail_Split" transform="translate(120, 760)">
+      <text x="0" y="20" fill="#818CF8" font-family="SF Mono, monospace" font-size="12" font-weight="600">01 / CAREER ARCHITECTURE</text>
+      <text x="0" y="58" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="36" font-weight="700">Professional Journey.</text>
+
+      <!-- Left Selector Rail -->
+      <g id="Experience_Selector_Rail" transform="translate(0, 88)">
+        <rect width="380" height="92" rx="20" fill="#6366F1" fill-opacity="0.14" stroke="#6366F1" stroke-opacity="0.6"/>
+        <text x="24" y="28" fill="#818CF8" font-family="SF Mono, monospace" font-size="11">Apr 2024 – Present · CURRENT</text>
+        <text x="24" y="54" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="18" font-weight="700">Brain Station 23 PLC.</text>
+        <text x="24" y="76" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">Software Engineer I</text>
+
+        <rect y="108" width="380" height="86" rx="20" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="24" y="134" fill="#71717A" font-family="SF Mono, monospace" font-size="11">Aug 2023 – Mar 2024</text>
+        <text x="24" y="158" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="17" font-weight="700">Synesis IT Ltd.</text>
+        <text x="24" y="178" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">Trainee Programmer (Convay Platform)</text>
+
+        <rect y="210" width="380" height="86" rx="20" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="24" y="236" fill="#71717A" font-family="SF Mono, monospace" font-size="11">2020 – 2021</text>
+        <text x="24" y="260" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="17" font-weight="700">BdOSN Programming Camp</text>
+        <text x="24" y="280" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">Programming Instructor (100+ Mentored)</text>
+      </g>
+
+      <!-- Right Detail Stage -->
+      <g id="Experience_Active_Stage" transform="translate(408, 88)">
+        <rect width="792" height="296" rx="28" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="32" y="42" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="22" font-weight="700">Software Engineer I · Brain Station 23 PLC.</text>
+        <text x="32" y="74" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="14">✦ Engineered and maintained 50+ RESTful APIs using Spring Boot, Oracle, and Vue.</text>
+        <text x="32" y="102" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="14">✦ Developing Omnizia, a medical data intelligence platform using Spring Batch &amp; OpenAI API.</text>
+        <text x="32" y="130" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="14">✦ Architected a transaction &amp; referral reward point engine improving user engagement.</text>
+        <text x="32" y="158" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="14">✦ Built CI/CD pipelines with Jenkins &amp; Docker Compose, cutting deploy time from hours to minutes.</text>
+        <text x="32" y="186" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="14">✦ Leveraged Claude Code, Cursor &amp; Windsurf for rapid prototyping and delivery acceleration.</text>
+
+        <line x1="32" y1="224" x2="760" y2="224" stroke="#FFFFFF" stroke-opacity="0.1"/>
+        <text x="32" y="258" fill="#818CF8" font-family="SF Mono, monospace" font-size="12">STACK: Java · Spring Boot · Spring Batch · OpenAI API · Oracle · Vue · Docker · Jenkins</text>
+      </g>
+    </g>
+
+    <!-- =================================================================== -->
+    <!-- 05. ASYMMETRIC APPLE BENTO PROJECTS SHOWCASE                        -->
+    <!-- =================================================================== -->
+    <g id="05_Asymmetric_Projects_Bento_Grid" transform="translate(120, 1210)">
+      <text x="0" y="20" fill="#C084FC" font-family="SF Mono, monospace" font-size="12" font-weight="600">02 / PRODUCT ENGINEERING BENTO</text>
+      <text x="0" y="58" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="36" font-weight="700">Built for Production Scale.</text>
+
+      <!-- Row 1: Omnizia (700px) + City Remit (476px) -->
+      <g id="Bento_Project_Omnizia" transform="translate(0, 88)">
+        <rect width="700" height="250" rx="28" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="32" y="40" fill="#818CF8" font-family="SF Mono, monospace" font-size="11" font-weight="600">FLAGSHIP · AI MEDICAL DATA INTELLIGENCE</text>
+        <text x="32" y="76" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="26" font-weight="700">Omnizia — Medical Intelligence Platform</text>
+        <text x="32" y="110" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="14">Automated Spring Batch data-processing pipelines integrated with OpenAI APIs</text>
+        <text x="32" y="132" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="14">to synthesize AI-driven clinical summaries and intelligent healthcare workflows.</text>
+        <text x="32" y="210" fill="#C7D2FE" font-family="SF Mono, monospace" font-size="12">Java · Spring Boot · Spring Batch · OpenAI API                    Case Study ↗</text>
+      </g>
+
+      <g id="Bento_Project_CityRemit" transform="translate(724, 88)">
+        <rect width="476" height="250" rx="28" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="32" y="40" fill="#34D399" font-family="SF Mono, monospace" font-size="11" font-weight="600">CROSS-BORDER FINTECH ENGINE</text>
+        <text x="32" y="76" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="26" font-weight="700">City Remit (Malaysia)</text>
+        <text x="32" y="110" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="14">REST APIs and backend services for secure financial</text>
+        <text x="32" y="132" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="14">remittance operations and transaction management.</text>
+        <text x="32" y="210" fill="#6EE7B7" font-family="SF Mono, monospace" font-size="12">Java · Spring Boot · Oracle · Vue</text>
+      </g>
+
+      <!-- Row 2: Convay (384px) + Butterfly iOS (384px) + JU Alumni / Cardinal / RWWS (384px) -->
+      <g id="Bento_Project_Convay" transform="translate(0, 362)">
+        <rect width="384" height="210" rx="28" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="28" y="38" fill="#C084FC" font-family="SF Mono, monospace" font-size="11" font-weight="600">ENTERPRISE VIDEO CONFERENCING</text>
+        <text x="28" y="70" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="22" font-weight="700">Convay Platform</text>
+        <text x="28" y="102" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">Meeting scheduling APIs, recording alert</text>
+        <text x="28" y="122" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">systems &amp; real-time session stability.</text>
+        <text x="28" y="178" fill="#D8B4FE" font-family="SF Mono, monospace" font-size="11">Java · Spring Boot · MySQL · React</text>
+      </g>
+
+      <g id="Bento_Project_Butterfly_iOS" transform="translate(408, 362)">
+        <rect width="384" height="210" rx="28" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="28" y="38" fill="#FBBF24" font-family="SF Mono, monospace" font-size="11" font-weight="600">NATIVE iOS · SWIFTUI</text>
+        <text x="28" y="70" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="22" font-weight="700">Butterfly Group BD</text>
+        <text x="28" y="102" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">iOS app development, API integration,</text>
+        <text x="28" y="122" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">SwiftUI views &amp; deployment workflows.</text>
+        <text x="28" y="178" fill="#FDE68A" font-family="SF Mono, monospace" font-size="11">Swift · SwiftUI · iOS · Xcode</text>
+      </g>
+
+      <g id="Bento_Project_Web_Suite" transform="translate(816, 362)">
+        <rect width="384" height="210" rx="28" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="28" y="38" fill="#38BDF8" font-family="SF Mono, monospace" font-size="11" font-weight="600">FULL-STACK &amp; WEB PLATFORMS</text>
+        <text x="28" y="70" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="22" font-weight="700">JU Alumni · Cardinal · RWWS</text>
+        <text x="28" y="102" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">Organizational portals, travel platforms &amp;</text>
+        <text x="28" y="122" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">Amla Kamla AI-assisted web apps.</text>
+        <text x="28" y="178" fill="#7DD3FC" font-family="SF Mono, monospace" font-size="11">React · Spring Boot · Tailwind CSS</text>
+      </g>
+    </g>
+
+    <!-- =================================================================== -->
+    <!-- 06. COMPETITIVE PROGRAMMING TELEMETRY (3,500+ SOLVED)               -->
+    <!-- =================================================================== -->
+    <g id="06_Competitive_Programming_Telemetry" transform="translate(120, 1850)">
+      <text x="0" y="20" fill="#22D3EE" font-family="SF Mono, monospace" font-size="12" font-weight="600">03 / ALGORITHMIC TELEMETRY</text>
+      <text x="0" y="58" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="36" font-weight="700">3,500+ Verified Solutions &amp; IUPC Standings.</text>
+
+      <!-- Left 6 Judges Telemetry Card -->
+      <g id="CP_Judges_Card" transform="translate(0, 88)">
+        <rect width="740" height="260" rx="28" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="32" y="46" fill="#22D3EE" font-family="SF Pro Display, Inter, sans-serif" font-size="32" font-weight="700">Codeforces 2,750+ (Max 1694)</text>
+        <text x="32" y="76" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="14">LeetCode 250+ (Max 1747) · CodeChef Max 1759 · AtCoder 200+ · UVa 150+ · LightOJ 100+</text>
+
+        <!-- Distribution Bar -->
+        <rect x="32" y="102" width="500" height="14" rx="7" fill="#22D3EE"/>
+        <rect x="536" y="102" width="75" height="14" rx="4" fill="#FBBF24"/>
+        <rect x="615" y="102" width="50" height="14" rx="4" fill="#34D399"/>
+        <rect x="669" y="102" width="39" height="14" rx="7" fill="#C084FC"/>
+
+        <text x="32" y="162" fill="#F5F5F7" font-family="SF Mono, monospace" font-size="13">✔ Codeforces (@sahal)        ✔ LeetCode (@sahal2000)      ✔ CodeChef (@sahal2000)</text>
+        <text x="32" y="194" fill="#F5F5F7" font-family="SF Mono, monospace" font-size="13">✔ AtCoder (@sahal2000)       ✔ LightOJ (@sahal)           ✔ UVa Judge (#955955)</text>
+      </g>
+
+      <!-- Right Onsite IUPC Podium Card -->
+      <g id="CP_Onsite_IUPC_Card" transform="translate(764, 88)">
+        <rect width="436" height="260" rx="28" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="28" y="42" fill="#FBBF24" font-family="SF Mono, monospace" font-size="11" font-weight="600">ONSITE NATIONAL CONTEST STANDINGS</text>
+        <text x="28" y="86" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="18" font-weight="700">🏅 #11th — MBSTU IDPC 2020A</text>
+        <text x="28" y="138" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="18" font-weight="700">🏅 #35th — RUET IUPC 2022</text>
+        <text x="28" y="190" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="18" font-weight="700">🏅 #42nd — AUST IUPC 2022</text>
+      </g>
+    </g>
+
+    <!-- =================================================================== -->
+    <!-- 07. SKILLS MATRIX, EDUCATION, CREATOR STUDIO & CONTACT              -->
+    <!-- =================================================================== -->
+    <g id="07_Skills_Education_Creator_Contact" transform="translate(120, 2270)">
+      <text x="0" y="20" fill="#34D399" font-family="SF Mono, monospace" font-size="12" font-weight="600">04 / SILICON SKILL MATRIX · EDUCATION · CREATOR HUB · CONTACT</text>
+      <text x="0" y="58" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="36" font-weight="700">Ecosystem Mastery &amp; Thought Leadership.</text>
+
+      <!-- 3 Domain Cards -->
+      <g transform="translate(0, 88)">
+        <rect width="384" height="210" rx="24" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="28" y="38" fill="#34D399" font-family="SF Mono, monospace" font-size="11" font-weight="600">TECHNICAL ARSENAL (34 SKILLS)</text>
+        <text x="28" y="70" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="20" font-weight="700">Backend, Frontend &amp; AI Tools</text>
+        <text x="28" y="104" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">• Java (92%), Spring Boot (90%), Batch, JPA</text>
+        <text x="28" y="128" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">• React (95%), Vue, Tailwind, SwiftUI</text>
+        <text x="28" y="152" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">• Claude Code, Cursor, OpenAI, Antigravity</text>
+        <text x="28" y="176" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">• Oracle, PostgreSQL, MySQL, Docker, AWS</text>
+      </g>
+
+      <g transform="translate(408, 88)">
+        <rect width="384" height="210" rx="24" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="28" y="38" fill="#38BDF8" font-family="SF Mono, monospace" font-size="11" font-weight="600">ACADEMIC PEDIGREE</text>
+        <text x="28" y="70" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="20" font-weight="700">Education</text>
+        <text x="28" y="104" fill="#E4E4E7" font-family="SF Pro Text, Inter, sans-serif" font-size="13" font-weight="600">🎓 Jahangirnagar University (B.Sc. IT)</text>
+        <text x="28" y="124" fill="#34D399" font-family="SF Mono, monospace" font-size="11">Feb 2018 – Mar 2023 · CGPA 3.51 / 4.00</text>
+        <text x="28" y="152" fill="#E4E4E7" font-family="SF Pro Text, Inter, sans-serif" font-size="13" font-weight="600">🏛 Notre Dame College (HSC · GPA 5.00)</text>
+        <text x="28" y="180" fill="#E4E4E7" font-family="SF Pro Text, Inter, sans-serif" font-size="13" font-weight="600">🏫 Faizur Rahman Ideal Inst. (SSC · 5.00)</text>
+      </g>
+
+      <g transform="translate(816, 88)">
+        <rect width="384" height="210" rx="24" fill="url(#card_glass)" stroke="url(#specular_border)"/>
+        <text x="28" y="38" fill="#FB7185" font-family="SF Mono, monospace" font-size="11" font-weight="600">CREATOR STUDIOHUB</text>
+        <text x="28" y="70" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="20" font-weight="700">YouTube (10) &amp; Tech Blog (10)</text>
+        <text x="28" y="104" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">▶ ICPC World Finals 2024 Bangladesh</text>
+        <text x="28" y="128" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">▶ First Bangladeshi IOI 2024 Gold</text>
+        <text x="28" y="152" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">📖 Competitive Programming &amp; Graph DFS</text>
+        <text x="28" y="176" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="13">📖 Camera HDR &amp; Smartphone SoCs</text>
+      </g>
+
+      <!-- Contact Callout Banner -->
+      <g id="08_Contact_Studio_Banner" transform="translate(0, 330)">
+        <rect width="1200" height="220" rx="32" fill="url(#card_glass)" stroke="url(#specular_border)" stroke-width="1.5"/>
+        <text x="48" y="56" fill="#818CF8" font-family="SF Mono, monospace" font-size="11" font-weight="600">05 / INITIATE CONNECTION</text>
+        <text x="48" y="100" fill="#F5F5F7" font-family="SF Pro Display, Inter, sans-serif" font-size="34" font-weight="700">Let's build something extraordinary.</text>
+        <text x="48" y="136" fill="#A1A1AA" font-family="SF Pro Text, Inter, sans-serif" font-size="15">Direct EmailJS integration + 1-click clipboard copy &amp; social dock.</text>
+        <rect x="48" y="156" width="240" height="38" rx="19" fill="#6366F1" fill-opacity="0.2" stroke="#6366F1" stroke-opacity="0.5"/>
+        <text x="68" y="180" fill="#C7D2FE" font-family="SF Mono, monospace" font-size="12">📋 mdsahal.info@gmail.com</text>
+
+        <!-- Form Preview on Right -->
+        <rect x="640" y="36" width="240" height="42" rx="12" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+        <text x="656" y="62" fill="#71717A" font-family="SF Pro Text, Inter, sans-serif" font-size="12">Your Name</text>
+        <rect x="896" y="36" width="256" height="42" rx="12" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+        <text x="912" y="62" fill="#71717A" font-family="SF Pro Text, Inter, sans-serif" font-size="12">Your Email</text>
+        <rect x="640" y="90" width="512" height="50" rx="12" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1"/>
+        <text x="656" y="120" fill="#71717A" font-family="SF Pro Text, Inter, sans-serif" font-size="12">Project or opportunity details...</text>
+        <rect x="640" y="152" width="512" height="40" rx="12" fill="url(#cta_grad)"/>
+        <text x="845" y="177" fill="#FFFFFF" font-family="SF Pro Text, Inter, sans-serif" font-size="13" font-weight="600">Send Message →</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+Creating an optimized production build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Compiled successfully.
+
+File sizes after gzip:
+
+  166.04 kB         sahal-studio-build/static/js/373.000bca46.chunk.js
+  160.31 kB (+1 B)  sahal-studio-build/static/js/main.0ec95f51.js
+  8.2 kB            sahal-studio-build/static/css/main.de873f93.css
+  5.74 kB           sahal-studio-build/static/css/990.a4d47846.chunk.css
+  5.06 kB           sahal-studio-build/static/js/990.04e62e7e.chunk.js
+  4.57 kB (+29 B)   sahal-studio-build/static/js/711.17066ab1.chunk.js
+  2.82 kB (-1 B)    sahal-studio-build/static/js/833.12802d6e.chunk.js
+  2.41 kB (-2 B)    sahal-studio-build/static/css/833.2b1a8652.chunk.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The ../../../../../tmp/sahal-studio-build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s ../../../../../tmp/sahal-studio-build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+

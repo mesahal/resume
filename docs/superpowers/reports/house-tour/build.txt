@@ -1,0 +1,45 @@
+Creating an optimized production build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Compiled successfully.
+
+File sizes after gzip:
+
+  166.89 kB         sahal-house-build/static/js/373.a2f7859d.chunk.js
+  160.37 kB (+1 B)  sahal-house-build/static/js/main.5414f280.js
+  13.27 kB (+34 B)  sahal-house-build/static/js/111.c089b479.chunk.js
+  8.51 kB (+27 B)   sahal-house-build/static/js/236.90c29f65.chunk.js
+  8.21 kB           sahal-house-build/static/css/main.f5aae53d.css
+  5.74 kB           sahal-house-build/static/css/990.a4d47846.chunk.css
+  5.18 kB (+20 B)   sahal-house-build/static/js/990.7f2e5eae.chunk.js
+  4.63 kB (+70 B)   sahal-house-build/static/css/111.bb0341dc.chunk.css
+  4.57 kB           sahal-house-build/static/js/711.17066ab1.chunk.js
+  2.82 kB           sahal-house-build/static/js/833.12802d6e.chunk.js
+  2.41 kB           sahal-house-build/static/css/833.2b1a8652.chunk.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The ../../../../../tmp/sahal-house-build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s ../../../../../tmp/sahal-house-build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+

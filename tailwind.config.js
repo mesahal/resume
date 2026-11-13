@@ -6,6 +6,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Syne', 'Inter', 'system-ui', 'sans-serif'],
+        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       colors: {
         // Sophisticated Light Mode Palette

@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Performance optimizations */
 * {
   box-sizing: border-box;
 }
@@ -15,16 +14,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
-/* Optimize images */
 img {
   max-width: 100%;
   height: auto;
-  loading: lazy;
 }
 
-/* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -36,113 +33,63 @@ img {
   }
 }
 
-:root {
-  color-scheme: dark;
+/* Custom Editorial & Spatial Typography Utilities */
+.font-editorial-serif {
+  font-family: "Instrument Serif", Georgia, serif;
 }
 
-/* Light mode styles */
-body {
-  @apply bg-light-bg-primary text-light-text-primary;
+.font-architectural {
+  font-family: "Syne", "Inter", -apple-system, sans-serif;
 }
 
-/* Dark mode styles */
-.dark body {
-  @apply bg-gray-900 text-gray-100;
+.font-tech-mono {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
-/* Section title styles */
-.section-title {
-  @apply relative inline-block;
+/* Brushed Titanium & Alabaster Text Finishes */
+.titanium-headline-dark {
+  background: linear-gradient(180deg, #ffffff 0%, #e4e4e7 58%, #71717a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.section-title::after {
-  content: "";
-  @apply absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 transform scale-x-0 transition-transform duration-300;
+.champagne-accent-text {
+  background: linear-gradient(135deg, #fffdf9 0%, #e7dec8 48%, #b8a686 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.section-title:hover::after {
-  @apply scale-x-100;
+/* Subtle Film Grain & Atmospheric Depth */
+.spatial-atmosphere-dark {
+  background-color: #040406;
+  background-image:
+    radial-gradient(ellipse 90% 55% at 50% -10%, rgba(231, 222, 200, 0.09), transparent 65%),
+    radial-gradient(ellipse 55% 45% at 85% 25%, rgba(56, 189, 248, 0.06), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 15% 65%, rgba(168, 85, 247, 0.05), transparent 65%);
 }
 
-/* Animations */
-@keyframes float {
-  0% {
-    transform: translateY(0) rotate(0deg) scale(1);
-    opacity: 0.3;
-  }
-  25% {
-    transform: translateY(-50px) rotate(90deg) scale(1.1);
-    opacity: 0.2;
-  }
-  50% {
-    transform: translateY(-100px) rotate(180deg) scale(1);
-    opacity: 0.1;
-  }
-  75% {
-    transform: translateY(-150px) rotate(270deg) scale(0.9);
-    opacity: 0.05;
-  }
-  100% {
-    transform: translateY(-200px) rotate(360deg) scale(1);
-    opacity: 0;
-  }
+.spatial-atmosphere-light {
+  background-color: #f6f4f0;
+  background-image:
+    radial-gradient(ellipse 90% 55% at 50% -10%, rgba(184, 166, 134, 0.16), transparent 65%),
+    radial-gradient(ellipse 55% 45% at 85% 25%, rgba(14, 165, 233, 0.07), transparent 60%);
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient 8s ease infinite;
+::-webkit-scrollbar-thumb {
+  background: rgba(161, 161, 170, 0.25);
+  border-radius: 9999px;
 }
 
-.animate-blink {
-  animation: blink 1s step-end infinite;
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(231, 222, 200, 0.45);
 }
-
-/* Title gradients */
-.gradient-text {
-  @apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent;
-}
-
-/* Card styles */
-.card {
-  @apply relative overflow-hidden rounded-xl transition-all duration-300;
-}
-
-.dark .card {
-  @apply bg-gray-800/50;
-}
-
-:not(.dark) .card {
-  @apply bg-light-surface-primary shadow-card-light border border-light-border-primary;
-}
-
-.card::before {
-  content: "";
-  @apply absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 opacity-0 transition-opacity duration-300;
-}
-
-.card:hover::before {
-  @apply opacity-100;
-}
-

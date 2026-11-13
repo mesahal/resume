@@ -1,273 +1,109 @@
-import { GraduationCap, Calendar, Building2, BookOpen } from "lucide-react";
-import SectionHeading from "./ui/SectionHeading";
 import ju from "../assets/optimized/ju.png";
 import ndc from "../assets/optimized/ndc.png";
 import frii from "../assets/optimized/frii.jpeg";
 
+const EDUCATION = [
+  {
+    index: "01",
+    institution: "Jahangirnagar University",
+    department: "Institute of Information Technology (IIT)",
+    degree: "Bachelor of Science in Information Technology",
+    duration: "February 2018 – March 2023",
+    result: "CGPA: 3.51 / 4.00",
+    logo: ju,
+  },
+  {
+    index: "02",
+    institution: "Notre Dame College",
+    department: "Higher Secondary Education · Dhaka",
+    degree: "HSC ~ Science",
+    duration: "2015 – 2017",
+    result: "GPA: 5.00 / 5.00",
+    logo: ndc,
+  },
+  {
+    index: "03",
+    institution: "Faizur Rahman Ideal Institute",
+    department: "Secondary Education · Dhaka",
+    degree: "SSC ~ Science",
+    duration: "2007 – 2014",
+    result: "GPA: 5.00 / 5.00",
+    logo: frii,
+  },
+];
+
 const Education = ({ darkMode }) => {
-  const education = [
-    {
-      institution: "Jahangirnagar University",
-      degree: "Bachelor of Science in Information Technology",
-      duration: "February 2018 - March 2023",
-      logo: ju,
-      icon: GraduationCap,
-      description: "CGPA: 3.51 out of 4.00",
-    },
-    {
-      institution: "Notre Dame College",
-      degree: "HSC ~ Science",
-      duration: "2015 - 2017",
-      logo: ndc,
-      icon: Building2,
-      description: "GPA: 5.00 out of 5.00",
-    },
-    {
-      institution: "Faizur Rahman Ideal Institute",
-      degree: "SSC ~ Science",
-      duration: "2007 - 2014",
-      logo: frii,
-      icon: BookOpen,
-      description: "GPA: 5.00 out of 5.00",
-    },
-  ];
-
   return (
-    <section className="py-20 px-4">
-      <div className="container mx-auto max-w-6xl">
-        <SectionHeading title="Education" darkMode={darkMode} />
-
-        {/* Desktop Timeline */}
-        <div className="hidden lg:block relative">
-          {/* Timeline Line */}
-          <div className={`absolute top-0 left-1/2 w-1 h-full bg-gradient-to-b ${
-            darkMode 
-              ? "from-purple-400 via-pink-500 to-red-500" 
-              : "from-purple-600 via-purple-500 to-purple-700"
-          } transform -translate-x-1/2`}></div>
-
-          {/* Timeline Items */}
-          <div className="relative">
-            {education.map((edu, index) => {
-              const Icon = edu.icon;
-              const isLeft = index % 2 === 0;
-
-              return (
-                <div
-                  key={index}
-                  className={`flex items-center mb-16 last:mb-0 ${
-                    isLeft ? "justify-start" : "justify-end"
-                  }`}
-                >
-                  {/* Timeline Dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6">
-                    <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-gradient-to-r ${
-                      darkMode 
-                        ? "from-purple-400 to-pink-500" 
-                        : "from-purple-600 to-purple-700"
-                    } border-4 border-white dark:border-gray-300`}>
-                      <div className={`absolute inset-0 w-full h-full rounded-full animate-ping bg-gradient-to-r ${
-                        darkMode 
-                          ? "from-purple-400 to-pink-500" 
-                          : "from-purple-600 to-purple-700"
-                      } opacity-75`}></div>
-                    </div>
-                  </div>
-
-                  {/* Card */}
-                  <div
-                    className={`w-[calc(50%-3rem)] ${
-                      isLeft ? "mr-auto pr-8" : "ml-auto pl-8"
-                    }`}
-                  >
-                    <div
-                      className={`relative group rounded-xl p-6 transition-all duration-300 border ${
-                        darkMode
-                          ? "bg-gray-800/90 border-gray-700/50 hover:bg-gray-700/90 shadow-lg hover:shadow-xl"
-                          : "bg-white/95 border-light-border-secondary hover:bg-light-surface-secondary shadow-card-light hover:shadow-card-hover"
-                      }`}
-                    >
-                      {/* Gradient overlay on hover */}
-                      <div className={`absolute inset-0 rounded-xl bg-gradient-to-r ${
-                        darkMode 
-                          ? "from-purple-500/10 to-pink-500/10" 
-                          : "from-purple-600/10 to-purple-700/10"
-                      } opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-
-                      {/* Content */}
-                      <div className="relative z-10">
-                        {/* Institution Logo */}
-                        <div className="mb-4 flex justify-center">
-                          <div className={`w-24 h-24 rounded-full overflow-hidden bg-white p-2 border-4 ${
-                            darkMode 
-                              ? "border-purple-400/20" 
-                              : "border-purple-600/20"
-                          } shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
-                            <img
-                              src={edu.logo}
-                              alt={edu.institution}
-                              className="w-full h-full object-contain"
-                            />
-                          </div>
-                        </div>
-
-                        <div className="text-center space-y-3">
-                          <div className="flex items-center justify-center gap-2">
-                            <Icon className={`${
-                              darkMode ? "text-purple-400" : "text-purple-600"
-                            }`} size={20} />
-                            <h3
-                              className={`text-xl font-semibold ${
-                                darkMode ? "text-gray-200" : "text-light-text-primary"
-                              }`}
-                            >
-                              {edu.institution}
-                            </h3>
-                          </div>
-
-                          <p
-                            className={`text-lg font-medium ${
-                              darkMode ? "text-gray-300" : "text-light-text-secondary"
-                            }`}
-                          >
-                            {edu.degree}
-                          </p>
-
-                          {/* <p
-                            className={`text-sm font-semibold ${
-                              darkMode ? "text-purple-400" : "text-purple-600"
-                            }`}
-                          >
-                            {edu.description}
-                          </p> */}
-
-                          <div
-                            className={`flex items-center justify-center gap-2 text-sm ${
-                              darkMode ? "text-gray-400" : "text-light-text-tertiary"
-                            }`}
-                          >
-                            <Calendar size={16} />
-                            <span>{edu.duration}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+    <section
+      className={`py-24 px-4 sm:px-6 lg:px-10 border-b transition-colors ${
+        darkMode
+          ? "bg-[#050508] border-white/[0.08]"
+          : "bg-[#f2eee7] border-black/[0.08]"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto space-y-14">
+        {/* Chapter Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="space-y-3">
+            <div className="font-tech-mono text-xs uppercase tracking-[0.22em] text-[#e7dec8] opacity-80">
+              CHAPTER 05 — ACADEMIC PEDIGREE
+            </div>
+            <h2 className="font-architectural text-4xl sm:text-5xl font-bold tracking-[-0.035em] leading-[1.04]">
+              Institutional{" "}
+              <span className="font-editorial-serif italic font-normal champagne-accent-text">
+                Foundation.
+              </span>
+            </h2>
           </div>
+          <p className="font-tech-mono text-xs opacity-60 max-w-sm">
+            Trained in computer science, mathematics, and software engineering
+            at Bangladesh’s premier academic institutions.
+          </p>
         </div>
 
-        {/* Mobile Timeline */}
-        <div className="lg:hidden relative">
-          {/* Timeline Line */}
-          <div className={`absolute top-0 left-8 w-1 h-full bg-gradient-to-b ${
-            darkMode 
-              ? "from-purple-400 via-pink-500 to-red-500" 
-              : "from-purple-600 via-purple-500 to-purple-700"
-          }`}></div>
+        {/* 3-Column Architectural Pedigree Ledger with Hairline Dividers */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 border-t border-b border-current/15 divide-y lg:divide-y-0 lg:divide-x divide-current/15">
+          {EDUCATION.map((edu) => (
+            <div
+              key={edu.institution}
+              className="py-10 lg:px-8 first:lg:pl-0 last:lg:pr-0 flex flex-col justify-between gap-8 group"
+            >
+              <div className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <span className="font-tech-mono text-xs opacity-50">
+                    {edu.index} · {edu.duration}
+                  </span>
+                  <span className="font-tech-mono text-xs px-2.5 py-0.5 rounded-full border border-current/20 text-emerald-400">
+                    {edu.result}
+                  </span>
+                </div>
 
-          {/* Timeline Items */}
-          <div className="relative">
-            {education.map((edu, index) => {
-              const Icon = edu.icon;
-              return (
-                <div key={index} className="relative mb-16 last:mb-0">
-                  {/* Timeline Dot */}
-                  <div className="absolute left-8 transform -translate-x-1/2 w-6 h-6">
-                    <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-gradient-to-r ${
-                      darkMode 
-                        ? "from-purple-400 to-pink-500" 
-                        : "from-purple-600 to-purple-700"
-                    } border-4 border-white dark:border-gray-300`}>
-                      <div className={`absolute inset-0 w-full h-full rounded-full animate-ping bg-gradient-to-r ${
-                        darkMode 
-                          ? "from-purple-400 to-pink-500" 
-                          : "from-purple-600 to-purple-700"
-                      } opacity-75`}></div>
-                    </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden bg-white p-2 border border-black/10 shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                    <img
+                      src={edu.logo}
+                      alt={edu.institution}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
-
-                  {/* Card */}
-                  <div className="ml-16">
-                    <div
-                      className={`relative group rounded-xl p-6 transition-all duration-300 border ${
-                        darkMode
-                          ? "bg-gray-800/90 border-gray-700/50 hover:bg-gray-700/90 shadow-lg hover:shadow-xl"
-                          : "bg-white/95 border-light-border-secondary hover:bg-light-surface-secondary shadow-card-light hover:shadow-card-hover"
-                      }`}
-                    >
-                      {/* Gradient overlay on hover */}
-                      <div className={`absolute inset-0 rounded-xl bg-gradient-to-r ${
-                        darkMode 
-                          ? "from-purple-500/10 to-pink-500/10" 
-                          : "from-purple-600/10 to-purple-700/10"
-                      } opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-
-                      {/* Content */}
-                      <div className="relative z-10">
-                        {/* Institution Logo */}
-                        <div className="mb-4 flex justify-center">
-                          <div className={`w-24 h-24 rounded-full overflow-hidden bg-white p-2 border-4 ${
-                            darkMode 
-                              ? "border-purple-400/20" 
-                              : "border-purple-600/20"
-                          } shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
-                            <img
-                              src={edu.logo}
-                              alt={edu.institution}
-                              className="w-full h-full object-contain"
-                            />
-                          </div>
-                        </div>
-
-                        <div className="text-center space-y-3">
-                          <div className="flex items-center justify-center gap-2">
-                            <Icon className={`${
-                              darkMode ? "text-purple-400" : "text-purple-600"
-                            }`} size={20} />
-                            <h3
-                              className={`text-xl font-semibold ${
-                                darkMode ? "text-gray-200" : "text-light-text-primary"
-                              }`}
-                            >
-                              {edu.institution}
-                            </h3>
-                          </div>
-
-                          <p
-                            className={`text-lg font-medium ${
-                              darkMode ? "text-gray-300" : "text-light-text-secondary"
-                            }`}
-                          >
-                            {edu.degree}
-                          </p>
-
-                          {/* <p
-                            className={`text-sm font-semibold ${
-                              darkMode ? "text-purple-400" : "text-purple-600"
-                            }`}
-                          >
-                            {edu.description}
-                          </p> */}
-
-                          <div
-                            className={`flex items-center justify-center gap-2 text-sm ${
-                              darkMode ? "text-gray-400" : "text-light-text-tertiary"
-                            }`}
-                          >
-                            <Calendar size={16} />
-                            <span>{edu.duration}</span>
-                          </div>
-                        </div>
-                      </div>
+                  <div>
+                    <h3 className="font-architectural text-xl sm:text-2xl font-bold tracking-tight">
+                      {edu.institution}
+                    </h3>
+                    <div className="text-xs opacity-60 mt-0.5">
+                      {edu.department}
                     </div>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+
+              <div className="pt-4 border-t border-current/10 flex items-center justify-between">
+                <span className="font-editorial-serif italic text-2xl">
+                  {edu.degree}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,0 +1,14 @@
+
+> sahal-portfolio@1.0.0 test
+> react-scripts test --watchAll=false --runInBand
+
+PASS src/concepts/Concepts.test.jsx
+  ✓ cinematic chapters show the right work and cycle back (98 ms)
+  ✓ editorial notes open and close with explicit expanded state (40 ms)
+  ✓ word workshop supports mistakes, reset, solve, and skipping the puzzle (158 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        1.857 s, estimated 2 s
+Ran all test suites.

@@ -1,0 +1,13 @@
+
+> sahal-portfolio@1.0.0 test
+> react-scripts test --watchAll=false --runInBand
+
+PASS src/concepts/House.test.jsx
+PASS src/concepts/Concepts.test.jsx
+PASS src/concepts/Studio.test.jsx
+
+Test Suites: 3 passed, 3 total
+Tests:       14 passed, 14 total
+Snapshots:   0 total
+Time:        2.453 s
+Ran all test suites.

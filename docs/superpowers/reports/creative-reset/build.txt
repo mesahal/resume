@@ -1,0 +1,32 @@
+Creating an optimized production build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Compiled successfully.
+
+File sizes after gzip:
+
+  159.91 kB (-2 B)  sahal-creative-reset-build/static/js/main.e65920bf.js
+  8.14 kB           sahal-creative-reset-build/static/css/main.4b91d374.css
+  5.68 kB (+33 B)   sahal-creative-reset-build/static/css/906.1e4a0731.chunk.css
+  4.93 kB (+162 B)  sahal-creative-reset-build/static/js/906.ad7278d1.chunk.js
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The ../../../../../tmp/sahal-creative-reset-build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s ../../../../../tmp/sahal-creative-reset-build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
